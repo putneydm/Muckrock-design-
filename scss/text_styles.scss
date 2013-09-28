@@ -1,0 +1,125 @@
+
+
+body
+	{
+	@include font ($regular, em(15), $body, 1.5em, none);
+	background-color:$background;
+	font-family: $sans;
+	font-weight:$light;
+	margin:0 0px;
+	}
+
+.clear
+	{
+	clear:both;
+	height:0px;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	font-size:0em;
+	}
+	
+	
+ p
+	{
+	@include font ($regular, em(15), $body, 1.5em, none);
+	margin:0 0 .80em 0;
+	}
+	
+	
+strong
+	{
+	@include font ($bold, inherit, inherit, inherit, inherit);
+	}
+	
+.byline
+	{
+	@include font ($regular, em(13), $medium_gray, 1.2em, uppercase);
+	margin:20px 0 5px 0;
+	}	
+	
+	
+a
+	{
+	text-decoration:none;
+	color:$red;
+	@include transition;
+
+	
+	&:hover
+	{
+	color:$light_gray;
+	}
+		
+	}	
+	
+h1
+	{
+	@include font ($light, em(42), $red, 1.1em, none);
+	margin:0 0 20px 0;	
+	}
+	
+h2
+	{
+	@include font ($medium, em(32), $red, 1.2em, none);
+	margin:0 0 10px 0;
+	
+	@media screen and (max-width:500px) 
+	{
+	font-size:em(24);
+	}
+	
+	}
+	
+h3
+	{
+	@include font ($bold, em(18), $text, 1.5em, none);
+	}	
+
+h4 
+	{
+	@include font ($bold, em(16), $text, em(20), none);
+	margin:10px 0 10px 0;
+	}
+
+	
+	
+h5
+	{
+	@include font ($bold, em(16), $red, .8em, uppercase);
+	margin:0 0 5px 0;
+	letter-spacing:.1em;
+	}	
+	
+h6
+	{
+	@include font ($bold, em(12), $red, .8em, uppercase);
+	margin:0 0 5px 0;
+	letter-spacing:.1em;
+	}
+	
+h7
+	{
+	@include font ($light, em(10), $light_gray, 1em, uppercase);
+	margin:0 0 5px 0;
+	display:block;
+	}	
+	
+	
+.icon
+	{
+	font-family: $icon;
+	}
+	
+
+.chatter_text
+	{
+	@include font (500, .9em, $dark_gray, 1.5em, none);
+	
+		strong
+		{
+		font-weight:$medium;
+		}
+	
+	}		
+	

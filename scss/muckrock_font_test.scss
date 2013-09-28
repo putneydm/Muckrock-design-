@@ -1,0 +1,1110 @@
+
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "front";
+
+
+
+
+
+
+.container
+	{
+	width:100%;
+	max-width:1000px;
+	margin:50px auto;
+	
+	}
+	
+	
+.content_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	max-width:1000px;
+	@include center (0,0);	
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:1040px) 
+	{
+	width:95%;
+	margin-left:2.5%;
+	margin-right:2.5%;	
+	}
+	
+	@media screen and (max-width:700px) 
+	{
+	width:95%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	}
+	
+	}	
+	
+	
+.byline_avatar
+	{
+	@include box-sizing(border-box);
+	@include spanner (6, 580, 0, 1);
+	margin:20px 0 0 0;
+	padding:0 10px 0 0;
+	
+	
+	@media screen and (max-width:750px) 
+	{
+	width:100%;
+	}
+	
+	.avatar
+	{
+	width:100%;
+	max-width:60px;
+	margin:0 0 5px 0;
+	float:right;
+	
+	@media screen and (max-width:750px) 
+	{
+	max-width:40px;
+	float:left;
+	margin:0 10px 0 0;
+	float:left;
+	}
+	
+	
+	}
+	
+	.byline
+	{
+	@include font ($light, em(11), $light_gray, 1em, none);
+	margin:0 0 5px 0;
+	clear:right;
+	text-align:right;
+	
+	@media screen and (max-width:750px) 
+	{
+	font-size:em(14);
+	margin-top:2px;
+	text-align:left;
+	}
+	
+	}
+	
+	.icon
+	{
+	font-size:em(24);
+	line-height:1.1em;
+	letter-spacing: .2em;
+	
+	@media screen and (max-width:800px) 
+	{
+	font-size:em(19);
+	}
+	
+	}
+	
+	}
+	
+	
+	.right_link
+	{
+	float:right;
+	margin:0px 0 20px 0;
+	font-size:em(14);
+	color:$dark_gray;
+		&:after
+		{
+		content:' \f0a9';
+		font-family:$icon;
+		color:$dark_gray;
+		display:inline-block;
+		margin-left:5px;
+		font-size:em(18);
+		padding:0px 0 0 0;
+		}
+	
+	
+	}
+	
+	
+	
+	.social
+	{
+	width:100%;
+	max-width:1000px;
+	@include center (0,0);
+	padding-top:10px;
+	color:$dark_gray;
+	@include font ($bold, em(12), $dark_gray, 2em, uppercase);
+	}
+	
+	
+	.intro
+	{
+	float:left;
+	@include font ($bold, em(16), $dark_gray, 2em, uppercase);
+	margin:10px 15px 0 0;
+	}
+	
+	.hover_show
+		{
+		display:none;
+		}
+	
+	.circle_icon
+	{
+	@include circle (36px);
+	background-color:$white;
+	text-align:center;
+	@include box-sizing(border-box);
+	@include font ($light, em(22), $white, 1em, none);
+	font-family:$icon;
+	padding:11px 0 0 0;
+	text-shadow: .1em .1em .1em rgba(255, 255, 255, 1);	
+	float:right;
+	margin: 0 20px 0 0;
+	@include transition;
+	cursor:pointer;
+	color:$light_gray;
+	
+
+		&:hover
+		{
+		
+		.hover_hide
+		{
+		display:none;	
+		}
+		
+		
+		.hover_show
+		{
+		display:inline;
+		}
+		
+		}
+	
+	}
+	
+	
+	.activity_list
+	{
+	width:100%;
+	height:400px;
+	border-top:5px solid $blue;
+	padding-top:40px;
+	@include font ($light, em(14), $dark_gray, 1.5em, none);
+	
+		.activity_list_items
+		{
+		width:100%;
+		height:auto;
+		margin:10px 0 0;
+		padding:0px;
+
+				.activity_list_avatar
+				{
+				width:40px;
+				float:right;
+				margin:5px 0px 0 8px;
+				
+				}
+				
+			
+				dd
+				{
+				@include font ($light, em(16), $dark_gray, 1.2em, none);
+				margin:0px 0 20px 0px;
+				line-height:1.5em;
+				padding:0px;					
+				}
+				
+				h7
+				{
+				font-size:em(14) !important;
+				}
+		
+		}
+		
+	}	
+	
+	
+.footer
+	{
+	width:100%;
+	height:200px;
+	margin:40px 0 0 0;
+	background-color:$dark_background;	
+	}
+	
+	
+	
+	
+#select
+	{
+	width:300px;
+	height:40px;
+	@include font ($medium, em(14), $white, 125%, none);
+	background:transparent;
+	border:1px solid red;
+    border-radius:8px;
+    background: $red;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    padding:5px 15px;
+	box-sizing:border-box;
+	background-image:url('../temp_art/arrow.png');
+	background-repeat:no-repeat;
+	background-position:95% -12px;
+	background-size:24px;
+	@include text_transition;
+	}
+	
+	
+.button
+	{
+	@include button (120px, 34px, 11px, 2px);
+	@include font ($medium, em(14), $white, 100%, none);
+	background-color:$red;
+	box-sizing:border-box;
+	@include transition;
+	
+	&:hover
+	{
+	background-color:$light_gray;
+	color:$white;
+	}
+	
+	
+	}
+
+
+.small_button
+	{
+	@include button (90px, 22px, 6px, 2px);
+	@include font ($light, em(12), $white, 100%, none);
+	background-color:$red;
+	font-family:$sans;
+	box-sizing:border-box;
+	@include transition;
+	text-align:center;
+	
+	&:hover
+	{
+	background-color:$light_gray;
+	}
+	
+	
+	}
+	
+	
+.small_button_white
+	{
+	text-indent:0px;
+	margin:5px 0 0 0;
+	font-size:em(14);
+	border:1px dotted $white;
+	background-color:$white;
+	color:$red;
+	padding-top:5px;
+	@include transition;
+	clear:both;
+	
+		&:hover
+		{
+		border:1px solid $red;
+		background-color:$white;
+		color:$red;
+		}
+	
+	
+	}	
+	
+	
+.cloner_container
+{
+width:100%;
+max-width:1000px;
+height:auto;
+border:1px solid red;
+
+
+
+.cloner
+	{
+	@include spanner (10, 1000, 10, 1);	
+	height:auto;
+	border:0px solid red;
+	font-size:.7em;
+	text-transform:uppercase;
+	text-align:center;	
+	font-weight:$bold;
+	color:$light_gray;
+	min-width:85px;
+	@include transition;
+
+	&:hover
+	{
+	color:$red;
+	}
+	
+.selector
+	{
+	
+	&:after
+	{
+	content:' \f126';
+	font-family:$icon;
+	margin:0 0 0 3px;
+	color:$red;
+	}
+	
+	}
+
+
+.clone_chatter
+	{
+	font-size:1.1em;
+	font-weight:$regular;
+	text-transform:none;
+	}
+		
+.doc_icon
+	{
+	width:100%;
+	height:90px;
+	border:0px solid blue;
+	overflow:hidden;
+	background-color:$red;
+	border-radius:3px;
+	
+	
+	img
+	{
+	width:100%;
+	margin:0px 0 0 0;
+	transition: all .1s ease-in-out;	
+
+	&:hover
+	{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	
+	}
+	
+	
+	}
+	
+	}	
+	
+	
+	} /*end cloner */
+	
+	} /* end cloner container */
+	
+	
+	
+	
+	input
+	{
+	@include font ($medium, .85em, $medium_gray, 1.5em, none);
+	width:600px;
+	height:45px;
+	box-sizing:border-box;
+	border:1px solid #ebebeb;
+	border-radius:8px;
+	padding:0px 18px;
+	@include transition;
+	
+	&:hover
+	{
+	border:1px solid $silver;
+	}
+	
+	&:focus
+	{
+	background-color:$yellow;
+	color:$dark_gray !important;
+	}
+	
+	&:active
+	{
+	background-color:$yellow;
+	color:$dark_gray !important;
+	}
+	
+	
+	}
+	
+	
+#menu
+	{
+	height:28px;
+	background-color:#fff;
+	position:fixed;
+	top:-28px;
+	left:0px;
+	width:100%;
+	
+	@media screen and (max-width:800px) 
+		{	
+		width:45px;
+		height:45px;
+		left:3%;
+		top:20px;
+		background-color:rgba(253,253,245,.9);
+		@include rounded;
+		}
+	
+	.menu_inside
+	{
+	width:100%;
+	max-width:$max_width;
+	height:22px;
+	border:0px solid blue;
+	margin:0px auto;
+
+	
+	.menu_icon
+	{
+	@include font (100, 2em, $light_gray, 1.5em, none);
+	font-family:$icon;
+	text-align:center;
+	margin:0px;
+	display:none;
+	}
+	
+	}
+	}
+	
+
+	/* universal navigation */
+	.top_navigation
+	{
+	@include spanner (10, 1000, 0, 10);
+	@include center (0,0);	
+	max-width:1000px;
+	}
+	
+	.site_navigation
+	{
+	@include font ($bold, .8em, $light_gray, 1em, uppercase);
+	list-style-type:none;
+	margin:9px 0;
+	padding:0px;
+	
+		@media screen and (max-width:800px) 
+		{	
+		display:none;	
+		}
+	
+	
+	li
+	{
+	float:left;
+	text-align:center;
+	@include spanner (6, 1000, 0, 1);
+	
+	span
+	{
+	color:$red;
+	}
+	
+	
+	}
+	
+	}
+	
+
+	
+	
+	#grid_container
+	{
+	width:100%;
+	padding:0 40px;
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:700px) 
+	{
+	padding:0px 10px;
+	}
+	
+	}
+
+	#grid
+	{
+	width:100%;
+	max-width:1000px;
+	height:auto;
+	@include center (40px,40px);
+	clear:all;
+	
+	ul
+	{
+	width:100%;
+	height:auto;
+	border-bottom:1px solid $silver;
+	list-style-type:none;
+	clear:all;
+	padding:0px;
+
+	@include font ($medium, .85em, $dark_gray, 1.2em, none);
+
+	li
+	{
+	margin-top:0px !important;
+	word-wrap: break-word;
+	font-weight:$regular;
+	float:left;
+	padding:0px 0 10px 0 !important;			
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, 5);	
+	}
+
+	
+	span
+	{
+/*
+	@include hide_show (700px,inline-block);
+*/	
+	color:$light_gray;
+	font-weight:$medium;
+	font-size:.8em;
+	text-transform:uppercase;
+	width:60px;
+	display:block;
+	
+	@media screen and (max-width:700px) 
+	{
+	display:inline-block;
+	}
+	
+	}
+
+	&:nth-child(1)
+	{
+	font-weight:$medium;
+	font-size:1.2em;
+	padding-right:10px !important;
+	padding-bottom:15px !important;
+	}
+
+
+	&:nth-child(2)
+	{
+	padding:0 10px 0 0;
+	padding-right:10px !important;
+	}
+
+
+	&:nth-child(6)
+	{
+	margin-right:0px;
+	
+	@media screen and (max-width:700px) 
+	{
+	padding-bottom:10px !important;
+	}
+	
+	}
+	
+	.small_button
+	{
+	max-width:65px !important;
+	float:right;
+	
+	@media screen and (max-width:700px) 
+	{
+	float:left;
+	margin-top:5px;
+	}
+	
+	
+	
+	&:before
+	{
+	content:'\f087';
+	font-family:$icon;
+	margin:0 3px 0 0px;
+	color:$white;
+	@media screen and (max-width:500px) 
+	{
+	display:none;
+	}
+
+	}
+	
+	&:after
+	{
+	
+	@media screen and (max-width:500px) 
+	{
+	content:'\f087';
+	font-family:$icon;
+	margin:0px 0px 0 3px;
+	color:$white;
+	}
+	
+	}	
+	}
+	}
+
+	.select
+	{
+	float:left;
+	border:1px solid red;
+	}
+	
+	
+	.half
+	{
+	@include spanner (10, 1000, 5, .5);	
+	}
+	
+	
+	.one
+	{
+	@include spanner (10, 1000, 5, 1);	
+	}
+	
+	.two
+	{
+	@include spanner (10, 1000, 5, 2);	
+	}
+	
+	.three
+	{
+	@include spanner (10, 1000, 5, 3);	
+	}	
+	
+	
+	.four
+	{
+	@include spanner (10, 1000, 5, 4);	
+	}		
+	
+	
+	.full_width
+	{
+	@include spanner (10, 1000, 5, 10);	
+	}	
+	
+	
+	/*
+	.half
+	{
+	@include spanner (10, 1000, 5, .5);	
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, .5);	
+	}
+	
+	}
+	
+	.one
+	{
+	@include spanner (10, 1000, 5, 1);	
+	@include box-sizing(border-box);
+
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, 5);
+	}
+	
+	
+	}
+	
+	
+	
+	.two
+	{
+	@include spanner (10, 1000, 5, 2);	
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, 4.5);	
+	}
+	
+	}
+	
+	
+	.two_quarter
+	{
+	@include spanner (10, 1000, 5, 2.25);	
+	@include box-sizing(border-box);
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, 5);	
+	}
+	}
+	
+	.three_half
+	{
+	@include spanner (10, 1000, 5, 3.5);	
+	@include box-sizing(border-box);
+	}	
+	
+	.four
+	{
+	@include spanner (10, 1000, 5, 10);	
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:700px) 
+	{
+	@include spanner (5, 1000, 5, 5);	
+	}	
+	
+	
+	*/
+	
+	}	
+
+	.status_icon
+	{
+	font-family:$icon;
+	color:$dark_gray;
+	font-size:1.25em;
+	line-height:1.25em;
+	text-align:center;
+	
+	@media screen and (max-width:700px) 
+	{
+	font-size:1.75em;
+	line-height:.65em;
+	}
+	
+	}
+
+	
+	.downloaded
+	{
+	&:after
+	{
+	content:' \f15b';
+	color:$green;
+	}
+	}
+
+
+	.waiting
+	{
+	&:after
+	{
+	content:' \f017';
+	color:$dark_gray;
+	}
+	}	
+	
+	
+	.rejected
+	{
+	&:after
+	{
+	content:' \f06a';
+	color:$red;
+	}
+	}	
+	
+	
+	/*
+	.more
+	{
+	text-align:right !important;
+	&:after
+	{
+	content:' \f055';
+	font-family:$icon;
+	margin:0 0 0 3px;
+	color:$light_gray;
+	}
+	}
+	
+	*/
+	
+	.draft
+	{
+	&:after
+	{
+	content:' \f040';
+	font-family:$icon;
+	margin:0 0 0 3px;
+	}
+	}
+	
+	
+	}
+	
+	.overline
+	{
+	padding:0px 0 5px 0;
+	border:0px;
+	display:none;
+	
+	@media screen and (max-width:700px) 
+	{
+	display:none;
+	}
+	
+	li
+	{
+	color:$light_gray;
+	font-weight:$medium !important;
+	font-size:.8em;
+	text-transform:uppercase;
+	padding:0px !important;
+	}
+	
+	
+	}
+	
+	
+	
+	.versitile_grid
+	{
+	max-width:$max_width;
+	width:100%;
+	border:1px solid red;
+	height:1000px;
+	margin:40px auto;
+	clear:both;
+	
+	
+		h4 
+		{
+		color:$medium_gray;	
+		margin:0 0 5px 0;
+		
+				@media screen and (max-width:700px) 
+				{
+				margin-left:7%;
+				}
+				
+			@media screen and (max-width:500px) 
+			{
+			padding: 0 0 0 2%;
+			}
+		
+		}
+	
+		.selector_box
+		{
+		float:left;
+		@include spanner (10, 1000, 0, .35);	
+		border:0px solid red;
+		@include box-sizing(border-box);
+		height:24px;
+		
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, .35);
+				}
+		
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, .45);	
+				}
+		
+				input[type=checkbox] 
+				{
+				padding-left:5px;
+				padding-right:5px;
+				border-radius:2px;
+				background-color:#fff;
+				border:2px solid $silver;
+				-webkit-appearance:button;
+				transition-property: border-color;
+				transition-duration: .07s;
+				transition-timing-function: ease-in-out;	
+				color:#FFF;
+				white-space: nowrap;
+				overflow:hidden;
+				width:20px;
+				height:20px;
+				margin:4px 0 0 0;
+				}
+
+				input[type=checkbox]:checked 
+				{
+				background-color:#fff;
+				background-position:0px 0px;
+				background-image:url(../temp_art/image_sprite.png);
+				background-repeat:no-repeat;
+				}
+
+				input[type=checkbox]:hover 
+				{
+				border-color:$light_gray;
+				}
+				
+		}		
+	
+	
+		ul
+		{
+		width:100%;
+		max-width:950px;
+		height:auto;
+		list-style-type:none;
+		clear:all;
+		padding: 0 0 0 3.5%;
+		margin:0px 0 10px 0;
+		border-bottom:1px solid $silver;
+		@include font ($medium, .85em, $dark_gray, 1.2em, none);
+		
+			@media screen and (max-width:700px) 
+			{
+			padding: 0 0 0 7%;
+			}
+			
+			@media screen and (max-width:500px) 
+			{
+			padding: 0 0 0 9%;
+			}
+			
+			
+			li
+			{
+			margin-top:0px !important;
+			word-wrap: break-word;
+			font-weight:$regular;
+			@include box-sizing(border-box);
+			float:left;
+			padding:0 10px 10px 0;
+			}
+
+			.half
+			{
+			@include spanner (10, 1000, 0, .5);	
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, .5);
+				}
+			
+			}
+	
+	
+			.one
+			{
+			@include spanner (10, 1000, 0, 1);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 1);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+	
+			.two
+			{
+			@include spanner (10, 1000, 0, 2);
+				
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 2);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+			
+			
+			.two_half
+			{
+			@include spanner (10, 1000, 0, 2.5);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 2.5);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+	
+			.three
+			{
+			@include spanner (10, 1000, 0, 3);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 3);
+				}
+			
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}	
+	
+	
+			.four
+			{
+			@include spanner (10, 1000, 0, 4);	
+			}		
+	
+	
+			.full_width
+			{
+			@include spanner (10, 1000, 0, 10);	
+			}	
+	
+	
+			span
+			{
+		/*
+			@include hide_show (700px,inline-block);
+		*/	
+			color:$light_gray;
+			font-weight:$medium;
+			font-size:.75em;
+			text-transform:uppercase;
+			display:block;
+			
+				@media screen and (max-width:500px) 
+				{
+				display:inline-block;
+				width:90px;
+				}
+			
+			}
+	
+		}
+			
+
+	}
+	
+	
+
+	
+	
+	
+	
+	

@@ -1,0 +1,64 @@
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+
+
+@mixin button ($width, $height, $padding, $corner)
+	{
+	width: $width;
+	height:$height;
+	padding-top:($padding);
+	border-radius:$corner;
+	box-sizing:border-box;
+	text-align:center;
+	transition-property: background-color;
+	transition-duration: .07s;
+	transition-timing-function: ease-in-out;
+	cursor:pointer;
+	}
+	
+	
+@mixin font ($weight, $size, $color, $line_height, $transform)
+ 	{
+ 	font-weight:$weight;
+ 	font-size:$size;
+ 	color:$color;
+ 	line-height:$line_height;
+ 	text-transform:$transform;
+ 	font-family:$sans;
+ 	}
+
+ 	
+@mixin transition 
+ 	{ 	
+ 	transition-property: all;
+	transition-duration: .07s;
+	transition-timing-function: ease-in-out;	
+	}
+	
+	
+@mixin text_transition 
+ 	{ 	
+ 	transition-property: color;
+	transition-duration: .07s;
+	transition-timing-function: ease-in-out;	
+	}	
+	
+@mixin rounded	
+	{
+	border-radius:3px;
+	}
+@mixin hide_show ($breakpoint,$display)
+	{
+	display:none;
+	
+	@media screen and (max-width:$breakpoint) 
+	{
+	display:$display;
+	}
+	
+	}	
+	
