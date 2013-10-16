@@ -49,13 +49,7 @@
 @mixin centered_content
 	{
 	margin-left:auto;
-	margin-right:auto; 
-	
-	@media screen and (max-width:$ipad_wide) 
-	{
-	width:90%;
-	}
-	
+	margin-right:auto; 	
 	}
 	
 

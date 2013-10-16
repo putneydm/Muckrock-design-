@@ -1,6 +1,10 @@
 $(document) .ready (function()
 	{	
 	
+	
+
+	
+	
 	function mobile_menu (document_width)
 		{
 	//	$('#menu') .width (document_width);
@@ -52,6 +56,36 @@ $(document) .ready (function()
 		console.log (document_width);
 		mobile_menu(document_width);
 		});	
+		
+		
+	function show_hide_toolbox()
+		{
+
+		var hidden = $('#toolbox').height();
+		
+		console.log(hidden);
+		
+		if (hidden !== 0)
+			{
+			console.log('shows');					
+			$('#toolbox_tab') .addClass ('toolbox_minimized_tab');
+			$('#toolbox') .addClass ('toolbox_minimized');
+			}
+			
+		else
+			{
+			console.log('hidden');
+			$('#toolbox_tab') .removeClass ('toolbox_minimized_tab');
+			$('#toolbox') .removeClass ('toolbox_minimized');
+			}
+
+		}
+			
+		$('#toolbox_tab') .click (function()
+			{
+			show_hide_toolbox()
+			console.log('works');
+			});
 		
 	});	
 	

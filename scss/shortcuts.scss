@@ -62,3 +62,15 @@ $browser-context: 16; // Default
 	
 	}	
 	
+	
+@mixin show_hide ($breakpoint)
+	{
+	
+	
+	@media screen and (max-width:$breakpoint) 
+	{
+	display:none;
+	}
+	
+	}		
+	

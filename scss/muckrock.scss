@@ -1,17 +1,5 @@
 
-@import "bourbon";
-@import "fonts";
-@import "colors";
-@import "shortcuts";
-@import "mixins";
-@import "variables";
-@import "text_styles";
-@import "menu_test.scss";
-@import "front";
-
-
-
-
+/* main content containers */
 
 
 .container
@@ -45,71 +33,192 @@
 	}
 	
 	}	
-	
-	
-.byline_avatar
+
+
+
+/* header */
+
+
+.hero
 	{
+	width:100%;
+	max-width:1200px;
+	background-image:url('../temp_art/letter.png');
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	margin:0 auto 30px;
+	background-position: center 0px;
+	
+	
+	
+		.icon
+		{
+		display:inline-block;
+		margin:-3px 5px 0 0;
+		font-size:em(16);
+		text-shadow: 0 0 0px rgba(80, 110, 160, .80);
+		font-weight:100;
+
+		}
+		
+		}
+	
+	.branding
+		{
+		@include spanner (10, 1000, 0, 5);
+		@include marginizer_left (10, 1000, 0, 1);
+		margin-top:80px;
+		
+			@media screen and (max-width:750px) 
+			{
+			margin:100px 2.5% 0;
+			width:95%;
+			}
+			
+			@media screen and (max-width:600px) 
+			{
+			margin:65px 2.5% 0;
+			width:95%;
+			}
+
+	
+			.hero_logo
+			{
+			background-image:url('../temp_art/logo_trans_bg.png');
+			background-size:cover;		
+			}
+	
+			h1
+			{
+			@include font ($bold, em(20), $dark_gray, 1.3em, none);
+			text-shadow: 0 0 20px rgba(245, 245, 245, 1); 
+			
+			
+				@media screen and (max-width:600px) 
+				{
+				font-size:em(16);
+				min-width:300px;
+				}
+			
+			}
+		
+		.call_to_action
+		{
+		@include button (180px, 40px, 15px, 3px);
+		float:left;
+		margin:0 20px 0 0;
+		
+		}
+		
+		.main_login
+		{
+		@include font ($bold, 14, $red, 2.9em, none);
+		text-shadow: 0 0 20px rgba(245, 245, 245, 1); 
+		}
+		
+	}
+	
+
+	.social
+	{
+	width:100%;
+	max-width:1000px;
+	@include center (0,0);
+	padding-top:10px;
+	color:$dark_gray;
+	@include font ($bold, em(12), $dark_gray, 2em, uppercase);
+	}
+	
+	
+	
+	.hover_show
+		{
+		display:none;
+		}
+	
+	.circle_icon
+	{
+	@include circle (48px);
+	background-color:$red;
+	text-align:center;
 	@include box-sizing(border-box);
-	@include spanner (6, 580, 0, 1);
-	margin:20px 0 0 0;
-	padding:0 10px 0 0;
-	
-	
-	@media screen and (max-width:750px) 
-	{
-	width:100%;
-	}
-	
-	.avatar
-	{
-	width:100%;
-	max-width:60px;
-	margin:0 0 5px 0;
+	@include font ($light, em(22), $white, 1em, none);
+	font-family:$icon;
+	padding:16px 0 0 0;
+	text-shadow: -.1em -.1em 0em rgba(180, 55, 55, 1);	
 	float:right;
+	margin: 0 20px 0 0;
+	@include transition;
+	cursor:pointer;
+	color:$white;
 	
-	@media screen and (max-width:750px) 
+
+		&:hover
+		{
+		
+		.hover_hide
+		{
+		display:none;	
+		}
+		
+		
+		.hover_show
+		{
+		display:inline;
+		}
+		
+		}
+	
+	}
+	
+	.small
 	{
-	max-width:40px;
-	float:left;
-	margin:0 10px 0 0;
-	float:left;
+	@include circle (30px);
+	padding:10px 0 0 0;
+	font-size:em(18);
 	}
 	
-	
-	}
-	
-	.byline
+
+	/* main container */
+
+
+	.main_news_container
 	{
-	@include font ($light, em(11), $light_gray, 1em, none);
-	margin:0 0 5px 0;
-	clear:right;
-	text-align:right;
+	@include spanner (10, 1000, 4, 7);	
+	height:auto;
+	@include box-sizing(border-box);
+	margin-right:2%;
 	
-	@media screen and (max-width:750px) 
-	{
-	font-size:em(14);
-	margin-top:2px;
-	text-align:left;
-	}
-	
-	}
-	
-	.icon
-	{
-	font-size:em(24);
-	line-height:1.1em;
-	letter-spacing: .2em;
-	
-	@media screen and (max-width:800px) 
-	{
-	font-size:em(19);
-	}
-	
-	}
-	
+		@media screen and (max-width:700px) 
+		{
+		width:100%;
+		}
 	}
 	
 	
+	.byline_avatar
+			{
+			position:absolute;
+			top:0px;
+			padding-right:0px;
+			padding:10px 0 0 0;
+			
+				@media screen and (max-width:700px) 
+				{
+				position:static;
+				}
+			}
+		
+			.avatar		
+			{
+				@media screen and (max-width:700px) 
+				{
+				width:35px !important;
+				}
+			}	
+	
+
 	.right_link
 	{
 	float:right;
@@ -132,64 +241,9 @@
 	
 	
 	
-	.social
-	{
-	width:100%;
-	max-width:1000px;
-	@include center (0,0);
-	padding-top:10px;
-	color:$dark_gray;
-	@include font ($bold, em(12), $dark_gray, 2em, uppercase);
-	}
 	
 	
-	.intro
-	{
-	float:left;
-	@include font ($bold, em(16), $dark_gray, 2em, uppercase);
-	margin:10px 15px 0 0;
-	}
-	
-	.hover_show
-		{
-		display:none;
-		}
-	
-	.circle_icon
-	{
-	@include circle (36px);
-	background-color:$white;
-	text-align:center;
-	@include box-sizing(border-box);
-	@include font ($light, em(22), $white, 1em, none);
-	font-family:$icon;
-	padding:11px 0 0 0;
-	text-shadow: .1em .1em .1em rgba(255, 255, 255, 1);	
-	float:right;
-	margin: 0 20px 0 0;
-	@include transition;
-	cursor:pointer;
-	color:$light_gray;
-	
-
-		&:hover
-		{
-		
-		.hover_hide
-		{
-		display:none;	
-		}
-		
-		
-		.hover_show
-		{
-		display:inline;
-		}
-		
-		}
-	
-	}
-	
+	/*activity list */
 	
 	.activity_list
 	{
@@ -233,6 +287,65 @@
 	}	
 	
 	
+	
+	/* right rail */
+	
+	.main_right_rail
+	{
+	@include spanner (10, 1000, 0, 3);	
+	height:auto;
+	@include box-sizing(border-box);
+	padding:0px 0 0 20px;
+	float:left;
+	
+		@media screen and (max-width:700px) 
+		{
+		width:100%;
+		padding:0 10px;
+		}
+	}
+	
+	
+	.main_about_us
+	{
+	width:100%;
+	height:auto;
+	@include box-sizing(border-box);
+		
+		h4
+		{
+		color:$red;
+		clear:right;
+		}
+		
+		
+		p
+		{
+		color:$dark_gray;
+		
+			a
+			{
+			color:$dark_gray;
+			@include transition;
+			
+			&:hover
+			{
+			color:$red;
+			}
+			
+			}
+		
+		}
+	
+		h6
+		{
+		clear:both;
+		}
+
+	}	
+	
+
+	
 .footer
 	{
 	width:100%;
@@ -241,8 +354,248 @@
 	background-color:$dark_background;	
 	}
 	
+
+
+/* toolbox */
+
+.toolbox
+	{
+	width:100%;
+	@include spanner (10, 1000, 0, 10);	
+	@include center (0,0);	
+	position:fixed;
+	bottom:0px;
+	background-color:rgba(220,220,220,0.9);
+	padding:0px 10px;
+	
+		.double_rule
+			{
+			margin:0px 0px 0px;
+			border-bottom:1px solid #d2d2d2;
+			border-top:1px solid $white;
+			width:105%;
+			margin-left:-10px;
+			}
+	
+		.toolbox_inside
+		{
+		@include spanner (10, 1000, 0, 10);
+		@include center (0,0);
+		max-width:1000px;
+		position:relative;
+		}
+
+
+		.toolbox_hide
+		{
+		@include spanner (10, 1000, 0, .5);	
+		@include box-sizing(border-box);
+		float:right;
+		text-align:center;
+		padding-top:10px;
+		font-size:em(20);
+		color:$light_gray;
+		text-shadow:.09em .09em .2em  $background;
+		cursor:pointer;
+		
+			@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 1);
+				float:right;
+				padding:5px 0 0 0;
+				}	
+		
+			.toolbox_icon
+			{
+			display:none;
+			font-size:em(18);
+			}
+		
+			.toolbox_close_icon
+			{
+			display:block;	
+			}
+		
+		
+		}
+
+		.toolbox_intro
+		{
+		@include spanner (10, 1000, 0, 2.5);
+		padding:0px 0 0px 0;
+		
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 9);	
+				}		
+		
+		
+			.counter
+			{
+			width:24px;
+			height:24px;
+			float:left;
+			background-image:url('../temp_art/sunburst_bg.png');
+			background-repeat: no-repeat;
+			background-size: 24px;
+			background-position: left top;
+			text-align:center;
+			@include box-sizing(border-box);
+			@include font ($light, em(12), $white, 1.3em, none);
+			display:inline-block;
+			padding:6px 0 0 0px;
+			margin:-4px 3px 0 0;
+			}
+		
+		
+			h4
+			{
+			@include font ($bold, em(14), $dark_gray, 1.2em, none);
+			margin:3px 5px 0 0;
+			padding:16px 0 0;
+				&:after
+				{
+				content:'\f0a9';
+				font-family:$icon;
+				margin:0 0 0 3px;
+				color:$light_gray;
+				}
+			
+			
+				@media screen and (max-width:600px) 
+				{
+				padding:5px 0 0;
+				}
+			
+			
+			}
+		
+		
+		}
+		
+		.toolbox_menu
+		{
+		list-style-type:none;
+		padding:0px;
+		margin:0px;
+		border-left:1px solid $white;
+		border-right:1px solid #d2d2d2;
+		@include spanner (10, 1000, 0, 7);	
+		
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 10);
+				border:0px;
+				}	
+			
+			li
+			{
+			@include spanner (5, 598, 0, 1);	
+			text-align:center;
+			padding:5px 10px 6px;
+			@include font ($light, em(12), $red, 1em, none);
+			border-left:1px solid #d2d2d2;
+			border-right:1px solid $white;
+			@include box-sizing(border-box);
+			@include transition;
+			
+					&:first-child
+					{
+						@media screen and (max-width:500px) 
+						{	
+						border-left:0px;
+						}
+
+					}
+					
+					&:nth-child(5)
+					{
+						@media screen and (max-width:500px) 
+						{	
+						border-right:0px;
+						}
+					}
+					
+				@media screen and (max-width:500px) 
+					{
+					font-size:em(9);
+					margin:5px 0;
+					padding:3px 3px 3px;
+					min-height:38px;
+			
+					}
+				
+				&:hover
+				{
+				color:$red;
+				background-color:rgba(255,255,255,0.3);
+				border-left:1px solid transparent;
+				
+					.icon
+					{
+					color:$red;
+					text-shadow:none;
+					}
+				}
+				
+				.icon
+				{
+				font-size:em(26);
+				color:$light_gray;
+				line-height:1em;
+				margin:2px 0px 2px 0;
+				text-shadow:.09em .09em .2em  $background;
+				@include transition;			
+				}
+				
+					
+			}
+		
+		}
 	
 	
+	}
+	
+
+.toolbox_minimized
+	{
+	height:0px;
+
+		.toolbox_minimized_tab
+		{
+		height:45px;
+		width:45px;
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		@include marginizer_left (10, 1000, 0, 7.5);
+		background-color:$silver;
+		border-top:1px solid $white;
+		border-left:1px solid $white;
+		border-right:1px solid $silver;
+		border-bottom:0px;
+		border-top-left-radius:4px;
+		border-top-right-radius:4px;
+		text-shadow:.09em .09em .2em  $white;
+		display:block !important;
+
+		
+			.toolbox_icon
+			{
+			display:block;
+			font-size:em(16);
+			color:$red;
+			}
+		
+			.toolbox_close_icon
+			{
+			display:none;	
+			}
+		
+		
+		}	
+	
+	}
 	
 #select
 	{
@@ -272,25 +625,24 @@
 	
 .button
 	{
-	@include button (120px, 34px, 11px, 2px);
-	@include font ($medium, em(14), $white, 100%, none);
+	@include button (120px, 38px, 13px, 2px);
+	@include font ($light, em(13), $white, 100%, none);
 	background-color:$red;
 	box-sizing:border-box;
 	@include transition;
 	
-	&:hover
-	{
-	background-color:$light_gray;
-	color:$white;
-	}
-	
+		&:hover
+		{
+		background-color:$light_gray;
+		color:$white;
+		}
 	
 	}
 
 
 .small_button
 	{
-	@include button (90px, 22px, 6px, 2px);
+	@include button (96px, 24px, 6px, 2px);
 	@include font ($light, em(12), $white, 100%, none);
 	background-color:$red;
 	font-family:$sans;
@@ -307,28 +659,74 @@
 	}
 	
 	
-.small_button_white
+	.donate
 	{
-	text-indent:0px;
-	margin:5px 0 0 0;
-	font-size:em(14);
-	border:1px dotted $white;
-	background-color:$white;
-	color:$red;
-	padding-top:5px;
-	@include transition;
-	clear:both;
-	
-		&:hover
+		&:before
 		{
-		border:1px solid $red;
+		content:' \f155';
+		font-family:$icon;
+		margin-right:5px;
+		@include circle (16px);
+		display:inline-block;
 		background-color:$white;
 		color:$red;
+		padding-top:3px;
+		text-align:center;
 		}
 	
+	}
 	
-	}	
 	
+	.support
+	{
+		&:before
+		{
+		content:' \f062';
+		font-family:$icon;
+		margin-right:5px;
+		@include circle (16px);
+		display:inline-block;
+		background-color:$white;
+		color:$red;
+		padding-top:3px;
+		text-align:center;
+		}
+	
+	}
+	
+	.fork
+	{
+		&:after
+		{
+		content:' \f126';
+		font-family:$icon;
+		display:inline-block;
+		margin-left:5px;
+		}
+	}
+	
+	
+		.follow
+	{
+		&:after
+		{
+		content:' \f05d';
+		font-family:$icon;
+		display:inline-block;
+		margin-left:5px;
+		}
+	}
+
+	
+	
+	
+	.double_rule
+	{
+	height:0px;
+	border-bottom:1px solid $white;
+	border-top:1px solid $silver;
+	}
+
 	
 .cloner_container
 {
@@ -457,11 +855,11 @@ border:1px solid red;
 	
 	@media screen and (max-width:800px) 
 		{	
-		width:45px;
-		height:45px;
+		width:30px;
+		height:30px;
 		left:3%;
-		top:20px;
-		background-color:rgba(253,253,245,.9);
+		top:10px;
+		background-color:rgba(255,255,255,.9);
 		@include rounded;
 		}
 	
@@ -523,355 +921,6 @@ border:1px solid red;
 	}
 	
 	}
-	
-
-	
-	
-	#grid_container
-	{
-	width:100%;
-	padding:0 40px;
-	@include box-sizing(border-box);
-	
-	@media screen and (max-width:700px) 
-	{
-	padding:0px 10px;
-	}
-	
-	}
-
-	#grid
-	{
-	width:100%;
-	max-width:1000px;
-	height:auto;
-	@include center (40px,40px);
-	clear:all;
-	
-	ul
-	{
-	width:100%;
-	height:auto;
-	border-bottom:1px solid $silver;
-	list-style-type:none;
-	clear:all;
-	padding:0px;
-
-	@include font ($medium, .85em, $dark_gray, 1.2em, none);
-
-	li
-	{
-	margin-top:0px !important;
-	word-wrap: break-word;
-	font-weight:$regular;
-	float:left;
-	padding:0px 0 10px 0 !important;			
-	@include box-sizing(border-box);
-	
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, 5);	
-	}
-
-	
-	span
-	{
-/*
-	@include hide_show (700px,inline-block);
-*/	
-	color:$light_gray;
-	font-weight:$medium;
-	font-size:.8em;
-	text-transform:uppercase;
-	width:60px;
-	display:block;
-	
-	@media screen and (max-width:700px) 
-	{
-	display:inline-block;
-	}
-	
-	}
-
-	&:nth-child(1)
-	{
-	font-weight:$medium;
-	font-size:1.2em;
-	padding-right:10px !important;
-	padding-bottom:15px !important;
-	}
-
-
-	&:nth-child(2)
-	{
-	padding:0 10px 0 0;
-	padding-right:10px !important;
-	}
-
-
-	&:nth-child(6)
-	{
-	margin-right:0px;
-	
-	@media screen and (max-width:700px) 
-	{
-	padding-bottom:10px !important;
-	}
-	
-	}
-	
-	.small_button
-	{
-	max-width:65px !important;
-	float:right;
-	
-	@media screen and (max-width:700px) 
-	{
-	float:left;
-	margin-top:5px;
-	}
-	
-	
-	
-	&:before
-	{
-	content:'\f087';
-	font-family:$icon;
-	margin:0 3px 0 0px;
-	color:$white;
-	@media screen and (max-width:500px) 
-	{
-	display:none;
-	}
-
-	}
-	
-	&:after
-	{
-	
-	@media screen and (max-width:500px) 
-	{
-	content:'\f087';
-	font-family:$icon;
-	margin:0px 0px 0 3px;
-	color:$white;
-	}
-	
-	}	
-	}
-	}
-
-	.select
-	{
-	float:left;
-	border:1px solid red;
-	}
-	
-	
-	.half
-	{
-	@include spanner (10, 1000, 5, .5);	
-	}
-	
-	
-	.one
-	{
-	@include spanner (10, 1000, 5, 1);	
-	}
-	
-	.two
-	{
-	@include spanner (10, 1000, 5, 2);	
-	}
-	
-	.three
-	{
-	@include spanner (10, 1000, 5, 3);	
-	}	
-	
-	
-	.four
-	{
-	@include spanner (10, 1000, 5, 4);	
-	}		
-	
-	
-	.full_width
-	{
-	@include spanner (10, 1000, 5, 10);	
-	}	
-	
-	
-	/*
-	.half
-	{
-	@include spanner (10, 1000, 5, .5);	
-	@include box-sizing(border-box);
-	
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, .5);	
-	}
-	
-	}
-	
-	.one
-	{
-	@include spanner (10, 1000, 5, 1);	
-	@include box-sizing(border-box);
-
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, 5);
-	}
-	
-	
-	}
-	
-	
-	
-	.two
-	{
-	@include spanner (10, 1000, 5, 2);	
-	@include box-sizing(border-box);
-	
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, 4.5);	
-	}
-	
-	}
-	
-	
-	.two_quarter
-	{
-	@include spanner (10, 1000, 5, 2.25);	
-	@include box-sizing(border-box);
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, 5);	
-	}
-	}
-	
-	.three_half
-	{
-	@include spanner (10, 1000, 5, 3.5);	
-	@include box-sizing(border-box);
-	}	
-	
-	.four
-	{
-	@include spanner (10, 1000, 5, 10);	
-	@include box-sizing(border-box);
-	
-	@media screen and (max-width:700px) 
-	{
-	@include spanner (5, 1000, 5, 5);	
-	}	
-	
-	
-	*/
-	
-	}	
-
-	.status_icon
-	{
-	font-family:$icon;
-	color:$dark_gray;
-	font-size:1.25em;
-	line-height:1.25em;
-	text-align:center;
-	
-	@media screen and (max-width:700px) 
-	{
-	font-size:1.75em;
-	line-height:.65em;
-	}
-	
-	}
-
-	
-	.downloaded
-	{
-	&:after
-	{
-	content:' \f15b';
-	color:$green;
-	}
-	}
-
-
-	.waiting
-	{
-	&:after
-	{
-	content:' \f017';
-	color:$dark_gray;
-	}
-	}	
-	
-	
-	.rejected
-	{
-	&:after
-	{
-	content:' \f06a';
-	color:$red;
-	}
-	}	
-	
-	
-	/*
-	.more
-	{
-	text-align:right !important;
-	&:after
-	{
-	content:' \f055';
-	font-family:$icon;
-	margin:0 0 0 3px;
-	color:$light_gray;
-	}
-	}
-	
-	*/
-	
-	.draft
-	{
-	&:after
-	{
-	content:' \f040';
-	font-family:$icon;
-	margin:0 0 0 3px;
-	}
-	}
-	
-	
-	}
-	
-	.overline
-	{
-	padding:0px 0 5px 0;
-	border:0px;
-	display:none;
-	
-	@media screen and (max-width:700px) 
-	{
-	display:none;
-	}
-	
-	li
-	{
-	color:$light_gray;
-	font-weight:$medium !important;
-	font-size:.8em;
-	text-transform:uppercase;
-	padding:0px !important;
-	}
-	
-	
-	}
-	
 	
 	
 	.versitile_grid
