@@ -151,6 +151,7 @@
 			h3
 			{
 			color:$red;
+			margin:0 0 20px 0;
 			
 				span
 				{
@@ -163,6 +164,17 @@
 		{
 		margin:0 0 5px 0;
 		clear:left;
+		font-weight:$bold;
+		
+			&:before
+			{
+			content:'\f054 ';
+			color:$red;	
+			font-family:icon;
+			display:inline-block;
+			margin:0 10px 0 0;
+			}
+		
 		}
 			
 		.request_title
@@ -182,6 +194,12 @@
 		{
 		width:50%;
 		margin:0 0 30px 0;
+		
+			@media screen and (max-width:500px) 
+			{
+			width:100%;
+			}
+		
 		}
 		
 		.right_link
@@ -229,7 +247,7 @@
 	
 		.request_government_picker
 		{
-		@include spanner (4, 674, 0,4);	
+		@include spanner (4, 674.797, 0, 4);	
 		@include box-sizing(border-box);
 		padding:0px;
 		list-style-type:none;
@@ -237,12 +255,51 @@
 		
 			li
 			{
-			@include spanner (4, 674, 10, 1);	
-			margin:0px 10px 0 0;
+			@include spanner (4, 674.797, 10, 1);	
+			
 			padding:13px 0;
 			text-align:center;
 			background-color:$light_gray;
 			@include font ($light, em(14), $white, 1em, none);
+			border:0px;
+			
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (2, 674.797, 10, 1);	
+				
+				
+					&:first-child
+					{
+					border-top-left-radius:3px;
+					border-bottom-left-radius:0px  !important;
+					margin-bottom:6px;
+					}
+				
+					&:nth-child(2)
+					{
+					border-top-right-radius:3px;
+					margin-bottom:8px;
+					margin-right:0px;
+					}
+				
+					
+					&:nth-child(3)
+					{
+					border-bottom-left-radius:3px;
+					}
+					
+					
+					&:nth-child(4)
+					{
+					border-bottom-right-radius:3px;
+					border-top-right-radius:0px  !important;
+
+					}					
+				
+					
+				
+				}
+			
 			
 					&:first-child
 					{
