@@ -1,0 +1,1252 @@
+
+/* main content containers */
+
+
+.container
+	{
+	width:100%;
+	max-width:1000px;
+	margin:50px auto;
+	
+	}
+	
+	
+.content_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	max-width:1000px;
+	@include center (0,0);	
+	@include box-sizing(border-box);
+	
+	@media screen and (max-width:1040px) 
+	{
+	width:95%;
+	margin-left:2.5%;
+	margin-right:2.5%;	
+	}
+	
+	@media screen and (max-width:700px) 
+	{
+	width:95%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	}
+	
+	}	
+
+
+
+/* header */
+
+
+.hero
+	{
+	width:100%;
+	max-width:1200px;
+	background-image:url('../temp_art/letter.png');
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	margin:0 auto 30px;
+	background-position: center 0px;
+	
+	
+	
+		.icon
+		{
+		display:inline-block;
+		margin:-3px 5px 0 0;
+		font-size:em(16);
+		text-shadow: 0 0 0px rgba(80, 110, 160, .80);
+		font-weight:100;
+
+		}
+		
+		}
+	
+	.branding
+		{
+		@include spanner (10, 1000, 0, 5);
+		@include marginizer_left (10, 1000, 0, 1);
+		margin-top:80px;
+		
+			@media screen and (max-width:750px) 
+			{
+			margin:100px 2.5% 0;
+			width:95%;
+			}
+			
+			@media screen and (max-width:600px) 
+			{
+			margin:65px 2.5% 0;
+			width:95%;
+			}
+
+	
+			.hero_logo
+			{
+			background-image:url('../temp_art/logo_trans_bg.png');
+			background-size:cover;		
+			}
+	
+			h1
+			{
+			@include font ($bold, em(20), $dark_gray, 1.3em, none);
+			text-shadow: 0 0 20px rgba(245, 245, 245, 1); 
+			
+			
+				@media screen and (max-width:600px) 
+				{
+				font-size:em(16);
+				min-width:300px;
+				}
+			
+			}
+		
+		.call_to_action
+		{
+		@include button (180px, 40px, 15px, 3px);
+		float:left;
+		margin:0 20px 0 0;
+		
+		}
+		
+		.main_login
+		{
+		@include font ($bold, 14, $red, 2.9em, none);
+		text-shadow: 0 0 20px rgba(245, 245, 245, 1); 
+		}
+		
+	}
+	
+
+	.social
+	{
+	width:100%;
+	max-width:1000px;
+	@include center (0,0);
+	padding-top:10px;
+	color:$dark_gray;
+	@include font ($bold, em(12), $dark_gray, 2em, uppercase);
+	}
+	
+	
+	
+	.hover_show
+		{
+		display:none;
+		}
+	
+	.circle_icon
+	{
+	@include circle (48px);
+	background-color:$red;
+	text-align:center;
+	@include box-sizing(border-box);
+	@include font ($light, em(22), $white, 1em, none);
+	font-family:$icon;
+	padding:16px 0 0 0;
+	text-shadow: -.1em -.1em 0em rgba(180, 55, 55, 1);	
+	float:right;
+	margin: 0 20px 0 0;
+	@include transition;
+	cursor:pointer;
+	color:$white;
+	
+
+		&:hover
+		{
+		
+		.hover_hide
+		{
+		display:none;	
+		}
+		
+		
+		.hover_show
+		{
+		display:inline;
+		}
+		
+		}
+	
+	}
+	
+	.small
+	{
+	@include circle (30px);
+	padding:10px 0 0 0;
+	font-size:em(18);
+	}
+	
+
+	/* main container */
+
+
+	.main_news_container
+	{
+	@include spanner (10, 1000, 4, 7);	
+	height:auto;
+	@include box-sizing(border-box);
+	margin-right:2%;
+	
+		@media screen and (max-width:750px) 
+		{
+		width:100%;
+		}
+	}
+	
+	
+	.byline_avatar
+			{
+			position:absolute;
+			top:0px;
+			padding-right:0px;
+			padding:10px 0 0 0;
+			
+				@media screen and (max-width:700px) 
+				{
+				position:static;
+				}
+			}
+		
+			.avatar		
+			{
+				@media screen and (max-width:700px) 
+				{
+				width:35px !important;
+				}
+			}	
+	
+
+	.right_link
+	{
+	float:right;
+	margin:0px 0 20px 0;
+	font-size:em(14);
+	color:$dark_gray;
+		&:after
+		{
+		content:' \f0a9';
+		font-family:$icon;
+		color:inherit;
+		display:inline-block;
+		margin-left:5px;
+		font-size:em(18);
+		padding:0px 0 0 0;
+		}
+	
+	
+	}
+	
+	
+	
+	
+	
+	/*activity list */
+	
+	.activity_list
+	{
+	width:100%;
+	height:400px;
+	border-top:5px solid $blue;
+	padding-top:40px;
+	@include font ($light, em(14), $dark_gray, 1.5em, none);
+	
+		.activity_list_items
+		{
+		width:100%;
+		height:auto;
+		margin:10px 0 0;
+		padding:0px;
+
+				.activity_list_avatar
+				{
+				width:40px;
+				float:right;
+				margin:5px 0px 0 8px;
+				
+				}
+				
+			
+				dd
+				{
+				@include font ($light, em(16), $dark_gray, 1.2em, none);
+				margin:0px 0 20px 0px;
+				line-height:1.5em;
+				padding:0px;					
+				}
+				
+				h7
+				{
+				font-size:em(14) !important;
+				}
+		
+		}
+		
+	}	
+	
+	
+	
+	/* right rail */
+	
+	.main_right_rail
+	{
+	@include spanner (10, 1000, 0, 3);	
+	height:auto;
+	@include box-sizing(border-box);
+	padding:0px 0 0 20px;
+	float:left;
+	
+		@media screen and (max-width:700px) 
+		{
+		width:100%;
+		padding:0 10px;
+		}
+	}
+	
+	
+	.main_about_us
+	{
+	width:100%;
+	height:auto;
+	@include box-sizing(border-box);
+		
+		h4
+		{
+		color:$red;
+		clear:right;
+		}
+		
+		
+		p
+		{
+		color:$dark_gray;
+		
+			a
+			{
+			color:$dark_gray;
+			@include transition;
+			
+			&:hover
+			{
+			color:$red;
+			}
+			
+			}
+		
+		}
+	
+		h6
+		{
+		clear:both;
+		}
+
+	}	
+	
+
+	
+.footer
+	{
+	width:100%;
+	height:200px;
+	margin:40px 0 0 0;
+	background-color:$dark_background;	
+	}
+	
+
+
+/* toolbox */
+
+.toolbox
+	{
+	width:100%;
+	@include spanner (10, 1000, 0, 10);	
+	@include center (0,0);	
+	position:fixed;
+	bottom:0px;
+	background-color:rgba(220,220,220,0.9);
+	padding:0px 10px;
+	
+		.double_rule
+			{
+			margin:0px 0px 0px;
+			border-bottom:1px solid #d2d2d2;
+			border-top:1px solid $white;
+			width:105%;
+			margin-left:-10px;
+			}
+	
+		.toolbox_inside
+		{
+		@include spanner (10, 1000, 0, 10);
+		@include center (0,0);
+		max-width:1000px;
+		position:relative;
+		}
+
+
+		.toolbox_hide
+		{
+		@include spanner (10, 1000, 0, .5);	
+		@include box-sizing(border-box);
+		float:right;
+		text-align:center;
+		padding-top:10px;
+		font-size:em(20);
+		color:$light_gray;
+		text-shadow:.09em .09em .2em  $background;
+		cursor:pointer;
+		
+			@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 1);
+				float:right;
+				padding:5px 0 0 0;
+				}	
+		
+			.toolbox_icon
+			{
+			display:none;
+			font-size:em(18);
+			}
+		
+			.toolbox_close_icon
+			{
+			display:block;	
+			}
+		
+		
+		}
+
+		.toolbox_intro
+		{
+		@include spanner (10, 1000, 0, 2.5);
+		padding:0px 0 0px 0;
+		
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 9);	
+				}		
+		
+		
+			.counter
+			{
+			width:24px;
+			height:24px;
+			float:left;
+			background-image:url('../temp_art/sunburst_bg.png');
+			background-repeat: no-repeat;
+			background-size: 24px;
+			background-position: left top;
+			text-align:center;
+			@include box-sizing(border-box);
+			@include font ($light, em(12), $white, 1.3em, none);
+			display:inline-block;
+			padding:6px 0 0 0px;
+			margin:-4px 3px 0 0;
+			}
+		
+		
+			h4
+			{
+			@include font ($bold, em(14), $dark_gray, 1.2em, none);
+			margin:3px 5px 0 0;
+			padding:16px 0 0;
+				&:after
+				{
+				content:'\f0a9';
+				font-family:$icon;
+				margin:0 0 0 3px;
+				color:$light_gray;
+				}
+			
+			
+				@media screen and (max-width:600px) 
+				{
+				padding:5px 0 0;
+				}
+			
+			
+			}
+		
+		
+		}
+		
+		
+		/* toolbox */
+		
+		.toolbox_menu
+		{
+		list-style-type:none;
+		padding:0px;
+		margin:0px;
+		border-left:1px solid $white;
+		border-right:1px solid #d2d2d2;
+		@include spanner (10, 1000, 0, 7);	
+		
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (10, 1000, 0, 10);
+				border:0px;
+				}	
+			
+			li
+			{
+			@include spanner (5, 598, 0, 1);	
+			text-align:center;
+			padding:5px 10px 6px;
+			@include font ($light, em(12), $red, 1em, none);
+			border-left:1px solid #d2d2d2;
+			border-right:1px solid $white;
+			@include box-sizing(border-box);
+			@include transition;
+			
+					&:first-child
+					{
+						@media screen and (max-width:500px) 
+						{	
+						border-left:0px;
+						}
+
+					}
+					
+					&:nth-child(5)
+					{
+						@media screen and (max-width:500px) 
+						{	
+						border-right:0px;
+						}
+					}
+					
+				@media screen and (max-width:500px) 
+					{
+					font-size:em(9);
+					margin:5px 0;
+					padding:3px 3px 3px;
+					min-height:38px;
+			
+					}
+				
+				&:hover
+				{
+				color:$red;
+				background-color:rgba(255,255,255,0.3);
+				border-left:1px solid transparent;
+				
+					.icon
+					{
+					color:$red;
+					text-shadow:none;
+					}
+				}
+				
+				.icon
+				{
+				font-size:em(26);
+				color:$light_gray;
+				line-height:1em;
+				margin:2px 0px 2px 0;
+				text-shadow:.09em .09em .2em  $background;
+				@include transition;			
+				}
+				
+					
+			}
+		
+		}
+	
+	
+	}
+	
+
+.toolbox_minimized
+	{
+	height:0px;
+
+		.toolbox_minimized_tab
+		{
+		height:45px;
+		width:45px;
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		@include marginizer_left (10, 1000, 0, 7.5);
+		background-color:$silver;
+		border-top:1px solid $white;
+		border-left:1px solid $white;
+		border-right:1px solid $silver;
+		border-bottom:0px;
+		border-top-left-radius:4px;
+		border-top-right-radius:4px;
+		text-shadow:.09em .09em .2em  $white;
+		display:block !important;
+
+		
+			.toolbox_icon
+			{
+			display:block;
+			font-size:em(16);
+			color:$red;
+			}
+		
+			.toolbox_close_icon
+			{
+			display:none;	
+			}
+		
+		
+		}	
+	
+	}
+	
+	
+/* paginate numbers */
+
+.paginate_numbers
+	{
+	@include font ($bold, em(12), $light_gray, 1em, uppercase);
+	@include spanner (6, 632.797, 0, 4);
+	float:right;
+	text-align:right;
+	margin:20px 0 0 0;
+	padding:0px;
+	clear:left;
+	max-width:450px;
+
+		@media screen and (max-width:500px) 
+		{
+		@include spanner (6, 632.797, 0, 6);
+		float:right;
+		margin:20px 0 0 0;
+		}
+	
+		dd
+		{
+		@include spanner (6, 632.797, 20, 1);
+		display:inline-block;
+		padding:6px 0px;
+		border:1px solid $silver;
+		@include rounded;
+		text-align:center;
+		cursor:pointer;
+		@include transition;
+			&:nth-child(6)
+			{
+			margin-right: 0px;		
+			}
+		
+			&:hover
+			{
+			color:$white;
+			border:1px solid $light_gray;
+			color:$dark_gray;
+				
+			
+			}
+		
+		}
+	
+	
+		.active
+		{
+		color:$dark_gray;
+		border-color:$light_gray;	
+		}
+	
+	}
+	
+	
+	
+.selector
+	{
+	width:300px;
+	height:40px;
+	@include font ($light, em(14), $dark_gray, 125%, none);
+	background:transparent;
+	border:1px solid red;
+	@include rounded;
+    background: $silver;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    padding:5px 15px;
+	box-sizing:border-box;
+	background-image:url('../temp_art/arrow.png');
+	background-repeat:no-repeat;
+	background-position:95% -12px;
+	background-size:24px;
+	@include text_transition;
+	margin:0 0 20px 0;
+	
+	&:disabled
+	{
+	background-color:$silver;
+	background-image:url('../temp_art/subtle_stripes_@2X.png');
+	background-repeat:repeat;
+	background-size:3px;
+	color:$silver;
+	border:1px solid $silver;	
+	}
+	
+	
+	}
+	
+	.inactive_selector
+	{
+	background-color:$silver;
+	background-image:url('../temp_art/subtle_stripes_@2X.png');
+	background-repeat:repeat;
+	background-size:3px;
+	color:$silver;
+	border:1px solid $silver;
+	}
+	
+	
+.button
+	{
+	@include button (120px, 38px, 13px, 2px);
+	@include font ($light, em(13), $white, 100%, none);
+	background-color:$red;
+	box-sizing:border-box;
+	@include transition;
+	
+		&:hover
+		{
+		background-color:$light_gray;
+		color:$white;
+		}
+	
+	}
+
+
+	.gray_button
+	{
+	background-color:$light_gray;
+	
+		&:hover
+		{
+		background-color:$silver;
+		}
+		
+	}
+
+.small_button
+	{
+	@include button (96px, 24px, 6px, 2px);
+	@include font ($light, em(12), $white, 100%, none);
+	background-color:$red;
+	font-family:$sans;
+	box-sizing:border-box;
+	@include transition;
+	text-align:center;
+	
+	&:hover
+	{
+	background-color:$light_gray;
+	}
+	
+	
+	}
+	
+	
+	.donate
+	{
+		&:before
+		{
+		content:' \f155';
+		font-family:$icon;
+		margin-right:5px;
+		@include circle (16px);
+		display:inline-block;
+		background-color:$white;
+		color:$red;
+		padding-top:3px;
+		text-align:center;
+		}
+	
+	}
+	
+	
+	.support
+	{
+		&:before
+		{
+		content:' \f062';
+		font-family:$icon;
+		margin-right:5px;
+		@include circle (16px);
+		display:inline-block;
+		background-color:$white;
+		color:$red;
+		padding-top:3px;
+		text-align:center;
+		}
+	
+	}
+	
+	.fork
+	{
+		&:after
+		{
+		content:' \f126';
+		font-family:$icon;
+		display:inline-block;
+		margin-left:5px;
+		}
+	}
+	
+	
+		.follow
+	{
+		&:after
+		{
+		content:' \f05d';
+		font-family:$icon;
+		display:inline-block;
+		margin-left:5px;
+		}
+	}
+
+	
+	
+	
+	.double_rule
+	{
+	height:0px;
+	border-bottom:1px solid $white;
+	border-top:1px solid $silver;
+	}
+
+	
+.cloner_container
+{
+width:100%;
+max-width:1000px;
+height:auto;
+border:1px solid red;
+
+
+
+.cloner
+	{
+	@include spanner (10, 1000, 10, 1);	
+	height:auto;
+	border:0px solid red;
+	font-size:.7em;
+	text-transform:uppercase;
+	text-align:center;	
+	font-weight:$bold;
+	color:$light_gray;
+	min-width:85px;
+	@include transition;
+
+	&:hover
+	{
+	color:$red;
+	}
+	
+.selector
+	{
+	
+	&:after
+	{
+	content:' \f126';
+	font-family:$icon;
+	margin:0 0 0 3px;
+	color:$red;
+	}
+	
+	}
+
+
+.clone_chatter
+	{
+	font-size:1.1em;
+	font-weight:$regular;
+	text-transform:none;
+	}
+		
+.doc_icon
+	{
+	width:100%;
+	height:90px;
+	border:0px solid blue;
+	overflow:hidden;
+	background-color:$red;
+	border-radius:3px;
+	
+	
+	img
+	{
+	width:100%;
+	margin:0px 0 0 0;
+	transition: all .1s ease-in-out;	
+
+	&:hover
+	{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	
+	}
+	
+	
+	}
+	
+	}	
+	
+	
+	} /*end cloner */
+	
+	} /* end cloner container */
+	
+	
+	
+	
+	input, textarea
+	{
+	@include font ($light, em(14), $dark_gray, 1.5em, none);
+	box-sizing:border-box;
+	border:1px solid $silver;
+	border-radius:3px;
+	padding:10px 18px;
+	@include transition;
+	
+	&:hover
+	{
+	border:1px solid $silver;
+	}
+	
+	&:focus
+	{
+	background-color:$yellow;
+	color:$dark_gray !important;
+	}
+	
+	&:active
+	{
+	background-color:$yellow;
+	color:$dark_gray !important;
+	}
+	
+	
+	}
+	
+	
+#menu
+	{
+	height:28px;
+	background-color:#fff;
+	position:fixed;
+	top:-28px;
+	left:0px;
+	width:100%;
+	
+	@media screen and (max-width:800px) 
+		{	
+		width:30px;
+		height:30px;
+		left:3%;
+		top:10px;
+		background-color:rgba(255,255,255,.9);
+		@include rounded;
+		}
+	
+	.menu_inside
+	{
+	width:100%;
+	max-width:$max_width;
+	height:22px;
+	border:0px solid blue;
+	margin:0px auto;
+
+	
+	.menu_icon
+	{
+	@include font (100, 2em, $light_gray, 1.5em, none);
+	font-family:$icon;
+	text-align:center;
+	margin:0px;
+	display:none;
+	}
+	
+	}
+	}
+	
+
+	/* universal navigation */
+	.top_navigation
+	{
+	@include spanner (10, 1000, 0, 10);
+	@include center (0,0);	
+	max-width:1000px;
+	}
+	
+	.site_navigation
+	{
+	@include font ($bold, .8em, $light_gray, 1em, uppercase);
+	list-style-type:none;
+	margin:9px 0;
+	padding:0px;
+	
+		@media screen and (max-width:800px) 
+		{	
+		display:none;	
+		}
+	
+	
+	li
+	{
+	float:left;
+	text-align:center;
+	@include spanner (6, 1000, 0, 1);
+	
+	span
+	{
+	color:$red;
+	}
+	
+	
+	}
+	
+	}
+	
+	
+	.versitile_grid
+	{
+	max-width:$max_width;
+	width:100%;
+	border:1px solid red;
+	height:1000px;
+	margin:40px auto;
+	clear:both;
+	
+	
+		h4 
+		{
+		color:$medium_gray;	
+		margin:0 0 5px 0;
+		
+				@media screen and (max-width:700px) 
+				{
+				margin-left:7%;
+				}
+				
+			@media screen and (max-width:500px) 
+			{
+			padding: 0 0 0 2%;
+			}
+		
+		}
+	
+		.selector_box
+		{
+		float:left;
+		@include spanner (10, 1000, 0, .35);	
+		border:0px solid red;
+		@include box-sizing(border-box);
+		height:24px;
+		
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, .35);
+				}
+		
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, .45);	
+				}
+		
+				input[type=checkbox] 
+				{
+				padding-left:5px;
+				padding-right:5px;
+				border-radius:2px;
+				background-color:#fff;
+				border:2px solid $silver;
+				-webkit-appearance:button;
+				transition-property: border-color;
+				transition-duration: .07s;
+				transition-timing-function: ease-in-out;	
+				color:#FFF;
+				white-space: nowrap;
+				overflow:hidden;
+				width:20px;
+				height:20px;
+				margin:4px 0 0 0;
+				}
+
+				input[type=checkbox]:checked 
+				{
+				background-color:#fff;
+				background-position:0px 0px;
+				background-image:url(../temp_art/image_sprite.png);
+				background-repeat:no-repeat;
+				}
+
+				input[type=checkbox]:hover 
+				{
+				border-color:$light_gray;
+				}
+				
+		}		
+	
+	
+		ul
+		{
+		width:100%;
+		max-width:950px;
+		height:auto;
+		list-style-type:none;
+		clear:all;
+		padding: 0 0 0 3.5%;
+		margin:0px 0 10px 0;
+		border-bottom:1px solid $silver;
+		@include font ($medium, .85em, $dark_gray, 1.2em, none);
+		
+			@media screen and (max-width:700px) 
+			{
+			padding: 0 0 0 7%;
+			}
+			
+			@media screen and (max-width:500px) 
+			{
+			padding: 0 0 0 9%;
+			}
+			
+			
+			li
+			{
+			margin-top:0px !important;
+			word-wrap: break-word;
+			font-weight:$regular;
+			@include box-sizing(border-box);
+			float:left;
+			padding:0 10px 10px 0;
+			}
+
+			.half
+			{
+			@include spanner (10, 1000, 0, .5);	
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, .5);
+				}
+			
+			}
+	
+	
+			.one
+			{
+			@include spanner (10, 1000, 0, 1);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 1);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+	
+			.two
+			{
+			@include spanner (10, 1000, 0, 2);
+				
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 2);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+			
+			
+			.two_half
+			{
+			@include spanner (10, 1000, 0, 2.5);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 2.5);
+				}
+				
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}
+	
+			.three
+			{
+			@include spanner (10, 1000, 0, 3);
+			
+				@media screen and (max-width:700px) 
+				{
+				@include spanner (5, 650, 0, 3);
+				}
+			
+				@media screen and (max-width:500px) 
+				{
+				@include spanner (5, 500, 0, 5);	
+				}
+			
+			}	
+	
+	
+			.four
+			{
+			@include spanner (10, 1000, 0, 4);	
+			}		
+	
+	
+			.full_width
+			{
+			@include spanner (10, 1000, 0, 10);	
+			}	
+	
+	
+			span
+			{
+		/*
+			@include hide_show (700px,inline-block);
+		*/	
+			color:$light_gray;
+			font-weight:$medium;
+			font-size:.75em;
+			text-transform:uppercase;
+			display:block;
+			
+				@media screen and (max-width:500px) 
+				{
+				display:inline-block;
+				width:90px;
+				}
+			
+			}
+	
+		}
+			
+
+	}
+	
+	
+
+	
+	
+	
+	
+	
