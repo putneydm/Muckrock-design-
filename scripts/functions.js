@@ -1,9 +1,6 @@
 $(document) .ready (function()
 	{	
-	
-	
 
-	
 	
 	function mobile_menu (document_width)
 		{
@@ -86,6 +83,23 @@ $(document) .ready (function()
 			show_hide_toolbox()
 			console.log('works');
 			});
+		
+		
+		$('#grid') .click (function()
+		{
+		$('#document_list') .fadeOut (0);
+		$('#document_list') .removeClass ('fork_document_list_view') .addClass ('fork_document_grid');	
+		$('#document_list') .fadeIn (100);	
+		});
+		
+	
+		$('#list') .click (function()
+		{
+		$('#document_list') .fadeOut (0);
+		$('#document_list') .removeClass ('fork_document_grid') .addClass ('fork_document_list_view');;	
+		$('#document_list') .fadeIn (100);	
+		});
+	
 		
 	});	
 	

@@ -1,0 +1,490 @@
+
+
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "muckrock";
+@import "inside_page";
+
+
+
+
+
+	
+	.top_info_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	margin:0px 0px 10px 0;
+	
+	
+		h1
+		{
+		font-weight:$bold;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(32);
+			}
+		
+		}
+		
+	
+		h3
+		{
+		color:$light_gray;
+		font-weight:$light;
+		margin-top:0px;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(20);
+			}
+		
+	
+		}				
+		}	
+	
+	/*
+		.top_info_explainer_container
+		{
+		width:100%;
+		margin:0 0 30px 0;
+	
+		
+			.top_info_expainer
+			{
+			@include spanner (3, 1000, 10, 1);
+			padding:0 0 0 10px;
+
+				.round_icon
+				{
+				@include circle(60);
+				background-color:$white;
+				margin:0px auto 20px;
+				font-family:$icon;
+				font-size:em(30);
+				text-align:center;
+				padding-top:20px;
+				color:$red;
+				}
+			
+				h5
+				{
+				font-size:em(15);
+				}
+			
+				p
+				{
+				color:$light_gray;
+				@include font ($light, em(18), $light_gray, 1.8em, none);
+				}
+			
+			
+			}
+		
+		
+			& :first-child
+			{
+			padding:0px;
+			}
+			
+			& :nth-child(3)
+			{
+			margin:0px;
+			}
+		
+		}	
+	
+	*/
+	
+	
+	.progress_bar
+	{
+	@include spanner (3, 674, 0, 3);
+	margin:0 0 30px 0px;
+	
+		.progress_stepper
+		{
+		@include spanner (3, 674, 0, 1);
+		padding:5px 0px 3px 10px;
+		background-color:$white;
+		@include font ($light, em(12), $silver, 1em, uppercase);
+		background-image:url('../temp_art/progress_arrow.png');
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: 25px 19px;
+		
+			&:nth-child(3)
+			{
+			background-image:url('../temp_art/progress_arrow_end.png');
+			}
+		
+		}
+	
+	}
+
+	
+	
+	.main_news_container
+	{
+
+		.story_container
+		{
+		max-width:$max_width;
+		width:100%;
+		margin:00px auto;
+		clear:both;
+		}
+		
+		
+		.request_container
+		{
+		width:100%;
+		height:auto;
+		margin:0 0 40px 0;
+		
+			h3
+			{
+			color:$red;
+			
+				span
+				{
+				border:0px;
+				}			
+			}
+			
+			
+		.explainer_text
+		{
+		margin:0 0 5px 0;
+		clear:left;
+		}
+			
+		.request_title
+		{
+		width:100%;
+		margin:0 0 30px 0;
+		color:$dark_gray !important;
+		}	
+		
+		.request_detail
+		{
+		width:100%;
+		height:75px;
+		}
+		
+		.agency_picker
+		{
+		width:50%;
+		margin:0 0 30px 0;
+		}
+		
+		.right_link
+		{
+		color:$light_gray;
+		margin:5px 0 20px 20px;
+		}
+		
+		.button
+		{
+		float:left;
+		margin:0 30px 0 0;	
+		}
+
+		.gray_button
+		{
+		float:right;
+		margin: 0 0 0 10px;
+		}
+		
+		input
+		{
+		height:40px;
+		}
+			
+		.switcher
+		{
+		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
+		float:right;
+		margin:0 0 0 20px;
+		cursor:pointer;
+		
+			&:hover
+			{
+			color:$red;
+			}
+		
+			.icon
+			{
+			display:inline-block;
+			margin: 0 0 0 5px;
+			}
+		
+		}
+	
+		.request_government_picker
+		{
+		@include spanner (4, 674, 0,4);	
+		@include box-sizing(border-box);
+		padding:0px;
+		list-style-type:none;
+		margin:0 0 30px 0;
+		
+			li
+			{
+			@include spanner (4, 674, 10, 1);	
+			margin:0px 10px 0 0;
+			padding:13px 0;
+			text-align:center;
+			background-color:$light_gray;
+			@include font ($light, em(14), $white, 1em, none);
+			
+					&:first-child
+					{
+					border-top-left-radius:3px;
+					border-bottom-left-radius:3px;					
+					}
+			
+			
+					&:nth-child(4)
+					{
+					margin-right:0px;
+					border-top-right-radius:3px;
+					border-bottom-right-radius:3px;
+					border:0px
+					}
+
+
+					&:hover
+					{
+					background-color:$red;
+					color:white;
+					@include transition;
+					}			
+			}		
+		}		
+		}
+
+		
+		.fork_document_grid
+		{
+		width:100%;
+		height:auto;
+		margin:0px;
+		padding:5px 0 0 0;
+				
+			li
+			{
+			@include spanner (6, 632.797, 0, 3);	
+			padding:20px 5px 10px 0;
+			margin:0 0 0px 0;
+			overflow:hidden;
+			max-height:165px;
+			position:relative;
+			border-bottom: 1px solid $silver;
+			@include box-sizing(border-box);
+				
+			
+					@media screen and (max-width:700px) 
+					{
+					@include spanner (6, 632.797, 0, 3);	
+					}
+					
+					
+					@media screen and (max-width:550px) 
+					{
+					@include spanner (6, 632.797, 0, 6);	
+					}
+		
+				.document_image
+				{
+				width:45%;
+				margin:0px 10px 0px 0;
+				max-height:135px;
+				overflow:hidden;
+				float:left;
+				position:relative;
+				border-left:1px solid $silver;
+				cursor:pointer;
+				
+					&:hover
+					{
+						.small_button
+						{
+						background-color:$red;
+						color:$white;	
+						@include transition;
+						}
+						
+					}
+				
+				.small_button
+				{
+				position:absolute;
+				bottom:10px;
+				width:85%;
+				margin:0 7.5%;
+				background-color:$silver;
+				color:$dark_gray;
+				}
+			
+					@media screen and (max-width:600px) 
+					{
+					width:33%;	
+					}
+					
+				
+					img
+					{
+					width:100%;
+					}
+				
+				}
+			
+				p
+				{
+				font-size:em(13);
+				line-height:1.2em;
+				color:$dark_gray;	
+				margin:10px;
+				}
+			
+				.smaller
+				{
+				font-size:em(12);
+				margin:10px 0 0 0;
+				color:$light_gray;
+				}
+			
+		
+			}
+		
+		}
+		
+		
+		
+	
+
+	}
+
+		.fork_document_list_view
+		{
+		width:100%;
+		height:auto;
+		margin:0px;
+		padding:5px 0 0 0;
+				
+			li
+			{
+			@include spanner (6, 632.797, 0, 6);	
+			padding:20px 5px 10px 0;
+			margin:0 0 0px 0;
+			overflow:hidden;
+			max-height:165px;
+			position:relative;
+			border-bottom: 1px solid $silver;
+			@include box-sizing(border-box);
+				
+		
+				.document_image
+				{
+				@include spanner (6, 632.797, 0, 1);	
+				float:right;
+				
+					@media screen and (max-width:650px) 
+					{
+					@include spanner (6, 632.797, 0, 1.5);
+					float:right;
+					}
+					
+					}
+				
+				.small_button
+				{
+
+				width:85%;
+				margin:0 0 0 15%;
+				background-color:$silver;
+				color:$dark_gray;
+				
+					@media screen and (max-width:550px) 
+					{
+					width:100%;
+					margin:0px;
+					}
+				
+					&:hover
+					{
+					background-color:$red;
+					color:$white;
+					}
+				
+				}
+			
+			
+					
+				
+					img
+					{
+					display:none;
+					}
+				
+				}
+			
+				p
+				{
+				font-size:em(13);
+				line-height:1.2em;
+				color:$dark_gray;	
+				margin:10px;
+				padding:0 10px 0 0;
+				}
+				
+				.document_name
+				{
+				@include spanner (6, 632.797, 0, 2.5);
+				float:left;
+				
+					@media screen and (max-width:650px) 
+					{
+					@include spanner (6, 632.797, 0, 4.5);
+					}
+				
+				
+				}
+			
+				.smaller
+				{
+				@include spanner (6, 632.797, 0, 1.25);	
+				color:$light_gray;
+				float:left;
+				
+					@media screen and (max-width:650px) 
+					{
+					@include spanner (6, 632.797, 0, 2.5);
+					margin:2px 0 0 0;						
+					}
+				
+				
+				}
+			
+		
+			}
+		
+
+		
+		
+		
+	
+
+
+
+	
+	
+
+	

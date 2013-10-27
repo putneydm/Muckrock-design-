@@ -1,0 +1,8 @@
+.clear {
+  clear: all;
+  height: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0em;
+  border: 1px solid red; }
