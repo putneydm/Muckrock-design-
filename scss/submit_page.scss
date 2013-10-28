@@ -205,6 +205,24 @@
 	
 		}
 		
+		
+		.request_detail_review
+		{
+		width:97%;
+		height:400px;
+		margin:0 0 0 3%;
+		
+		@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			width:100%;
+			}
+	
+		}
+		
+		
+		
+		
 		.agency_picker
 		{
 		width:50%;
