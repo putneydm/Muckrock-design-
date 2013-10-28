@@ -100,6 +100,21 @@ $(document) .ready (function()
 		$('#document_list') .fadeIn (100);	
 		});
 	
+	
+	
+	
+	//resizes input text box on review page to show all the text 
+	
+			$('#request_detail_review').css('height','auto')
+		    var text = jQuery('#request_detail_review').val(),
+            // look for any "\n" occurences
+
+            matches = text.match(/\n/g),
+            breaks = matches ? matches.length : 2;
+
+        jQuery('#request_detail_review').attr('rows',breaks + 3);
+	
+	     //       console.log(text);
 		
 	});	
 	
