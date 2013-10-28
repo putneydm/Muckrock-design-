@@ -59,6 +59,10 @@ p {
   text-transform: none;
   font-family: "montserrat", arial, helvetica, sans-serif;
   margin: 0 0 .80em 0; }
+  p strong {
+    font-weight: 700; }
+  p .red {
+    color: #cc0202; }
 
 strong {
   font-weight: 700;
