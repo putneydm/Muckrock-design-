@@ -172,52 +172,57 @@
 			color:$red;	
 			font-family:icon;
 			display:inline-block;
-			width:20px;
+			width:3%;
 			}
 		
 		}
 			
 		.request_title
 		{
-		width:100%;
-		margin:0 0 30px 20px;
+		width:97%;
+		margin:0 0 30px 3%;
 		color:$dark_gray !important;
-		max-width:659.797px;
+		
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			width:100%;
+			}
+		
 		}	
 		
 		.request_detail
 		{
-		width:100%;
+		width:97%;
 		height:75px;
-		max-width:654.797px;
-		margin:0 0 0 20px;
+		margin:0 0 0 3%;
+		
+		@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			width:100%;
+			}
 	
 		}
 		
 		.agency_picker
 		{
 		width:50%;
-		margin:0 0 30px 20px;
+		margin:0 0 30px 3%;
+
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			}
 		
 			@media screen and (max-width:500px) 
 			{
 			width:100%;
-			max-width:654.797px;
+			margin-left:0px;
 			}
 		
 		}
 
-			
-		.agency_picker, .request_detail, .request_title, .request_government_picker
-		{
-			@media screen and (max-width:700px) 
-			{
-			margin-left:0px !important;
-			}
-		
-		}
-
-		
 		.right_link
 		{
 		color:$light_gray;
@@ -230,11 +235,46 @@
 		margin:0 30px 0 0;	
 		}
 
-		.gray_button
+		.preview_button
+		{
+		margin-left:3%;
+		
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			}
+		
+		}
+
+		.buttons_right
 		{
 		float:right;
-		margin: 0 0 0 10px;
+		
+			@media screen and (max-width:450px) 
+			{
+			float:left;
+			margin:10px 0 0 0;
+			}
+		
+			.gray_button
+			{
+			float:right;
+			margin: 0 0 0 10px;
+			
+				@media screen and (max-width:450px) 
+				{
+					&:nth-child(2)
+					{
+					margin-left:0px;
+					}
+				
+				}
+			
+			}
+			
 		}
+
+
 		
 		input
 		{
@@ -263,16 +303,23 @@
 	
 		.request_government_picker
 		{
-		@include spanner (4, 654.797, 0, 4);	
+		width:97%;	
 		@include box-sizing(border-box);
 		padding:0px;
 		list-style-type:none;
-		margin:0 0 30px 20px;
-		max-width:659.797px;
+		margin:0 0 30px 3%;
+		max-width:652.797px;
+		
+			@media screen and (max-width:750px) 
+			{
+			width:100%;
+			margin-left:0px;
+			}
+		
 		
 			li
 			{
-			@include spanner (4, 654.797, 10, 1);	
+			@include spanner (4, 652.797, 10, 1);	
 			
 			padding:13px 0;
 			text-align:center;
@@ -282,7 +329,7 @@
 			
 				@media screen and (max-width:600px) 
 				{
-				@include spanner (2, 654.797, 10, 1);	
+				@include spanner (2, 652.797, 10, 1);	
 				
 				
 					&:first-child
@@ -540,8 +587,8 @@
 				
 					@media screen and (max-width:650px) 
 					{
-					@include spanner (6, 632.797, 0, 2.5);
-					margin:2px 0 0 0;						
+					@include spanner (6, 632.797, 0, 2.2);
+					margin:2px 0 0 0;		
 					}
 				
 				
