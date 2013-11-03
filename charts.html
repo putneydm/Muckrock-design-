@@ -15,18 +15,61 @@
 
 
 
-
+<!--
 	<script type="text/javascript">
 
 	$(function() {
 
-		var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+		var data1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 		
-		
+		var data2 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 
 		
 
-		//console.log(data1);
+
+$.plot("#placeholder", [
+		{
+			data: data1,
+			bars: 
+			{ 
+			show: true, 
+			fill: true,
+			barWidth: 0.5,
+			}
+		}, 
+		{
+			data: data2,
+			bars: 
+			{ 
+			show: true,
+			barWidth: 0.5,
+			}	
+		},
+		{
+		xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					},
+			},
+			{
+					
+				grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+			}		
+		]);
+
+	/*
 		$.plot("#placeholder", [ data ], {
 			
 				bars: {
@@ -62,10 +105,137 @@
 
 
 	});
+	
+	*/
+
+
+		//console.log(data1);
+		
+		/*
+		$.plot("#placeholder", [ data ], {
+			
+				bars: {
+					show: true,
+					barWidth: 0.5,
+					align: "center",
+					fillColor: '#666666',
+					lineWidth: 0				
+					},
+				
+					
+				xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					},
+					
+				grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+					
+				
+		});
+
+	*/
+	});
+	
+
 
 	</script>
 
+-->
 
+
+<script>
+$(function() {
+
+		var d1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+
+		var d2 =  [ ["July", 10], ["Aug.", 8], ["Sept.", 4] ];
+
+		$.plot(
+		   $("#placeholder"),
+		   [
+			{
+			  label: "This is thing three",
+			  data: d1,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:'#999',
+				lineWidth: 0
+			  }   
+			},
+		
+			{
+			  label: "This is thing two",
+			  data: d2,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:'#cc0202',
+				lineWidth: 0
+			  }   
+			}
+			
+		 ],
+
+		 
+		 {
+		   
+		   
+		   xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					
+		   
+		   
+		   
+			/* ticks: [
+				["January", "2011"],
+				["February", "2012"],
+				["March", "2013"],
+				["April", "2014"],
+				["May", "2015"],
+				["June", "2016"],
+				["July", "2017"],
+				["Aug.", "2018"]
+			 ], */
+		   },
+		   
+		  	grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+					 
+		   
+		   
+		 }
+		);
+
+	});
+	
+	</script>
 
 </head>
 
