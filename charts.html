@@ -161,44 +161,51 @@ $(function() {
 		var d1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 
 		var d2 =  [ ["July", 10], ["Aug.", 8], ["Sept.", 4] ];
+		
+		var red = '#cc0202';
+		var gray = '#666';
+		var light_gray = '#999';
+		var background = '#f0f4f5';
+		var silver = '#d1d4d5';
 
 		$.plot(
 		   $("#placeholder"),
 		   [
 			{
 			  label: "This is thing three",
+			  color: light_gray,
 			  data: d1,
 			  bars: {
 				show: true,
 				barWidth: 0.5,
 				align: "center",
-				fillColor:'#999',
-				lineWidth: 0
+				fillColor:light_gray,
+				lineWidth: 0,
+				label: "y = 3"
 			  }   
 			},
 		
 			{
 			  label: "This is thing two",
+			  color: red,
 			  data: d2,
 			  bars: {
 				show: true,
 				barWidth: 0.5,
 				align: "center",
-				fillColor:'#cc0202',
+				fillColor:red,
 				lineWidth: 0
-			  }   
-			}
+			  }
+			},	
 			
 		 ],
-
-		 
+	 
 		 {
-		   
 		   
 		   xaxis: {
 					mode: "categories",
 					tickLength: 0,
-					color: '#666666',
+					color: silver,
 					position: 'bottom',
 					size: 11,
 					lineHeight: 13,
@@ -206,31 +213,22 @@ $(function() {
 					weight: "bold",
 					family: "sans-serif",
 					variant: "small-caps",
-					
-		   
-		   
-		   
-			/* ticks: [
-				["January", "2011"],
-				["February", "2012"],
-				["March", "2013"],
-				["April", "2014"],
-				["May", "2015"],
-				["June", "2016"],
-				["July", "2017"],
-				["Aug.", "2018"]
-			 ], */
+
 		   },
 		   
 		  	grid: {
-					color:'#999',
-					backgroundColor: "#f0f4f5",
+					color:gray,
+					backgroundColor: background,
 					borderWidth: 0
+					},
+					
+			legend: {
+					show:true,
+					backgroundColor: background,
+					labelBoxBorderColor: silver
 					}
-					 
-		   
-		   
-		 }
+   
+		 			}
 		);
 
 	});
@@ -318,11 +316,36 @@ $(function() {
 		
 
 		<div class="top_info_container">
-
-				<h1>Here's where you submit FOIA requests blah blah info about that goes here herer </h1>
-			
-			
 		
+				<img src="temp_art/FBI.jpeg.510x233_q85.jpg" class="agency_logo">
+
+				<h1>Federal Bureau of Investigation </h1>
+				<h6>Agency of</h6> 
+				<p class="agency_parent">United States Government</p>
+				
+				<div class="agency_info_container">
+				
+					<ul class="agency_info">
+							<h6>Mailing Address</h6>
+							<li>Federal Bureau of Investigation </li>
+							<li>Attn: FOI/PA Request </li>
+							<li>Record/Information Dissemination Section </li>
+							<li>170 Marcel Drive </li>
+							<li>Winchester, VA 22602-4843</li>
+							<li>(Map)</li>
+					</ul>
+					<ul class="agency_info">				
+							<h6>E-mail Address</h6>
+							<li>(Available for Pro Users)</li>
+
+							<h6>Fax Number</h6>
+							<li>Unknown</li>
+					</ul>
+
+				</div>
+			
+			
+			<p class="clear"></p>
 			<p class="double_rule"></p>
 		</div>
 
