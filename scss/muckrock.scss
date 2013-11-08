@@ -714,6 +714,12 @@
 	background-color:$red;
 	box-sizing:border-box;
 	@include transition;
+	background-image: url('../temp_art/circle.svg');
+	background-size:24px;
+	background-position: 87px 7px;
+	background-repeat: no-repeat;
+	box-shadow: 1px 1px 3px $silver;
+	
 	
 		&:hover
 		{
@@ -796,7 +802,10 @@
 		content:' \f126';
 		font-family:$icon;
 		display:inline-block;
-		margin-left:5px;
+		margin:0 10px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
 		}
 	}
 	
@@ -805,15 +814,56 @@
 	{
 		&:after
 		{
-		content:' \f05d';
+		content:' x';
 		font-family:$icon;
 		display:inline-block;
 		margin-left:5px;
 		}
 	}
 
+
+	.arrow_right
+	{
+		&:after
+		{
+		content:' \f061';
+		font-family:$icon;
+		display:inline-block;
+		margin:0 10px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
+		}
+	}
 	
+		.save
+	{
+		&:after
+		{
+		content:' \f040';
+		font-family:$icon;
+		display:inline-block;
+		margin:0 10px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
+		}
+	}
 	
+
+	.cancel
+	{
+		&:after
+		{
+		content:' \f00d';
+		font-family:$icon;
+		display:inline-block;
+		margin:0 11px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
+		}
+	}	
 	
 	.double_rule
 	{
