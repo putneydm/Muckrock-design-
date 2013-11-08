@@ -34,7 +34,7 @@ $browser-context: 16; // Default
  	
 @mixin transition 
  	{ 	
- 	transition-property: all;
+ 	transition-property: background-color;
 	transition-duration: .07s;
 	transition-timing-function: ease-in-out;	
 	}
@@ -61,6 +61,11 @@ $browser-context: 16; // Default
 	}
 	
 	}	
+	
+@mixin shadow
+	{
+	box-shadow: 1px 1px 4px rgba(102,102,102,0.2);
+	}
 	
 	
 @mixin show_hide ($breakpoint)
