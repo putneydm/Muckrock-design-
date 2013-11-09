@@ -1,0 +1,387 @@
+
+<html>
+<head>
+
+
+<link href="css/charts.css" rel="stylesheet" type="text/css">
+
+
+
+<script src="scripts/jquery-1.9.1.min-ck.js"></script>
+<script src="../scripts/flot/jquery.flot.js"></script>
+<script src="../scripts/flot/jquery.flot.categories.js"></script>
+<script src="../scripts/flot/jquery.flot.resize.js"></script>
+<!--<script src="scripts/functions.js"></script>-->
+
+
+
+<!--
+	<script type="text/javascript">
+
+	$(function() {
+
+		var data1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+		
+		var data2 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+
+		
+
+
+$.plot("#placeholder", [
+		{
+			data: data1,
+			bars: 
+			{ 
+			show: true, 
+			fill: true,
+			barWidth: 0.5,
+			}
+		}, 
+		{
+			data: data2,
+			bars: 
+			{ 
+			show: true,
+			barWidth: 0.5,
+			}	
+		},
+		{
+		xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					},
+			},
+			{
+					
+				grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+			}		
+		]);
+
+	/*
+		$.plot("#placeholder", [ data ], {
+			
+				bars: {
+					show: true,
+					barWidth: 0.5,
+					align: "center",
+					fillColor: '#666666',
+					lineWidth: 0				
+					},
+				
+					
+				xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					},
+					
+				grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+					
+				
+		});
+
+
+	});
+	
+	*/
+
+
+		//console.log(data1);
+		
+		/*
+		$.plot("#placeholder", [ data ], {
+			
+				bars: {
+					show: true,
+					barWidth: 0.5,
+					align: "center",
+					fillColor: '#666666',
+					lineWidth: 0				
+					},
+				
+					
+				xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: '#666666',
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+					},
+					
+				grid: {
+					color:'#999',
+					backgroundColor: "#f0f4f5",
+					borderWidth: 0
+					}
+					
+				
+		});
+
+	*/
+	});
+	
+
+
+	</script>
+
+-->
+
+
+<script>
+$(function() {
+
+		var d1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+
+		var d2 =  [ ["July", 10], ["Aug.", 8], ["Sept.", 4] ];
+		
+		var red = '#cc0202';
+		var gray = '#666';
+		var light_gray = '#999';
+		var background = '#f0f4f5';
+		var silver = '#d1d4d5';
+
+		$.plot(
+		   $("#placeholder"),
+		   [
+			{
+			  label: "This is thing three",
+			  color: light_gray,
+			  data: d1,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:light_gray,
+				lineWidth: 0,
+				label: "y = 3"
+			  }   
+			},
+		
+			{
+			  label: "This is thing two",
+			  color: red,
+			  data: d2,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:red,
+				lineWidth: 0
+			  }
+			},	
+			
+		 ],
+	 
+		 {
+		   
+		   xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: silver,
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+
+		   },
+		   
+		  	grid: {
+					color:gray,
+					backgroundColor: background,
+					borderWidth: 0
+					},
+					
+			legend: {
+					show:true,
+					backgroundColor: background,
+					labelBoxBorderColor: silver
+					}
+   
+		 			}
+		);
+
+	});
+	
+	</script>
+
+</head>
+
+
+
+
+<body>
+
+
+<div id="menu">
+
+	<div class="menu_inside">
+
+	<ul class="site_navigation">
+		<li><span>Muckrock</span></li>
+		<li>News</li>
+		<li>Submit Request</li>
+		<li>FOI Requests</li>
+		<li>FOI Questions</li>
+		<li>Account</li>
+	</ul>
+
+
+
+
+
+<p class="menu_icon" id="menu_trigger">&#xf0c9;</p>
+</div>
+
+
+</div>
+
+
+<!-- @import "/components/header_inside.html" -->
+
+
+<div class="content_container">
+		
+
+		<div class="top_info_container">
+		
+				<img src="temp_art/FBI.jpeg.510x233_q85.jpg" class="agency_logo">
+
+				<h1>Federal Bureau of Investigation </h1>
+				<h6>Agency of</h6> 
+				<p class="agency_parent">United States Government</p>
+				
+				<div class="agency_info_container">
+				
+					<ul class="agency_info">
+							<h6>Mailing Address</h6>
+							<li>Federal Bureau of Investigation </li>
+							<li>Attn: FOI/PA Request </li>
+							<li>Record/Information Dissemination Section </li>
+							<li>170 Marcel Drive </li>
+							<li>Winchester, VA 22602-4843</li>
+							<li>(Map)</li>
+					</ul>
+					<ul class="agency_info">				
+							<h6>E-mail Address</h6>
+							<li>(Available for Pro Users)</li>
+
+							<h6>Fax Number</h6>
+							<li>Unknown</li>
+					</ul>
+
+				</div>
+			
+			
+			<p class="clear"></p>
+			<p class="double_rule"></p>
+		</div>
+
+
+
+
+		<div class="main_news_container">
+
+			
+			
+			
+					<div id="placeholder" class="demo-placeholder"></div>
+	
+			
+
+	
+		</div>
+	
+	
+		
+
+
+
+	<div class="main_right_rail">
+	
+	
+
+	
+	
+	
+	</div>	
+		
+		
+	</div>
+
+
+
+
+
+<p class="clear"></p>
+</div>
+
+
+<div class="toolbox" id="toolbox">
+		<p class="double_rule"></p>
+	
+		<div class="toolbox_inside">
+		
+			<div class="toolbox_hide" id="toolbox_tab">
+			<span class="icon toolbox_close_icon">&#xf00d;</span>
+			<span class="icon toolbox_icon">&#xf0ad;</span>
+			</div>
+			
+			<div class="toolbox_intro">
+				<h4>
+				<span class="counter">2</span> People like your request
+				</h4>
+	
+				
+			</div>
+	
+				<ul class="toolbox_menu">	
+					<li><p class="icon">&#xf044; </p>file a request </li>
+					<li><p class="icon">&#xf03a; </p>your requests </li>
+					<li><p class="icon">&#xf059; </p> ask a question </li>
+					<li><p class="icon">&#xf0d6; </p> lend a hand </li>
+					<li><p class="icon">&#xf007; </p> log in </li>
+					<p class="clear"></p>
+				</ul>
+			</div>
+</div>
+
+
+
+<!-- @import "/components/footer.html" -->
+
+
+
+</body>
+
+</html>
