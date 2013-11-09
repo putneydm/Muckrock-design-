@@ -1,0 +1,415 @@
+
+
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "muckrock";
+@import "inside_page";
+
+
+
+
+
+	
+	.top_info_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	margin:0px 0px 10px 0;
+	
+	
+		h1
+		{
+		font-weight:$bold;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(32);
+			}
+		
+		}
+		
+	
+		h3
+		{
+		color:$light_gray;
+		font-weight:$light;
+		margin-top:0px;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(20);
+			}
+		
+	
+		}				
+		}	
+	
+	/*
+		.top_info_explainer_container
+		{
+		width:100%;
+		margin:0 0 30px 0;
+	
+		
+			.top_info_expainer
+			{
+			@include spanner (3, 1000, 10, 1);
+			padding:0 0 0 10px;
+
+				.round_icon
+				{
+				@include circle(60);
+				background-color:$white;
+				margin:0px auto 20px;
+				font-family:$icon;
+				font-size:em(30);
+				text-align:center;
+				padding-top:20px;
+				color:$red;
+				}
+			
+				h5
+				{
+				font-size:em(15);
+				}
+			
+				p
+				{
+				color:$light_gray;
+				@include font ($light, em(18), $light_gray, 1.8em, none);
+				}
+			
+			
+			}
+		
+		
+			& :first-child
+			{
+			padding:0px;
+			}
+			
+			& :nth-child(3)
+			{
+			margin:0px;
+			}
+		
+		}	
+	
+	*/
+	
+	
+	.progress_bar
+	{
+	@include spanner (3, 674, 0, 3);
+	margin:0 0 30px 0px;
+	
+		.progress_stepper
+		{
+		@include spanner (3, 674, 0, 1);
+		padding:5px 0px 3px 10px;
+		background-color:$white;
+		@include font ($light, em(12), $silver, 1em, uppercase);
+		background-image:url('../temp_art/progress_arrow.png');
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: 25px 19px;
+		
+			&:nth-child(3)
+			{
+			background-image:url('../temp_art/progress_arrow_end.png');
+			}
+		
+		}
+	
+	}
+
+	
+	
+	.main_news_container
+	{
+
+		.story_container
+		{
+		max-width:$max_width;
+		width:100%;
+		margin:00px auto;
+		clear:both;
+		}
+		
+		
+		.request_container
+		{
+		width:100%;
+		height:auto;
+		margin:0 0 40px 0;
+		
+			h3
+			{
+			color:$red;
+			margin:0 0 20px 0;
+			
+				span
+				{
+				border:0px;
+				}			
+			}
+			
+			
+		.explainer_text
+		{
+		margin:0 0 5px 0;
+		clear:left;
+		font-weight:$bold;
+		
+			&:before
+			{
+			content:'\f054 ';
+			color:$red;	
+			font-family:icon;
+			display:inline-block;
+			width:3%;
+			}
+		
+		}
+			
+		.request_title
+		{
+		width:97%;
+		margin:0 0 30px 3%;
+		color:$dark_gray !important;
+		
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			width:100%;
+			}
+		
+		}	
+		
+		.request_detail
+		{
+		width:97%;
+		height:75px;
+		margin:0 0 0 3%;
+		
+		@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			width:100%;
+			}
+	
+		}
+		
+		.agency_picker
+		{
+		width:50%;
+		margin:0 0 30px 3%;
+
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			}
+		
+			@media screen and (max-width:500px) 
+			{
+			width:100%;
+			margin-left:0px;
+			}
+		
+		}
+
+		.right_link
+		{
+		color:$light_gray;
+		margin:5px 0 20px 20px;
+		}
+		
+		.button
+		{
+		float:left;
+		margin:0 30px 0 0;	
+		}
+
+		.preview_button
+		{
+		margin-left:3%;
+		
+			@media screen and (max-width:700px) 
+			{
+			margin-left:0px;
+			}
+		
+		}
+
+		.buttons_right
+		{
+		float:right;
+		
+			@media screen and (max-width:450px) 
+			{
+			float:left;
+			margin:10px 0 0 0;
+			}
+		
+			.gray_button
+			{
+			float:right;
+			margin: 0 0 0 10px;
+			
+				@media screen and (max-width:450px) 
+				{
+					&:nth-child(2)
+					{
+					margin-left:0px;
+					}
+				
+				}
+			
+			}
+			
+		}
+
+
+		
+		input
+		{
+		height:40px;
+		}
+			
+		.switcher
+		{
+		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
+		float:right;
+		margin:0 0 0 20px;
+		cursor:pointer;
+		
+			&:hover
+			{
+			color:$red;
+			}
+		
+			.icon
+			{
+			display:inline-block;
+			margin: 0 0 0 5px;
+			}
+		
+		}
+	
+		.request_government_picker
+		{
+		width:97%;	
+		@include box-sizing(border-box);
+		padding:0px;
+		list-style-type:none;
+		margin:0 0 30px 3%;
+		max-width:652.797px;
+		
+			@media screen and (max-width:750px) 
+			{
+			width:100%;
+			margin-left:0px;
+			}
+		
+		
+			li
+			{
+			@include spanner (4, 652.797, 10, 1);	
+			
+			padding:13px 0;
+			text-align:center;
+			background-color:$light_gray;
+			@include font ($light, em(14), $white, 1em, none);
+			border:0px;
+			
+				@media screen and (max-width:600px) 
+				{
+				@include spanner (2, 652.797, 10, 1);	
+				
+				
+					&:first-child
+					{
+					border-top-left-radius:3px;
+					border-bottom-left-radius:0px  !important;
+					margin-bottom:6px;
+					}
+				
+					&:nth-child(2)
+					{
+					border-top-right-radius:3px;
+					margin-bottom:8px;
+					margin-right:0px;
+					}
+				
+					
+					&:nth-child(3)
+					{
+					border-bottom-left-radius:3px;
+					}
+					
+					
+					&:nth-child(4)
+					{
+					border-bottom-right-radius:3px;
+					border-top-right-radius:0px  !important;
+
+					}					
+				
+					
+				
+				}
+			
+			
+					&:first-child
+					{
+					border-top-left-radius:3px;
+					border-bottom-left-radius:3px;					
+					}
+			
+			
+					&:nth-child(4)
+					{
+					margin-right:0px;
+					border-top-right-radius:3px;
+					border-bottom-right-radius:3px;
+					border:0px
+					}
+
+
+					&:hover
+					{
+					background-color:$red;
+					color:white;
+					@include transition;
+					}			
+			}		
+		}		
+		}
+
+		
+		
+		
+		
+	
+
+	}
+
+
+		
+
+		
+		
+		
+	
+
+
+
+	
+	
+
+	
