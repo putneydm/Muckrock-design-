@@ -18,8 +18,20 @@
 
 <script>
 $(document).ready( function () {
-    $('#document_list').dataTable();
+    $('#document_list').dataTable({
+    
+    "aaSorting": [[ 1, "asc" ]],
+    "bStateSave": true,
+    "sPaginationType": "full_numbers",
+    "bLengthChange": false,
+    "bAutoWidth": false ,
+    "bProcessing": true,
+	"iDisplayLength": 12
+    }
+    );
 } );
+
+
 
 </script>
 
@@ -42,10 +54,24 @@ $(document).ready( function () {
 	
 		<thead>
 			<tr>
-			<th>Document</th>
-			<th>Document name</th>
-			<th>Date</th>
-			<th>Jurisdiction</th>
+			<th>
+			Document image
+			</th>
+			<th>
+			<div class="small_button">
+			Document
+			</div>
+			</th>
+			<th>
+			<div class="small_button">
+			Date
+			</div>
+			</th>
+			<th>
+			<div class="small_button">
+			Agency
+			</div>
+			</th>
 			<th>Button</th>
 			</tr>
 		</thead>

@@ -22,8 +22,15 @@
 		{
 		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
 		float:right;
-		margin:0 0 0 20px;
+		margin:0 20px 0 0px;
 		cursor:pointer;
+		padding-top:7px;
+		
+		@media screen and (max-width:450px) 
+		{
+		margin-bottom:20px;
+		float:right;
+		}
 		
 			&:hover
 			{
@@ -44,7 +51,35 @@
 		}
 	
 
-
+	.dataTables_filter
+	{
+	float:left;
+	margin-bottom:20px;
+		@media screen and (max-width:450px) 
+		{
+		float:none;
+		clear:left;
+		margin-bottom:0px;
+		clear:right;
+		}
+	
+	
+		input
+		{
+		width:182px;
+		margin-left:10px;
+		height:30px;
+		background-image:url('../temp_art/magnifier.svg');
+		background-repeat: no-repeat;
+		background-position: 155px 8px;
+		}
+	
+		label
+		{
+		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
+		}
+		
+	}
 
 
 	/* 
@@ -53,6 +88,63 @@
 	table { 
 		width: 100%; 
 		border-collapse: collapse; 
+	}
+	
+	
+	thead
+	{
+	border-bottom:1px solid silver;
+
+	
+		tr
+		{
+		width:50% !important;
+		margin-bottom:10px !important;
+		padding:0 0 10px 0;
+		min-width:258px;
+		float:left !important;
+		
+				@media screen and (max-width:450px) 
+				{
+				float:left !important;
+				}
+		
+			th 
+			{ 
+			color: white; 
+			font-weight: bold; 
+			width:30.333% !important;
+			float:left;
+			display:block;
+			margin-left:3%;
+			
+				@media screen and (max-width:450px) 
+				{
+				margin-left:0px;
+				margin-right:3%;
+				}
+						
+				.small_button
+				{
+				background-color:$light_gray;
+				box-shadow:none;
+				width:100%;
+				}
+			
+			
+				&:first-child
+				{
+				display:none;
+				}
+				
+				
+				&:nth-child(5)
+				{
+				display:none;
+				}
+			
+			}
+		}
 	}
 	
 	
@@ -73,13 +165,8 @@
 		width:100%;
 		}
 	
-
-		th { 
-			background: #333; 
-			color: white; 
-			font-weight: bold; 
-			}
-			td, th { 
+			
+			td { 
 			padding:5px 5px 10px 0; 
 			text-align: left; 
 			border-bottom:1px solid $silver;
@@ -325,11 +412,12 @@
 	
 
 		th { 
-			background: #333; 
 			color: white; 
 			font-weight: bold; 
 			}
-			td, th { 
+			
+			td 
+			{ 
 			padding:5px 5px 10px 0; 
 			text-align: left; 
 			vertical-align:top;
