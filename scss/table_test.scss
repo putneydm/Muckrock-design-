@@ -16,13 +16,14 @@
 	max-width:674px;
 	width:100%;
 	padding:10px;
+	position:relative;
 	}
 
 .switcher
 		{
 		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
 		float:right;
-		margin:0 20px 0 0px;
+		margin:0 0px 20px 20px;
 		cursor:pointer;
 		padding-top:7px;
 		
@@ -53,30 +54,33 @@
 
 	.dataTables_filter
 	{
-	float:left;
-	margin-bottom:20px;
-		@media screen and (max-width:450px) 
-		{
-		float:none;
-		clear:left;
-		margin-bottom:0px;
-		clear:right;
-		}
+		position:absolute;
+		right:10px;
+		top:50px;
+		
+			@media screen and (max-width:575px) 
+			{
+			position:static;
+			float:left;
+			clear:left;
+			margin-bottom:20px;
+			clear:right;
+			}
 	
 	
 		input
 		{
-		width:182px;
+		width:197px;
 		margin-left:10px;
-		height:30px;
+		height:28px;
 		background-image:url('../temp_art/magnifier.svg');
 		background-repeat: no-repeat;
-		background-position: 155px 8px;
+		background-position: 168px 6px;
 		}
 	
 		label
 		{
-		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
+		@include font ($bold, em(14), $dark_gray, 1.9em, uppercase);	
 		}
 		
 	}
@@ -94,41 +98,47 @@
 	thead
 	{
 	border-bottom:1px solid silver;
+	height:28px;
+	width:100%;
 
-	
 		tr
 		{
-		width:50% !important;
+		width:100% !important;
 		margin-bottom:10px !important;
 		padding:0 0 10px 0;
-		min-width:258px;
 		float:left !important;
+		height:30px;
 		
-				@media screen and (max-width:450px) 
+				@media screen and (max-width:575px) 
 				{
-				float:left !important;
+				width:100% !important;
+				max-height:30px !important;
+				min-height:30px;
 				}
 		
 			th 
 			{ 
 			color: white; 
 			font-weight: bold; 
-			width:30.333% !important;
+			width:82px !important;
 			float:left;
 			display:block;
-			margin-left:3%;
+			margin-right:6px;
+			margin-right:10px;
+			
 			
 				@media screen and (max-width:450px) 
 				{
 				margin-left:0px;
-				margin-right:3%;
+				margin-right:10px;
 				}
 						
 				.small_button
 				{
 				background-color:$light_gray;
 				box-shadow:none;
-				width:100%;
+				width:80px;
+				height:26px;
 				}
 			
 			
@@ -207,6 +217,8 @@
 				padding-right:0px;
 				}			
 
+
+
 			}
 	
 		tr
@@ -214,18 +226,19 @@
 		width:100%;
 		}
 	
-		.testing4
-		{
-		width:41.6666%;
-		}
-	
-	
+
 	
 	/* 
 	Max width before this PARTICULAR table gets nasty
 	This query will take effect for any screen smaller than 760px
 	and also iPads specifically.
 	*/
+
+	
+	tbody
+	{
+	
+	
 	@media 
 	only screen and (max-width: 650px),
 	(min-device-width: 768px) and (max-device-width: 1024px)  
@@ -286,6 +299,8 @@
 		
 		}
 		
+		}
+		
 		
 		/*
 		show table as a grid 
@@ -322,7 +337,7 @@
 				width:97%;
 				margin:0 3% 0 0;
 				position:absolute;
-				bottom:30px;
+				bottom:20px;
 				}
 			
 			}
