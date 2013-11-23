@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/questions_page.css" rel="stylesheet" type="text/css">
+
+
+<!-- <script src="scripts/jquery-1.9.1.min-ck.js"></script> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="scripts/jquery.dataTables.min.js"></script>
+
+<script src="scripts/functions.js"></script>
+
+<script>
+$(document).ready( function () {
+    $('#document_list').dataTable({
+    
+    "aaSorting": [[ 1, "asc" ]],
+    "bStateSave": true,
+    "sPaginationType": "full_numbers",
+    "bLengthChange": false,
+    "bAutoWidth": false ,
+    "bProcessing": true,
+	"iDisplayLength": 12
+    }
+    );
+} );
+
+
+
+</script>
+
+
+</head>
+
+
+
+
+<body>
+
+
+<div id="menu">
+
+	<div class="menu_inside">
+
+	<ul class="site_navigation">
+		<li><span>Muckrock</span></li>
+		<li>News</li>
+		<li>Submit Request</li>
+		<li>FOI Requests</li>
+		<li>FOI Questions</li>
+		<li>Account</li>
+	</ul>
+
+
+
+
+
+<p class="menu_icon" id="menu_trigger">&#xf0c9;</p>
+</div>
+
+
+</div>
+
+
+<!-- @import "/components/header_inside.html" -->
+
+
+<div class="content_container">
+		
+
+		<div class="top_info_container">
+
+				<h1>Here's where you submit FOIA requests blah blah info about that goes here herer </h1>
+			
+			
+		
+			<p class="double_rule"></p>
+		</div>
+
+
+
+
+		<div class="main_news_container">
+
+			
+
+					
+
+					<!-- @import "components/questions_table.html" -->
+	
+	
+		
+							
+		
+		</div>
+	
+	
+		
+
+
+
+	<div class="main_right_rail">
+	
+	
+	<div class="main_about_us">
+		
+	<h4>Tips for success</h4>
+	<p>As the only public records request service of its kind in the United States, MuckRock serves journalists, researchers, activists and historians, with a track record of over 2,000 requests.</p>
+
+	<p>Simply login to your account and submit your FOI request via our simple web-interface.</p>
+	
+	</div>
+	
+	
+	
+	</div>	
+		
+		
+	</div>
+
+
+
+
+
+<p class="clear"></p>
+</div>
+
+
+<div class="toolbox" id="toolbox">
+		<p class="double_rule"></p>
+	
+		<div class="toolbox_inside">
+		
+			<div class="toolbox_hide" id="toolbox_tab">
+			<span class="icon toolbox_close_icon">&#xf00d;</span>
+			<span class="icon toolbox_icon">&#xf0ad;</span>
+			</div>
+			
+			<div class="toolbox_intro">
+				<h4>
+				<span class="counter">2</span> People like your request
+				</h4>
+	
+				
+			</div>
+	
+				<ul class="toolbox_menu">	
+					<li><p class="icon">&#xf044; </p>file a request </li>
+					<li><p class="icon">&#xf03a; </p>your requests </li>
+					<li><p class="icon">&#xf059; </p> ask a question </li>
+					<li><p class="icon">&#xf0d6; </p> lend a hand </li>
+					<li><p class="icon">&#xf007; </p> log in </li>
+					<p class="clear"></p>
+				</ul>
+			</div>
+</div>
+
+
+
+<!-- @import "/components/footer.html" -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>

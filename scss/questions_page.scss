@@ -1,0 +1,79 @@
+
+
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "muckrock";
+@import "inside_page";
+@import "answers_grid";
+
+
+
+
+	
+	.top_info_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	margin:0px 0px 10px 0;
+	
+	
+		h1
+		{
+		font-weight:$bold;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(32);
+			}
+		
+		}
+		
+	
+		h3
+		{
+		color:$light_gray;
+		font-weight:$light;
+		margin-top:0px;
+		
+			@media screen and (max-width:600px) 
+			{
+			font-size:em(20);
+			}
+		
+	
+		}				
+		}	
+	
+
+	.main_news_container
+	{
+
+		.story_container
+		{
+		max-width:$max_width;
+		width:100%;
+		margin:00px auto;
+		clear:both;
+		}
+		
+
+	
+		}
+		
+
+	
+		
+		
+	
+
+
+
+	
+	
+
+	
