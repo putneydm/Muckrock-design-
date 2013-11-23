@@ -15,9 +15,7 @@
 .answers_container
 	{
 	width:100%;
-	border:1px solid red;
-	
-
+	margin:20px 0 0px 0px;
 	
 	
 	
@@ -25,14 +23,13 @@
 		{
 		width:100%;
 		list-style-type: none;
-		border:1px solid blue;
 		clear:both;
 		
 						
 				
 			h7
 			{
-			@include font ($light, em(10), $dark_gray, 1em, uppercase);
+			@include font ($light, em(10), $light_gray, 1em, uppercase);
 			padding-top:7px;
 			margin-bottom:12px;
 			
@@ -47,8 +44,16 @@
 			h3
 			{
 			clear:left;
-			font-size:em(18);
+			font-size:em(14);
 			margin-top:5px;
+			line-height:1.5em;
+			
+				@media screen and (max-width:em(550)) 
+				{
+				font-size:em(14);
+				margin-bottom:5px;
+				}
+			
 			}
 		
 		
@@ -57,7 +62,7 @@
 			{
 			@include font ($bold, em(18), $dark_gray, 1.5em, none);			
 			@include spanner (6, 674.797, 0, 6);
-			padding:0 0 0px 0;
+			padding:0 0 5px 0;
 			margin:0 0 10px 0;
 			border-bottom:1px solid $silver;
 			
@@ -65,7 +70,15 @@
 				{
 				@include spanner (6, 674.797, 0, 2);	
 				margin:5px 0 0 0;
-				padding:0 0 0 10px;
+				padding:0 0 0 2%;
+				
+					@media screen and (max-width:em(550)) 
+					{
+					@include spanner (6, 674.797, 0, 6);
+					padding:0 0 0 5%;
+					}
+				
+				
 				}
 				
 				
@@ -73,11 +86,58 @@
 				{
 				@include spanner (6, 674.797, 0, 1);
 				margin:5px 0 0 0;
+				
+					@media screen and (max-width:em(550)) 
+					{
+					@include spanner (6, 674.797, 0, 3);
+					padding:0 0 0 5%;
+					}
+				
+
+				
+					.counter				
+					{
+					display:inline-block;
+					width:24px;
+					height:24px;
+					background-image:url('../temp_art/sunburst_bg.png');
+					background-size:24px;
+					@include box-sizing(border-box);
+					color:$white;
+					padding:6px 0 0 0px;
+					text-align:center;
+					font-weight:$light;
+					font-size:em(18);
+					}
+				
+					.small_button
+					{
+					background-color:$light_gray;
+					font-size:em(10);
+					margin-top:7px;
+					height:21px;
+					float:right;
+					width:78px;
+					
+						@media screen and (max-width:em(550)) 
+						{
+						margin-right:10%;
+						}
+					
+					
+					}
+				
 				}
 				
 				h7
 				{
 				margin:0px 0 2px 0;
+				
+				@media screen and (max-width:em(550)) 
+				{
+				display:inline-block;
+				}
+				
 				}
 			
 			}
@@ -86,16 +146,35 @@
 		
 			.answer_names
 			{
-			@include font ($light, em(13), $light_gray, 1.5em, none);
-			margin-top:0px;		
+			@include font ($light, em(12), $light_gray, 1.5em, none);
+			margin-top:0px;	
+			margin-left:37px;
+			
+						@media screen and (max-width:em(550)) 
+				{
+				display:inline-block;
+				margin-left:7px;
+				margin-top:8px;
+				}
+			
 			}
 			
 			.answer_avatar
 			{
-			width:30px;
+			width:25px;
 			float:left;
 			margin:7px 7px 0 0px;
+			
+			
+			
+				@media screen and (max-width:em(550)) 
+				{
+				width:21px;
+				}
 			}
+		
+
+		
 		
 		}
 	
