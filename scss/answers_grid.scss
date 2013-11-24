@@ -1,17 +1,4 @@
 
-@import "bourbon";
-@import "fonts";
-@import "colors";
-@import "shortcuts";
-@import "mixins";
-@import "variables";
-@import "text_styles";
-@import "menu_test.scss";
-@import "muckrock";
-@import "inside_page";
-
-
-
 .answers_container
 	{
 	width:100%;
@@ -24,161 +11,116 @@
 		width:100%;
 		list-style-type: none;
 		clear:both;
+		border-bottom:1px solid $silver;
+		margin:0 0 25px 0;
+		padding:0px 0 5px 0;
+		clear:left;
 		
-						
-				
-			h7
-			{
-			@include font ($light, em(10), $light_gray, 1em, uppercase);
-			padding-top:7px;
-			margin-bottom:12px;
-			
-				span
-				{
-				color:$light_gray;
-				border:0px;
-				}
-						
-			}
-			
-			h3
-			{
-			clear:left;
-			font-size:em(14);
-			margin-top:5px;
-			line-height:1.5em;
-			
-				@media screen and (max-width:em(550)) 
-				{
-				font-size:em(14);
-				margin-bottom:5px;
-				}
-			
-			}
-		
-		
-		
-			li
-			{
-			@include font ($bold, em(18), $dark_gray, 1.5em, none);			
-			@include spanner (6, 674.797, 0, 6);
-			padding:0 0 5px 0;
-			margin:0 0 10px 0;
-			border-bottom:1px solid $silver;
-			
-				.question_detail
-				{
-				@include spanner (6, 674.797, 0, 2);	
-				margin:5px 0 0 0;
-				padding:0 0 0 2%;
-				
-					@media screen and (max-width:em(550)) 
-					{
-					@include spanner (6, 674.797, 0, 6);
-					padding:0 0 0 5%;
-					}
-				
-				
-				}
-				
-				
-				.reply_detail
-				{
-				@include spanner (6, 674.797, 0, 1);
-				margin:5px 0 0 0;
-				
-					@media screen and (max-width:em(550)) 
-					{
-					@include spanner (6, 674.797, 0, 3);
-					padding:0 0 0 5%;
-					}
-				
-
-				
-					.counter				
-					{
-					display:inline-block;
-					width:24px;
-					height:24px;
-					background-image:url('../temp_art/sunburst_bg.png');
-					background-size:24px;
-					@include box-sizing(border-box);
-					color:$white;
-					padding:6px 0 0 0px;
-					text-align:center;
-					font-weight:$light;
-					font-size:em(18);
-					}
-				
-					.small_button
-					{
-					background-color:$light_gray;
-					font-size:em(10);
-					margin-top:7px;
-					height:21px;
-					float:right;
-					width:78px;
-					
-						@media screen and (max-width:em(550)) 
-						{
-						margin-right:10%;
-						}
-					
-					
-					}
-				
-				}
-				
-				h7
-				{
-				margin:0px 0 2px 0;
-				
-				@media screen and (max-width:em(550)) 
-				{
-				display:inline-block;
-				}
-				
-				}
-			
-			}
-					
-
-		
-			.answer_names
-			{
-			@include font ($light, em(12), $light_gray, 1.5em, none);
-			margin-top:0px;	
-			margin-left:37px;
-			
-						@media screen and (max-width:em(550)) 
-				{
-				display:inline-block;
-				margin-left:7px;
-				margin-top:8px;
-				}
-			
-			}
-			
-			.answer_avatar
-			{
-			width:25px;
-			float:left;
-			margin:7px 7px 0 0px;
-			
-			
-			
-				@media screen and (max-width:em(550)) 
-				{
-				width:21px;
-				}
-			}
-		
-
-		
+		h4
+		{
+		margin:0 0 10px 70px;
 		
 		}
+		
+				
+			.answer_count
+			{
+			width:60px;
+			float:left;
+			border-right:1px solid $silver;
+			padding:0 10px 0 0;
+			margin:0 10px 0 0;
+			
+				.answer_counter
+				{
+				@include font ($bold, em(28), $light_gray, 1em, none);
+				text-align:center;
+				margin:0px
+				}
+			
+				.answer_label
+				{
+				@include font ($light, em(11), $light_gray, 1em, uppercase);
+				text-align:center;
+				margin:5px 0px 0 0;
+				}
+			
+			
+			}
+			
 	
-	
-	
-	
-	}
+			.question_response
+			{
+			@include spanner (6, 674.797,0, 3.5);	
+			list-style-type:none;
+			margin:0px 0 0px 70px;
+			clear:left;
+			
+				@media screen and (max-width:em(500)) 
+				{
+				width:auto;
+				margin:10px 0 10px 70px;		
+				}
+			
+			.question_link
+			{
+			width:12px;
+			height:12px;
+			border-left:1px solid $light_gray;
+			border-bottom:1px solid $light_gray;
+			float:left;
+			margin:0 5px 0 0;
+			}
+				
+				li
+				{
+				@include font ($light, em(13), $dark_gray, 1.5em, none);
+				margin:0 0 5px 0;
+				min-height:25px;
+				margin-left:30px;
+				padding-top:3px;
+				
+					@media screen and (max-width:em(500)) 
+					{
+					padding-top:0px;
+					}
+				
+				
+					span
+					{
+					color:$light_gray;
+					}
+				
+				}
+				
+				
+				.question_avatar
+				{
+				width:22px;	
+				float:left;
+				vertical-align: bottom;
+				margin:0 5px 0 0;
+				}
+		
+			
+			}
+		
+		.small_button
+		{
+		float:right;
+		margin:15px 0 0 0;
+		width:70px;
+		
+			@media screen and (max-width:em(500)) 
+			{
+			float:none;
+			clear:left;
+			margin:0px 0 10px 70px;
+			}
+		
+		}
+		
+				
+		}
+		
+	}	
