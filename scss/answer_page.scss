@@ -1,0 +1,201 @@
+
+
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "muckrock";
+@import "inside_page";
+@import "answers_grid";
+
+
+
+	
+	.top_info_container
+	{
+	@include spanner (10, 1000, 0, 10);	
+	margin:0px 0px 10px 0;
+	
+	
+		h1
+		{
+		font-weight:$bold;
+	
+		
+		span
+		{
+		
+		color:$red;
+		font-size:em(14);
+		display:inline-block;
+		border-right:1px solid $silver;
+		padding-right:15px;
+		margin-right:5px;
+		font-weight:light;
+		width:40px;
+		
+			@media screen and (max-width:em(600)) 
+			{
+			width:25px;
+			font-size:em(12);
+			}
+		
+		}
+		
+			@media screen and (max-width:em(600)) 
+			{
+			font-size:em(32);
+			}		
+		}
+
+				
+		}	
+	
+	
+		.questioner
+		{
+		@include font ($bold, em(13), $dark_gray, 1.5em, none);
+		margin:0px 0 10px 0;
+		padding:12px 0 0 0;
+		
+			@media screen and (max-width:em(500)) 
+				{
+				padding:0px 0 0 0;
+				}
+		
+			
+			span
+			{
+			color:$light_gray;
+			}
+		
+		}	
+		
+		.question_avatar
+			{
+			width:40px;	
+			float:left;
+			vertical-align: bottom;
+			margin:0 10px 0 0;
+			
+				@media screen and (max-width:em(500)) 
+					{
+					width:25px;
+					}
+			
+			
+			}
+	
+
+		.answer_container
+		{
+		max-width:$max_width;
+		width:100%;
+		margin:00px auto;
+		clear:both;
+		
+			.answer_body
+			{
+			width:100%;
+			font-size:em(18);
+			margin:0 0px 30px 0;
+			border-bottom:1px solid $silver;
+			}
+
+		.about_request
+		{
+		color:$light_gray;
+		font-size:em(13);
+		margin:20px 0;
+		}
+
+
+			.reply_body
+			{
+				@include box-sizing(border-box);
+				padding:0 0 0 0px;
+				margin:0 0px 0px 0;
+				
+				p
+					{
+					margin-left:80px;
+					clear:left;
+					
+						@media screen and (max-width:em(500)) 
+						{
+						margin-left:20px;
+						}
+					
+					
+					}
+
+
+				.questioner
+						{
+						@include font ($bold, em(15), $dark_gray, 1.5em, none);
+						padding-top:20px;
+						clear:none;
+						
+							@media screen and (max-width:em(500)) 
+							{
+							padding-top:8px;
+							}
+						
+						
+						}
+						
+					.question_avatar
+						{		
+						padding-top:12px;
+						margin-bottom:10px;
+						}
+						
+					.question_link
+					{
+					width:20px;
+					height:34px;
+					border-left:1px solid $light_gray;
+					border-bottom:1px solid $light_gray;
+					float:left;
+					margin:0 10px 0 0;
+					
+					
+						@media screen and (max-width:em(500)) 
+						{
+						width:12px;
+						height:24px;
+						}
+					
+					}
+				
+			
+			}
+		
+		.button
+		{
+		margin:30px 0 0 30px;
+		}
+		
+		}
+		
+
+
+	
+
+		
+
+	
+		
+		
+	
+
+
+
+	
+	
+
+	
