@@ -189,10 +189,18 @@
 	height:auto;
 	@include box-sizing(border-box);
 	margin-right:2%;
+	padding:0 15px 0 0;
+	background-image:url('../temp_art/double_rule.png');
+	background-position:top right;
+	background-repeat:repeat-y;
+	background-size: 2px 1px;
+	
 	
 		@media screen and (max-width:750px) 
 		{
 		width:100%;
+		padding:0px;
+		border-right:0px;
 		}
 	}
 	
@@ -298,7 +306,7 @@
 	padding:0px 0 0 20px;
 	float:left;
 	
-		@media screen and (max-width:700px) 
+		@media screen and (max-width:em(700)) 
 		{
 		width:100%;
 		padding:0 10px;
@@ -709,41 +717,32 @@
 	
 .button
 	{
-	@include button (120px, 38px, 13px, 2px);
+	@include button (120px, 38px, 10px, 2px);
 	@include font ($light, em(13), $white, 100%, none);
 	background-color:$red;
 	box-sizing:border-box;
 	@include transition;
-	background-image: url('../temp_art/circle.svg');
-	background-size:24px;
-	background-position: 87px 7px;
-	background-repeat: no-repeat;
+	background-image: url('../temp_art/circle.svg'), url('../temp_art/button_bg.png');
+	background-size:24px, 1px;
+	background-position: 83px 4px, left 25px;
+	background-repeat: no-repeat, repeat-x;
 	@include shadow;
+	border:2px solid #c10101;
 	
 	
 		&:hover
 		{
 		background-color:$light_gray;
 		color:$white;
+		border:2px solid #919191;
 		}
 	
 	}
 
-
-	.gray_button
-	{
-	background-color:$light_gray;
-	
-		&:hover
-		{
-		background-color:$silver;
-		}
-		
-	}
 
 .small_button
 	{
-	@include button (96px, 24px, 6px, 2px);
+	@include button (70px, 24px, 6px, 2px);
 	@include font ($light, em(12), $white, 100%, none);
 	background-color:$red;
 	font-family:$sans;
@@ -760,6 +759,40 @@
 	
 	}
 	
+
+
+.mini_button
+	{
+	@include button (50px, 22px, 6px, 2px);
+	@include font ($light, em(12), $white, 100%, none);
+	background-color:$red;
+	font-family:$sans;
+	box-sizing:border-box;
+	@include transition;
+	text-align:center;
+	@include shadow;
+	
+		&:hover
+		{
+		background-color:$light_gray;
+		}
+	
+
+	}
+
+
+	.gray_button
+	{
+	background-color:$light_gray;
+	
+		&:hover
+		{
+		background-color:$silver;
+		}
+		
+	}
+
+
 	
 	.donate
 	{
@@ -865,6 +898,22 @@
 		float:right;
 		}
 	}	
+	
+	
+	
+	.reply
+	{
+		&:after
+		{
+		content:' \f112';
+		font-family:$icon;
+		display:inline-block;
+		margin:0 11px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
+		}
+	}
 	
 	.double_rule
 	{
