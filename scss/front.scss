@@ -15,7 +15,7 @@
 
 .hero
 	{
-	height:280px;
+	height:480px;
 	
 	@media screen and (max-width:700px) 
 	{
@@ -32,7 +32,7 @@
 		{
 		@include spanner (12, 1200, 0, 5);
 		@include marginizer_left (12, 1200, 0, 1);
-		margin-top:30px;
+		margin-top:0px;
 		
 			@media screen and (max-width:750px) 
 			{
@@ -59,18 +59,24 @@
 				}			
 			}
 	
-			h1
-			{
-			min-width:500px;
-						
-				@media screen and (max-width:600px) 
-				{
-				font-size:em(16);
-				min-width:300px;
-				}			
-			}	
 		}
 	
+	
+	.CTA_container
+		{
+		@include spanner (10, 1000, 0, 10);
+		border:1px solid red;
+		height:100px;
+		max-width:1000px;
+		@include center (220px,10px);	
+		
+			.CTA_inside
+			{
+			@include spanner (10, 1000, 0, 3);
+			border:1px solid blue;
+			}
+	
+		}
 	
 	
 	.main_news_container
@@ -134,20 +140,15 @@
 	
 			.small_button
 			{
-			padding-top:4px;
-			color:$white;
 			float:right;
 			margin-top:3px;
 			margin-left:0px !important;
-			width:85%;
-			min-width:96px;
 
 				@media screen and (max-width:700px) 
 				{
 				margin-left:40px !important;
 				margin-top:10px;
 				float:left;
-				width:96px
 				}		
 			}
 			
@@ -178,8 +179,6 @@
 			
 			h4
 			{
-			font-size:em(15);
-			float:left;
 			@include spanner (6, 670, 0, 3.75);
 			margin-bottom:10px;
 			padding-right:5px;
@@ -188,13 +187,11 @@
 				{
 				@include spanner (6, 670, 0, 5);
 
-				}				
-			
-			
+				}					
 			}
 
 		
-			h6, h3, .small_button, .description
+			h7, h3, .small_button, .description
 			{
 			@include marginizer_left (6, 670, 0, 1);	
 			
