@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/user_page.css" rel="stylesheet" type="text/css">
+
+
+<!-- <script src="scripts/jquery-1.9.1.min-ck.js"></script> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="scripts/jquery.dataTables.min.js"></script>
+
+<script src="scripts/functions.js"></script>
+
+<!--flot --> 
+<script src="../scripts/flot/jquery.flot.js"></script>
+<script src="../scripts/flot/jquery.flot.categories.js"></script>
+<script src="../scripts/flot/jquery.flot.resize.js"></script>
+
+
+<script>
+$(document).ready( function () {
+    $('#document_list').dataTable({
+    
+    "aaSorting": [[ 1, "asc" ]],
+    "bStateSave": true,
+    "sPaginationType": "full_numbers",
+    "bLengthChange": false,
+    "bAutoWidth": false ,
+    "bProcessing": true,
+	"iDisplayLength": 12
+    }
+    );
+} );
+
+</script>
+
+
+
+
+<script>
+$(function() {
+
+		var d1 = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+
+		var d2 =  [ ["July", 10], ["Aug.", 8], ["Sept.", 4] ];
+		
+		var red = '#cc0202';
+		var gray = '#666';
+		var light_gray = '#999';
+		var background = '#f0f4f5';
+		var silver = '#d1d4d5';
+
+		$.plot(
+		   $("#placeholder"),
+		   [
+			{
+			  label: "This is thing three",
+			  color: light_gray,
+			  data: d1,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:light_gray,
+				lineWidth: 0,
+				label: "y = 3"
+			  }   
+			},
+		
+			{
+			  label: "This is thing two",
+			  color: red,
+			  data: d2,
+			  bars: {
+				show: true,
+				barWidth: 0.5,
+				align: "center",
+				fillColor:red,
+				lineWidth: 0
+			  }
+			},	
+			
+		 ],
+	 
+		 {
+		   
+		   xaxis: {
+					mode: "categories",
+					tickLength: 0,
+					color: silver,
+					position: 'bottom',
+					size: 11,
+					lineHeight: 13,
+					style: "italic",
+					weight: "bold",
+					family: "sans-serif",
+					variant: "small-caps",
+
+		   },
+		   
+		  	grid: {
+					color:gray,
+					backgroundColor: background,
+					borderWidth: 0
+					},
+					
+			legend: {
+					show:true,
+					backgroundColor: background,
+					labelBoxBorderColor: silver
+					}
+   
+		 			}
+		);
+
+	});
+	
+	</script>
+
+
+<!--flot --> 
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+<div id="menu">
+
+	<div class="menu_inside">
+
+	<ul class="site_navigation">
+		<li><span>Muckrock</span></li>
+		<li>News</li>
+		<li>Submit Request</li>
+		<li>FOI Requests</li>
+		<li>FOI Questions</li>
+		<li>Account</li>
+	</ul>
+
+
+
+
+
+<p class="menu_icon" id="menu_trigger">&#xf0c9;</p>
+</div>
+
+
+</div>
+
+
+<!-- @import "/components/header_inside.html" -->
+
+
+<div class="content_container">
+		
+
+		<div class="top_info_container">
+				
+				<img class="main_avatar" src="temp_art/mug.jpg">
+				<h1>putneydm </h1>
+				
+				<p>Muckrock member since June 2013.</>
+			
+			
+		
+			<p class="double_rule"></p>
+		</div>
+
+
+
+
+		<div class="main_news_container">
+
+			
+		<div class="user_page_options">
+		
+			<div class="user_page_options_inside">
+				<h4><span class="red">Get more requests</span></h4>
+				<ul class="user_page_options_list">
+					<li>Virtue No. 1 about buying more requests goes here</li>
+					<li>An then there's another one that would go her her herer</li>
+					<li>And a final one would go here her here.</li>
+					</ul>
+				<div class="button button_plain">Buy requests</div>
+			
+			</div>
+			
+			<div class="user_page_options_inside">
+				<h4><span class="red">Upgrade to pro</span></h4>
+					<ul class="user_page_options_list">
+						<li>Virtue No. 1 about buying more requests goes here</li>
+						<li>An then there's another one that would go her her herer</li>
+						<li>And a final one would go here her here.</li>
+					</ul>
+
+				<div class="button button_plain">Go pro</div>
+			
+			</div>
+			
+
+		
+		<p class="clear"></p>
+		</div>
+		
+		<p class="clear"></p>
+
+					
+
+					<!-- @import "components/document_table.html" -->
+	
+	
+	
+			<h4><span class="red">Your contributions</span></h4>
+			<div class="chart">
+			
+			
+					<!-- @import "components/participation_chart.html" -->
+			
+
+			</div>
+	
+
+			<!--
+					<div id="placeholder" class="demo-placeholder"></div>
+				-->			
+		
+		</div>
+	
+	
+		
+
+
+
+	<div class="main_right_rail">
+	
+	
+	<div class="main_about_us">
+		
+	<h4>Tips for success</h4>
+	<p>As the only public records request service of its kind in the United States, MuckRock serves journalists, researchers, activists and historians, with a track record of over 2,000 requests.</p>
+
+	<p>Simply login to your account and submit your FOI request via our simple web-interface.</p>
+	
+	</div>
+	
+	
+	
+	</div>	
+		
+		
+	</div>
+
+
+
+
+
+<p class="clear"></p>
+</div>
+
+
+<!-- @import "/components/toolbox.html" -->
+
+<!-- @import "/components/footer.html" -->
+
+
+
+</body>
+
+</html>
