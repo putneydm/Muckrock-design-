@@ -331,7 +331,7 @@
 		
 		p
 		{
-		color:$dark_gray;
+		color:$light_gray;
 		
 			a
 			{
@@ -788,7 +788,14 @@
 		background-color:$light_gray;
 		}
 	
-
+	}
+	
+.mini_button_light
+	{
+	color:$light_gray;
+	background-color:$background;
+	border:1px solid $silver;	
+	box-shadow: none;
 	}
 
 
