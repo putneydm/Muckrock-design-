@@ -1,0 +1,212 @@
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "muckrock";
+@import "right_rail_monitor";
+
+
+
+.hero
+	{
+	height:75px;
+	background-image:none;
+	background-color:$red;
+	
+		@media screen and (max-width:em(700)) 
+		{
+		height:150px;
+		}
+		
+	}
+	
+	.branding
+		{
+		@include spanner (12, 1200, 0, 7);
+		@include marginizer_left (12, 1200, 0, 1);
+		margin-top:10px;
+		
+		/* test width */
+			@media screen and (max-width:em(700)) 
+			{
+			margin:20px 0 0 10px;
+			}
+
+			.hero_logo
+			{
+			width:230px;
+			height:32px;
+			background-image:url('../temp_art/muckrock1.png');
+			background-size:cover;
+			
+				@media screen and (max-width:em(700)) 
+				{
+				width:250px;
+				margin:0 0 5px 0;
+				}			
+			}
+	
+			h1
+			{
+			font-size:em(18);
+			width:100% !important;
+			text-shadow:none;
+			color:$white;
+
+						
+				@media screen and (max-width:em(600)) 
+				{
+				font-size:em(16);
+				}			
+			}	
+		}
+	
+	
+	.social
+		{
+		@include spanner (12, 1200, 0, 4);
+		float:right;
+	
+	
+		@media screen and (max-width:em(700)) 
+		{
+		width:100%;
+		}
+	
+			.circle_icon
+			{
+			background-color:$white;
+			color:$red;
+			text-shadow:none;
+			}				
+		}
+		
+		
+	.CCV_image	
+		{
+		width:80%;
+		margin:0 10%;
+		background-image: url('../temp_art/cvv3.jpg');
+		height:auto;
+		padding-bottom:50%;
+		background-size: cover;
+		position:absolute;
+		background-repeat: no-repeat;
+	/*	display:none; */
+		border-radius:15px;
+		box-shadow:3px 3px 5px 0px rgba(0,0,0,0.15);
+		border-bottom:1px solid $dark_gray;
+		border-right:1px solid $dark_gray;
+		border-top:1px solid $white;
+		border-left:1px solid $white;
+		
+			@media screen and (max-width:em(500)) 
+			{
+			width:92%;
+			margin:20px auto 0;
+			float:left;
+			padding-bottom:63%;
+			}
+		
+	
+		.CCV_image_close
+			{
+			font-family:$icon;
+			font-size:30px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			padding:0 10px 0 0;
+			color:$silver;
+			cursor:pointer;
+			@include transition;
+			
+			&:hover
+			{
+			color:$white;
+			}
+			
+			
+			}
+	
+		}
+		
+		
+	.regi_container
+		{
+		position:relative;
+		width:475px;
+		@include center (0,0);	
+		@include box-sizing(border-box);
+		position:relative;
+		
+			@media screen and (max-width:em(495)) 
+			{
+			width:100%;
+			padding:0 10px;
+			}
+		
+		
+		}
+	
+	
+	.account_name
+		{
+		margin:0 0 25px 0;
+		}
+	
+	.account_credit_card
+		{
+		width:68%;
+		margin:0 5% 25px 0;
+		float:left;
+		
+			@media screen and (max-width:em(400)) 
+			{
+			width:100%;
+			}
+		
+		}
+		
+				
+	.CCV_explainer	
+		{
+		@include font ($icon, 20px, $light_gray, 1em, none);
+		font-family:$icon;
+		float:left;
+		width:7%;
+		text-align:right;
+		padding-top:10px;
+		cursor:pointer;
+			@include transition;
+		&:hover
+			{
+			color:$red;
+			}
+		
+		}
+		
+		.account_CCV
+		{
+		width:20%;
+		margin:0 0 25px 0;
+		float:left;
+		}	
+	
+	.expiration_month
+		{
+		width:80px;
+		clear:left;
+		}
+		
+	.expiration_year
+		{
+		width:100px;
+		}
+
+		
+		
+	
