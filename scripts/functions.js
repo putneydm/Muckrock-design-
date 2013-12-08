@@ -2,6 +2,28 @@ $(document) .ready (function()
 	{	
 
 		
+		
+	// function that hides or shows 
+	// passses name of item clicked on it. looks for name, which is the id of the item to be shown, hidden
+	// initial visibility doesn't matter. It does the opposite of whatever it's state is.
+	
+	function hide_show (clicked)
+		{	
+		var target = '#' + $(clicked) .attr ('name');
+		var visible = $(target) .is(":visible");
+
+			if (visible == true)
+			{
+			$(target) .fadeOut (100);	
+			}
+		
+			if (visible == false)
+			{
+			$(target) .fadeIn (100);		
+			}
+
+		}
+		
 
 	
 	function mobile_menu (document_width)
@@ -144,6 +166,14 @@ $(document) .ready (function()
 		$('#document_list') .fadeIn (100);	
 		});
 	*/
+	
+	
+	$('#CCV_explainer, #CCV_image_close, #CCV_image') .click (function()
+		{
+		
+		hide_show(this);
+		
+		});
 	
 	
 		});	
