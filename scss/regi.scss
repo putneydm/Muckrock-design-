@@ -95,7 +95,7 @@
 		background-size: cover;
 		position:absolute;
 		background-repeat: no-repeat;
-	/*	display:none; */
+		display:none; 
 		border-radius:15px;
 		box-shadow:3px 3px 5px 0px rgba(0,0,0,0.15);
 		border-bottom:1px solid $dark_gray;
@@ -149,6 +149,17 @@
 			padding:0 10px;
 			}
 		
+		
+		.button
+			{
+			float:left;
+			margin-right:15px;
+			}
+			
+		h4
+			{
+			clear:left;
+			}
 		
 		}
 	
@@ -207,6 +218,127 @@
 		width:100px;
 		}
 
+
+
+
+	.icon_list_container
+		{
+		@include spanner (4, 639.797px, 0px, 4);
+		margin:0 0 25px 0;
+		
+				@media screen and (max-width:em(500)) 
+				{
+				@include spanner (4, 639.797px, 0px, 4);
+				}		
+
+	.icon_list
+		{
+		@include font ($light, em(60), $light_gray, 1.2em, none);
+		font-family:$icon;
+		list-style-type:none;
+		clear:left;
+		text-shadow:1px 1px 1px $white;
+		margin:0 0 15px 0;
+		width:100%;
+
+			li
+			{
+			float:left;
+			margin:0 20px 0 0;
+			@include transition;	
+			cursor:pointer;
+
+			
+			&:hover
+			{
+			color:$red;
+			}
+			
+			}
+			
+
+			
+			.used_request
+			{
+			color:$silver;
+			cursor:auto;
+
+			
+				&:hover
+				{
+				color:$silver;
+				}
+			
+			}
+		
+		}
+		}
+			
+			
+.user_page_options_inside
+		{
+		@include spanner (2, 639.797px, 0px, 2);
+		padding:0 0 0 0;
+		margin: 0 0 40px 0;	
+		
+			@media screen and (max-width:em(550)) 
+			{
+			width:100%;
+			clear:left;
+			margin:0 0 30px 0;
+			}
+		
+		}		
+		
+		
+.user_page_options_list
+		{
+		@include font ($light, em(16), $dark_gray, 1.4em, none);
+		margin:0 0 00px 10px;
+		list-style-type:none;
+		float:left;
+		padding-right:20px;
+		
+			li
+			{
+			text-indent:-10px;
+			margin:0 0px 15px 10px;
+			line-height:1.3em;
+			
+			
+			&:before {
+					content: "\2022";
+					display:inline-block;
+					margin:0 10px 0 0;
+					color: $red; 
+					font-size:em(16);
+				}
+			
+			}
+		
+		}
+	
+		.user_page_options_list_small
+		{
+		@include font ($light, em(12), $light_gray, 1.4em, none);
+		margin:7px 0 0 5px;
+		width:120px;
+		padding:0px;
+		
+			li
+			{
+			margin:0 0px 2px 5px;
+			text-indent:-5px;
+			
+			&:before {
+					margin:0 5px 0 0;
+				}
+			
+
+			}
+		
+		}		
+		
 		
 		
 	
