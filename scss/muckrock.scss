@@ -691,7 +691,7 @@
 	background-position:95% -12px;
 	background-size:24px;
 	@include text_transition;
-	margin:0 0 20px 0;
+	margin:0 0 25px 0;
 	
 	&:disabled
 	{
@@ -762,6 +762,7 @@
 	text-align:center;
 	@include shadow;
 	
+	
 	&:hover
 	{
 	background-color:$light_gray;
@@ -802,6 +803,7 @@
 	.gray_button
 	{
 	background-color:$light_gray;
+	border-color:$light_gray;
 	
 		&:hover
 		{
@@ -1038,6 +1040,7 @@ border:1px solid red;
 	padding:10px 18px;
 	@include transition;
 	width:100%;
+	margin:0 0 25px 0;
 	
 	&:hover
 	{
