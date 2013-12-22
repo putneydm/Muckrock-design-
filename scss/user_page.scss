@@ -57,8 +57,8 @@
 	.main_avatar
 	{
 	float:left;
-	width:50px;
-	margin:5px 10px 0 0;
+	width:90px;
+	margin:5px 20px 20px 0;
 	
 	}
 		
@@ -80,17 +80,16 @@
 	}	
 		
 		
-	.user_page_options
+	.contributions_stream
 	{
-	@include spanner (2, 639.797px, 0px, 2);
+	@include spanner (1, 639.797px, 0px, 1);
+	margin:20px 0 40px 0px;	
 	
-	
-		.user_page_options_inside
+		.contributions_inside
 		{
-		@include spanner (2, 639.797px, 0px, 2);
+		@include spanner (1, 639.797px, 0px, 1);
 		padding:0 0 0 0;
-		margin: 0 0 40px 0;		
-
+		margin: 0 0 20px 0;	
 		
 			@media screen and (max-width:em(550)) 
 			{
@@ -98,113 +97,47 @@
 			clear:left;
 			margin:0 0 30px 0;
 			}
-		
-		
-		
+				
 			&:nth-child(2)
 			{
 			margin-right:0px;
-			}
-		
+			}		
 		}
 		}
 	
-	
-		.icon_list_container
-		{
-		@include spanner (4, 639.797px, 0px, 3);
-		
-				@media screen and (max-width:em(500)) 
-				{
-				@include spanner (4, 639.797px, 0px, 4);
-				}		
 
-	
-		.icon_list
-		{
-		@include font ($light, em(60), $light_gray, 1.2em, none);
-		font-family:$icon;
-		list-style-type:none;
-		clear:left;
-		text-shadow:1px 1px 1px $white;
-		margin:0 0 15px 0;
-
-			li
-			{
-			float:left;
-			margin:0 20px 0 0;
-			@include transition;	
-			cursor:pointer;
-
-			
-			&:hover
-			{
-			color:$red;
-			}
-			
-			}
-			
-
-			
-			.used_request
-			{
-			color:$silver;
-			cursor:auto;
-
-			
-				&:hover
-				{
-				color:$silver;
-				}
-			
-			}
-		
-		}
-		
-		}	
-		
-	
-		
-		.user_page_options_button_container
-		{
-		@include spanner (4, 639.797px, 0px, 1);
-		margin:0;
-		padding:4px 0 0 0;
-		
-				@media screen and (max-width:em(500)) 
-				{
-				@include spanner (4, 639.797px, 0px, 4);
-				}		
-		
-		
-		}
-
-
-		.button
-		{
-			@media screen and (max-width:em(500)) 
-			{
-			float:left;
-			margin: 8px 20px 0 0;
-			}
-		
-		}
-	
 		.user_page_options_list
 		{
-		@include font ($light, em(16), $dark_gray, 1.4em, none);
-		margin:0 0 00px 10px;
+		@include font ($light, em(14), $dark_gray, 1.2em, none);
+		@include spanner (1, 639.797px, 0px, 1);
+		margin:10px 0 00px 0px;
 		list-style-type:none;
 		float:left;
 		padding-right:20px;
 		
+	
+		.list_avatar
+		{
+		float:left;
+		width:30px;
+		margin:0px 7px 0px 0px;
+		clear:left;
+		}
+		
+		
 			li
 			{
-			text-indent:-10px;
-			margin:0 0px 15px 10px;
-			line-height:1.3em;
+			margin:0 0px 7px 37px;
+			line-height:1.5em;
+			min-height:28px;
 			
+				@media screen and (max-width:em(600)) 
+				{
+				margin-bottom:15px;
+				}
+
 			
+			/*
 			&:before {
 					content: "\2022";
 					display:inline-block;
@@ -212,6 +145,7 @@
 					color: $red; 
 					font-size:em(16);
 				}
+			*/
 			
 			}
 		
@@ -391,21 +325,41 @@
 	
 		.chart_stats
 		{
-		@include spanner (3, 639.797px, 0px, 3);
-		margin:20px 0 0 0;
+		@include spanner (4, 639.797px, 0px, 4);
+		margin:0px 0 30px 0;
 		
 		.chart_stats_inside
 			{
-			@include spanner (3, 639.797px, 15px, 1);
+			@include spanner (4, 639.797px, 15px, 1);
+			border-right:1px solid $silver;
+			
+				&:nth-child(4)
+				{
+				border-right:0px;
+				}
 			
 				@media screen and (max-width:em(475)) 
 				{
-				@include spanner (3, 639.797px, 0px, 3);
+				@include spanner (4, 639.797px, 0px, 2);
+				margin-bottom:20px;
+				
 				}
 
 
+			&:nth-child(2)
+				{
+				margin-right:0px;
+				}
+		
+		
 			&:nth-child(3)
 				{
+				border-bottom:0px;
+				}
+			
+			&:nth-child(4)
+				{
+				border:0px;
 				margin-right:0px;
 				}
 			
@@ -421,6 +375,7 @@
 			{
 			@include font ($light, em(48), $light_gray, 1em, none);	
 			text-align:center;
+			margin:0px;
 			}
 		
 
