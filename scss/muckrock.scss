@@ -1356,8 +1356,19 @@ border:1px solid red;
 	}
 	
 	
+	.agate_left
+		{
+		@include font ($light, em(11), $medium_gray, 1em, none);
+		text-align:left;
+		margin:5px 0 10px 0;
+		}
 
-	
+	.agate_right
+		{
+		@include font ($light, em(11), $medium_gray, 1em, none);
+		text-align:right;
+		margin:5px 0 10px 0;
+		}	
 	
 	
 	
