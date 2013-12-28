@@ -32,6 +32,7 @@
 		h1
 		{
 		font-weight:$bold;
+		margin-bottom:10px;
 		
 			@media screen and (max-width:600px) 
 			{
@@ -54,14 +55,34 @@
 	
 		}
 		
+		
+	.user_container
+	{
+	float:left;	
+	margin:0 20px 0 0;
+	padding:0 20px 0 0;
+	
+		@media screen and (max-width:em(590)) 
+			{
+			width:100%;
+			}
+	
+		p
+		{
+		margin:0px;
+		}
+	
+	}	
+		
+		
 	.main_avatar
 	{
 	float:left;
-	width:90px;
+	width:150px;
 	margin:5px 20px 20px 0;
-	
 	}
 		
+	
 		
 		}	
 	
@@ -80,10 +101,63 @@
 	}	
 		
 		
+		
+	.badges
+	{
+	margin:10px 0 0 0;
+	padding:0;
+	list-style-type: none;
+	width:107%;
+	
+	
+		li
+		{
+			@include circle (48px);
+			background-color:$silver;
+			float:left;
+			margin:0px 10px 15px 0;
+			font-family:$icon;
+			font-size:em(24);
+			color:$red;
+			text-align:center;
+			padding-top:14px;
+			text-shadow: 1px 1px 0 $dark_silver;
+			
+				@media screen and (max-width:em(400)) 
+				{
+				@include circle (40px);
+				padding-top:10px;
+				}
+			
+		
+		}
+		
+		.pending
+		{
+		background-color:$silver;
+		color:$silver;
+		text-shadow:none;
+		background-image:url('../temp_art/subtle_stripes_@2X.png');
+		background-repeat:repeat;
+		background-size:3px;		
+		}
+		
+		.badge_name
+		{
+		@include font ($light, 10(em), $light_gray, 1em, none);
+		font-size:10px !important;
+		text-shadow: none;
+		padding-top:18px;
+		}	
+	
+	}
+		
+		
+		
 	.contributions_stream
 	{
 	@include spanner (1, 639.797px, 0px, 1);
-	margin:20px 0 40px 0px;	
+	margin:30px 0 40px 0px;	
 	
 		.contributions_inside
 		{
@@ -108,7 +182,7 @@
 
 		.user_page_options_list
 		{
-		@include font ($light, em(14), $dark_gray, 1.2em, none);
+		@include font ($light, em(14), $body, 1.2em, none);
 		@include spanner (1, 639.797px, 0px, 1);
 		margin:10px 0 00px 0px;
 		list-style-type:none;
@@ -179,7 +253,7 @@
 	{
 	width:100%;
 	height:auto;
-	
+	margin-top:20px;
 	
 		.chart_week
 		{
@@ -327,6 +401,8 @@
 		{
 		@include spanner (4, 639.797px, 0px, 4);
 		margin:0px 0 30px 0;
+		border-bottom:1px solid $silver;
+		padding:0 0 0px 0;
 		
 		.chart_stats_inside
 			{
@@ -346,16 +422,6 @@
 				}
 
 
-			&:nth-child(2)
-				{
-				margin-right:0px;
-				}
-		
-		
-			&:nth-child(3)
-				{
-				border-bottom:0px;
-				}
 			
 			&:nth-child(4)
 				{
@@ -365,20 +431,38 @@
 			
 			}
 		
-			h7
+			.big_number_label
 			{
+			@include font ($light, em(12), $medium_gray, 1em, none);
 			text-align:center;
+			
 			}
 		
 		
 			.big_number
 			{
-			@include font ($light, em(48), $light_gray, 1em, none);	
+			@include font ($light, em(60), $medium_gray, 1em, none);	
 			text-align:center;
-			margin:0px;
+			margin:0px 0 10px 0;
 			}
 		
-
+			.big_icon
+			{
+			font-size:em(28);
+			line-height:1em;
+			font-family:$icon;
+			font-weight:100;
+			color:$dark_silver;
+			text-align:center;
+			margin:0px;
+			text-shadow:(1px 1px 1px $white);
+			border:0px;
+			width:60px;
+			margin:0 auto 10px;
+			padding:0 0 5px 0;
+			border-bottom:1px solid $silver;	
+			display:none;
+			}
 		
 		
 		}
