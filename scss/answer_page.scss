@@ -82,6 +82,7 @@
 			vertical-align: bottom;
 			margin:0 10px 0 0;
 			
+			
 				@media screen and (max-width:em(500)) 
 					{
 					width:25px;
@@ -103,8 +104,44 @@
 			width:100%;
 			font-size:em(18);
 			margin:0 0px 30px 0;
-			border-bottom:1px solid $silver;
+			
+			/*
+				p
+				{
+				&:nth-child(3)
+				{
+				margin-top:15px;
+				}
+			
 			}
+			
+						*/
+			
+			
+			}
+			
+		.view_request
+		{
+		margin: 20px 0;
+			i
+			{
+			@include font ($light, em(34), $silver, 1em, none);
+			float:left;
+			font-family:$icon;
+			margin:-3px 10px 0 0;
+			text-shadow:(1px 1px 1px $white);
+			}
+			
+			p
+			{
+			margin:0 0 0 0;
+			font-size:em(13);
+			
+			}
+		
+		
+		}
+			
 
 		.about_request
 		{
@@ -114,24 +151,131 @@
 		}
 
 
+
+			.answer_tools
+			{
+			@include spanner (9, 657.797, 0, 1);
+			height:100px;
+			
+			.mini_button_special
+				{
+				margin:0 auto;
+				width:100%;
+					@media screen and (max-width:em(500)) 
+					{
+					font-size:em(18);
+					}
+				
+				}
+			
+			}
+
+
+			.vote_counter
+			{
+			@include font ($bold, em(28), $light_gray, 1em, none);
+			text-align:center;
+			margin:10px 0 0 0;
+			
+				@media screen and (max-width:em(500)) 
+				{
+				font-size:em(22);
+				}
+			
+			}
+
 			.reply_body
 			{
 				@include box-sizing(border-box);
 				padding:0 0 0 0px;
-				margin:0 0px 0px 0;
-				
+				@include spanner (9, 657.797, 0, 8);
+				margin:0 0px 20px 0;
+
 				p
 					{
-					margin-left:80px;
+					margin-left:0px;
 					clear:left;
-					
-						@media screen and (max-width:em(500)) 
+									
+					}
+
+			.append_reply
+				{
+				@include spanner (9, 657.797, 0, 9);
+				
+				@media screen and (max-width:em(500)) 
 						{
-						margin-left:20px;
+						margin:0 0px 10px 0;			
+						}
+					
+				
+	
+				.append_reply_field
+					{
+					height:24px;
+					padding:2px 10px 0;
+					@include spanner (9, 657.797, 0, 7);
+					margin:0 10px 10px 0;
+					
+					@media screen and (max-width:em(500)) 
+						{
+						width:100%;
+						margin:0 0px 10px 0;			
 						}
 					
 					
 					}
+	
+					.small_button
+					{
+					float:left;
+					}			
+				}
+
+
+
+				.append_body
+				{
+				padding:0 0 0 0px;
+				
+				p
+				{
+				margin-left:28px;
+				@include font ($light, em(14), $dark_gray, 1.6em, none);
+				
+					@media screen and (max-width:em(500)) 
+					{
+					margin-left:20px;
+					}
+				
+				
+				}
+				
+				
+				.question_avatar
+				{
+				width:25px;	
+				float:left;
+				vertical-align: bottom;
+				margin:0 10px 0 0;		
+				}
+				
+				
+				.questioner
+					{
+					@include font ($bold, em(13), $dark_gray, 1.5em, none);
+					padding-top:15px;
+					clear:none;
+					
+						@media screen and (max-width:em(500)) 
+						{
+						padding-top:8px;
+						}
+						
+					}	
+			
+				
+				
+				}
 
 
 				.questioner
@@ -157,7 +301,7 @@
 					.question_link
 					{
 					width:20px;
-					height:34px;
+					height:20px;
 					border-left:1px solid $light_gray;
 					border-bottom:1px solid $light_gray;
 					float:left;
