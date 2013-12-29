@@ -798,6 +798,24 @@
 	border:1px solid $silver;	
 	box-shadow: none;
 	}
+	
+	
+.mini_button_special
+	{
+	color:$light_gray;
+	background-color:$background;
+	border:0px;	
+	box-shadow: none;
+	font-family:$icon;
+	font-size:em(24);
+	
+	&:hover
+		{
+		background-color:$background;
+		color:$red;
+		}
+	
+	}	
 
 
 	.gray_button
