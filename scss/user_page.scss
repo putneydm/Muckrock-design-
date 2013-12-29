@@ -121,7 +121,7 @@
 			color:$red;
 			text-align:center;
 			padding-top:14px;
-			text-shadow: 1px 1px 0 $dark_silver;
+			text-shadow: 1px 1px 0 $silver;
 			
 				@media screen and (max-width:em(400)) 
 				{
@@ -452,7 +452,7 @@
 			line-height:1em;
 			font-family:$icon;
 			font-weight:100;
-			color:$dark_silver;
+			color:$silver;
 			text-align:center;
 			margin:0px;
 			text-shadow:(1px 1px 1px $white);
