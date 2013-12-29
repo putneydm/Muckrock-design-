@@ -49,6 +49,21 @@ body
 
 	}
 	
+blockquote
+	{
+	font-size:em(14);
+	line-height:1.5em;
+	margin:15px 0px 18px;
+	padding:0 20px;
+	color:$dark_gray;
+	border-left:1px solid $silver;
+	}
+	
+i
+	{
+	font-family:$icon;
+	font-style:normal;
+	}
 	
 strong
 	{
@@ -153,6 +168,21 @@ h7
 		}
 	
 	}	
+	
+h8
+	{
+	@include font ($light, em(11), $light_gray, 1em, uppercase);
+	margin:0 0 2px 0;
+	display:block;
+	
+	
+		span
+		{
+		border-bottom:1px solid $light_gray;	
+		padding: 0 0 2px 0;
+		}
+	
+	}		
 	
 	
 .icon
