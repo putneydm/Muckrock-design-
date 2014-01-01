@@ -126,6 +126,86 @@
 	}
 		
 	
+.agency_stats_chart
+	{
+	@include spanner (3, 659.797, 0, 3);
+	list-style-type: none;
+	margin:40px 0;
+	
+	
+		.header
+		{
+			@include font ($light, em(13), $light_gray, 1em, uppercase);
+			clear:left;
+			
+			
+			.sparkline_header
+			{
+			width:80px;
+			float:left;
+			margin:0 10px 0 0;
+			}
+			
+			.agency_stats_header
+			{
+			width:50px;
+			float:left;
+			margin:0 10px 0 0;
+			}
+		
+			.stats_explainer_text_header
+			{
+			}
+	
+		}
+	
+	
+		li
+		{
+		clear:left;
+		margin:0 0 15px 0;
+		@include font ($light, em(16), $dark_gray, 1.2em, none);
+		padding:3px 0 0 0;
+		
+			.sparkline
+			{
+			width:70px;
+			float:left;
+			margin:0 20px 0 0;
+			}
+			
+			span
+			{
+			width:55px;
+			@include font ($bold, em(18), $red, 1.1em, none);
+			float:left;
+			margin:0 20px 0 0;
+			display:inline_block;
+			}
+
+		}
+	
+	}
+	
+	.star_rating
+	{
+	@include font ($light, em(30), $silver, 1em, none);
+	font-family:$icon;
+	
+		li
+		{
+		float:left;
+		margin:0 10px 0 0;
+		text-shadow:(1px 1px 1px $white);
+		
+			span
+			{
+			color:$red;
+			}
+		
+		}
+
+	}	
 
 
 
