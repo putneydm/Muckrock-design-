@@ -32,8 +32,10 @@ body
 	
  p
 	{
-	@include font ($regular, em(15), $body, 1.5em, none);
+	@include font ($regular, em(15), $body, 1.7em, none);
 	margin:0 0 .80em 0;
+	font-family:$open;
+
 	
 	
 		strong
@@ -113,12 +115,12 @@ h3
 	{
 	@include font ($bold, em(24), $dark_gray, 1.5em, none);
 	line-height:1.3em;
-	margin:0 0 20px 0;
+	margin:0 0 40px 0;
 	}	
 
 h4 
 	{
-	@include font ($bold, em(16), $dark_gray, 1.4em, none);
+	@include font ($bold, em(14), $red, 1.4em, none);
 	margin:0px 0 10px 0;
 	
 	}
@@ -174,13 +176,6 @@ h8
 	@include font ($light, em(11), $light_gray, 1em, uppercase);
 	margin:0 0 2px 0;
 	display:block;
-	
-	
-		span
-		{
-		border-bottom:1px solid $light_gray;	
-		padding: 0 0 2px 0;
-		}
 	
 	}		
 	
