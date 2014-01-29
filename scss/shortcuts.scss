@@ -49,7 +49,7 @@ $browser-context: 16; // Default
 	
 @mixin rounded	
 	{
-	border-radius:3px;
+	border-radius:2px;
 	}
 @mixin hide_show ($breakpoint,$display)
 	{
