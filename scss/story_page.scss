@@ -156,6 +156,7 @@
 				p
 				{
 				@include font ($light, em(16), $body, 1.7em, none);
+				font-family:$open;
 
 					&:first-child
 					{
