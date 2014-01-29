@@ -670,13 +670,11 @@
 	
 .selector
 	{
-	width:300px;
+	width:100%;
 	height:40px;
 	@include font ($light, em(14), $dark_gray, 125%, none);
 	background:transparent;
-	border:1px solid red;
-	@include rounded;
-    background: $silver;
+    background-color: $white;
     border:none;
     outline:none;
     display: inline-block;
@@ -692,6 +690,7 @@
 	background-size:24px;
 	@include text_transition;
 	margin:0 0 25px 0;
+	overflow:hidden;
 	
 	&:disabled
 	{
@@ -704,8 +703,15 @@
 	}
 	
 	
+	option 
+	{
+    max-width: 120px !important;
+    overflow: hidden !important;
+	}
+
 	}
 	
+
 	.inactive_selector
 	{
 	background-color:$silver;
@@ -716,57 +722,70 @@
 	border:1px solid $silver;
 	}
 	
+
+
+.large_button
+	{
+	height:30px;
+	@include rounded;
+	width:100%;
+	@include font ($light, em(12), $white, 100%, none);
+	box-sizing:border-box;
+	@include transition;
+	background-color:$red;
+	text-align: center;
+	padding:10px 0 0;
+	margin:0 0 30px;
+		&:hover
+		{
+		color:$white;
+		background-color:$hover;
+		}
+	
+	}
+
 	
 .button
 	{
-	@include button (120px, 38px, 10px, 2px);
-	@include font ($light, em(13), $white, 100%, none);
-	background-color:$red;
+	@include button (150px, 42px, 16px, 2px);
+	@include font ($light, em(12), $white, 100%, none);
+	/* background-color:$red; */
 	box-sizing:border-box;
 	@include transition;
-	background-image: url('../temp_art/circle.svg'), url('../temp_art/button_bg.png');
-	background-size:24px, 1px;
-	background-position: 83px 4px, left 25px;
+	/*background-image: url('../temp_art/circle.svg'), url('../temp_art/button_bg.png') */;
+	background-size:30px, 1px;
+	background-position: 97px 5px;
 	background-repeat: no-repeat, repeat-x;
-	@include shadow;
-	border:2px solid #c10101;
-	
+	/* @include shadow; */
+	background-color:$red;
 	
 		&:hover
 		{
-		background-color:$light_gray;
 		color:$white;
-		border:2px solid #919191;
+		background-color:$hover;
 		}
 	
 	}
 	
 	
-.button_plain
-	{
-	background-image:url('../temp_art/button_bg.png');
-	background-size:1px;
-	background-position:left 25px;
-	background-repeat:repeat-x;	
-	}
 
 
 .small_button
 	{
-	@include button (70px, 24px, 6px, 2px);
-	@include font ($light, em(12), $white, 100%, none);
-	background-color:$red;
+	@include button (70px, 26px, 9px, 2px);
+	@include font ($light, em(10), $white, 100%, none);
 	font-family:$sans;
 	box-sizing:border-box;
 	@include transition;
 	text-align:center;
-	@include shadow;
+	background-color:$red;
 	
 	
-	&:hover
-	{
-	background-color:$light_gray;
-	}
+		&:hover
+		{
+		color:$white;
+		background-color:$hover;
+		}
 	
 	
 	}
@@ -784,9 +803,12 @@
 	text-align:center;
 	@include shadow;
 	
-		&:hover
+	&:hover
 		{
-		background-color:$light_gray;
+		border:1px solid $silver;
+		color:$silver;
+		box-shadow:1px 1px 0px $white;
+		text-shadow:1px 1px 0px $white;
 		}
 	
 	}
@@ -820,14 +842,8 @@
 
 	.gray_button
 	{
-	background-color:$light_gray;
 	border-color:$light_gray;
-	
-		&:hover
-		{
-		background-color:$silver;
-		}
-		
+	color:$light_gray;		
 	}
 
 
@@ -878,6 +894,8 @@
 		width:20px;
 		height:20px;
 		float:right;
+		margin-right:24px;
+		font-size:em(24);
 		}
 	}
 	
@@ -956,8 +974,7 @@
 	.double_rule
 	{
 	height:0px;
-	border-bottom:1px solid $white;
-	border-top:1px solid $silver;
+	border-top:3px solid $dark_background;
 	clear:both;
 	}
 
@@ -1051,19 +1068,15 @@ border:1px solid red;
 	
 	input, textarea
 	{
-	@include font ($light, em(14), $dark_gray, 1.5em, none);
+	@include font ($light, em(14), $silver, 1.5em, none);
 	box-sizing:border-box;
-	border:1px solid $silver;
-	border-radius:3px;
+	border:0px solid $silver;
+	@include rounded;
 	padding:10px 18px;
 	@include transition;
 	width:100%;
 	margin:0 0 25px 0;
-	
-	&:hover
-	{
-	border:1px solid $silver;
-	}
+	height:55px;
 	
 	&:focus
 	{
@@ -1125,6 +1138,7 @@ border:1px solid red;
 	top:-28px;
 	left:0px;
 	width:100%;
+	display:none;
 	
 	@media screen and (max-width:800px) 
 		{	
