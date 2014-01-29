@@ -37,11 +37,26 @@
 
 }
 
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#montserratregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
 $light: 400;
 $regular: 400;
 $medium:700;
 $bold:700;
 
+$open: 'open_sans', arial, helvetica, sans-serif;
 
 $sans: 'montserrat', arial, helvetica, sans-serif;
 
