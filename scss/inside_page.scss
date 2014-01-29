@@ -10,80 +10,203 @@
 
 
 
-.hero
+.hero_inside_page
 	{
-	height:75px;
-	background-image:none;
+	height:60px;
+	width:100%;
 	background-color:$red;
+	background-repeat:repeat-x;
+	margin:0 0 40px 0;
+	position:fixed;
+	top:0px;
+	z-index:1000;
+	border-bottom:1px solid $dark_red;
+	height:60px;
 	
-		@media screen and (max-width:em(700)) 
-		{
-		height:150px;
-		}
-		
+	
+		@media screen and (max-width:499px) 
+			{
+			height:50px;
+			}
+	
 	}
 	
-	.branding
-		{
-		@include spanner (12, 1200, 0, 7);
-		@include marginizer_left (12, 1200, 0, 1);
-		margin-top:10px;
-		
-		/* test width */
-			@media screen and (max-width:em(700)) 
-			{
-			margin:20px 0 0 10px;
-			}
 
-			.hero_logo
+
+	
+	.hero_inside_page_content
+	{
+	width:100%;
+	height:30px;
+	border:0px solid white;
+	margin:0 auto;
+	max-width:1000px;
+	
+		@media screen and (max-width:em(1040)) 
+		{
+		width:95%;
+		margin-left:2.5%;
+		margin-right:2.5%;
+		}
+	
+	
+		.button
+		{
+		float:right;
+		background-color:$dark_red;
+		margin:10px 0 0 0;
+		
+			@media screen and (max-width:em(499)) 
 			{
-			width:230px;
-			height:32px;
-			background-image:url('../temp_art/muckrock1.png');
-			background-size:cover;
-			
-				@media screen and (max-width:em(700)) 
+			@include button (100px, 30px, 10px, 2px);
+			margin:11px 0 0 0;
+			}
+		
+		
+		
+		}
+	
+	
+		.link_nav
+			{
+			width:33px;
+			height:33px;
+			margin:20px 0px 0 30px;
+			display:none;
+			font-family:$icon;
+			color:$white;
+			font-size:em(38);
+		
+				@media screen and (max-width:em(750)) 
 				{
-				width:250px;
-				margin:0 0 5px 0;
-				}			
+				display:block;
+				float:right;
+				}
+				
+				
+			@media screen and (max-width:em(499)) 
+				{
+				width:25px;
+				height:25px;
+				margin:16px 0px 0 20px;
+				font-size:em(30);
+				}
+			
+		
+		
 			}
 	
-			h1
+	
+	
+	}
+	
+	
+	.hero_logo
+		{
+		width:204px;
+		height:60px;
+		/*background-image:url('../temp_art/muckrock1.png'); */
+  		background-image: url('../temp_art/muckrock_white.png'), none;
+  		background-image: url('../temp_art/muckrock_white.svg'), none;
+		background-size:204px;
+		background-position:left 9px;
+		background-repeat:no-repeat;
+		float:left;
+		margin:7px 0 0 0;
+		
+			@media screen and (max-width:em(499)) 
+			{
+			width:140px;
+			height:40px;
+			background-size:140px;
+			}
+	
+		}
+	
+	/*
+		.link_button
+		{
+		border:1px solid white;
+		padding:10px 10px 8px;
+		margin:13px 20px 0 0;
+		@include rounded;
+		background-color:$dark_red;
+			
+			&:hover
+			{
+			@include transition;
+			background-color:$red_too;
+			cursor:pointer;
+			}
+			
+			@media screen and (max-width:em(725)) 
+			{
+			display:block;
+			}
+			
+			@media screen and (max-width:em(400)) 
+			{
+			display:none;
+			}
+			
+		
+		}
+	
+	*/
+	
+
+	
+	.link_list
+	{
+	float:right;
+	list-style-type: none;
+	@include font ($light, em(14), $red_too, 1em, none);
+	margin:0 0 0 20px;
+	
+		@media screen and (max-width:em(750)) 
+			{
+			float:right;
+			}
+
+		li
+		{
+		margin:27px 20px 0 0;
+		padding:0px;
+		float:left;
+		text-align:right;
+		
+			&:first-child
+			{
+			color:white;
+		
+			}
+			
+			i
 			{
 			font-size:em(18);
-			width:100% !important;
-			text-shadow:none;
-			color:$white;
-
-						
-				@media screen and (max-width:em(600)) 
-				{
-				font-size:em(16);
-				}			
-			}	
-		}
+			display:inline-block;
+			margin-top:-1px;
+			}
 	
 	
-	.social
-		{
-		@include spanner (12, 1200, 0, 4);
-		float:right;
-	
-	
-		@media screen and (max-width:em(700)) 
-		{
-		width:100%;
-		}
-	
-			.circle_icon
+			@media screen and (max-width:em(750)) 
 			{
-			background-color:$white;
-			color:$red;
-			text-shadow:none;
-			}				
+			display:none;
+			}
+	
+	
 		}
-		
 
+	
+	}
+	
+	
+	
+	
+	.content_container
+	{
+	margin-top:100px;
+	
+	}
 	
 	
