@@ -11,7 +11,44 @@
 <script src="../scripts/flot/jquery.flot.js"></script>
 <script src="../scripts/flot/jquery.flot.categories.js"></script>
 <script src="../scripts/flot/jquery.flot.resize.js"></script>
+<script src="./scripts/jquery.sparkline.min.js"></script>
 <!--<script src="scripts/functions.js"></script>-->
+
+
+
+ <script type="text/javascript">
+    $(function() {
+    
+    	$.fn.sparkline.defaults.common.type = 'line';
+    	$.fn.sparkline.defaults.common.lineColor = '#cc0202';
+    	$.fn.sparkline.defaults.common.fillColor = '#f0f4f5';
+    	$.fn.sparkline.defaults.common.width = '60px';
+    	$.fn.sparkline.defaults.line.maxSpotColor = '#cc0202';
+    	$.fn.sparkline.defaults.line.minSpotColor = '#cc0202';
+    	$.fn.sparkline.defaults.line.spotColor = '#cc0202';
+    	$.fn.sparkline.defaults.line.spotRadius = '2';
+    	$.fn.sparkline.defaults.line.lineWidth = '2';
+    /*	$.fn.sparkline.defaults.line.tooltipClassname = 'tool_tips'; */
+    	$.fn.sparkline.defaults.common.disableInteraction = 'true'; 
+
+    
+    	
+    
+    	
+
+   
+        /* Sparklines can also take their values from the first argument 
+        passed to the sparkline() function */
+        var myvalues = [10,8,5,7,4,4,1];
+        $('.sparkline').sparkline(myvalues);
+        
+        var myvaluesToo = [1,5,8,5,9,4,1];
+        $('.dynamicsparklinetoo').sparkline(myvaluesToo);
+        
+        
+
+    });
+    </script>
 
 
 <script>
@@ -170,6 +207,75 @@ $(function() {
 
 
 		<div class="main_news_container">
+
+
+<ul class="agency_stats_chart">
+
+
+			<li class="header">
+				<div class="sparkline_header">
+				trend
+				</div>
+
+				<div class="agency_stats_header">
+				total
+				</div>
+
+
+				<div class="stats_explainer_text_header">
+				metric
+				</div>
+
+
+			</li>
+
+
+			<li>
+				<div class="sparkline"></div>
+				<span>72</span> Rejected requests		
+			</li>
+
+			<li>
+				<div class="sparkline"></div>
+				<span>23</span> Requests awaiting acknowledgement 			
+			</li>
+
+				<li>
+				<div class="sparkline"></div>
+				<span>21</span>Requests awaiting response			
+			</li>
+
+
+			<li>
+				<div class="sparkline"></div>
+				<span>25</span> Overdue requests			
+			</li>
+
+			<li>
+				<div class="sparkline"></div>
+				<span>15</span> Requests requiring action			
+			</li>
+
+				<li>
+				<div class="sparkline"></div>
+				<span>14</span>No Responsive Documents			
+			</li>
+
+			<li>
+				<div class="sparkline"></div>
+				<span>24</span> Completed requests			
+			</li>
+
+			<li>
+				<div class="sparkline"></div>
+				<span>1760</span> Total requests filed		
+			</li>
+
+
+		<p class="clear"></p>
+		</ul>
+
+		<p class="clear"></p>
 
 			
 			
