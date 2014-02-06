@@ -58,26 +58,27 @@
 		
 			@media screen and (max-width:em(499)) 
 			{
-			@include button (100px, 30px, 10px, 2px);
+			@include button (80px, 30px, 10px, 2px);
 			margin:11px 0 0 0;
 			}
 		
 		
 		
 		}
-	
+		
+
 	
 		.link_nav
 			{
 			width:33px;
 			height:33px;
-			margin:20px 0px 0 30px;
+			margin:20px 0px 0 10px;
 			display:none;
 			font-family:$icon;
 			color:$white;
 			font-size:em(38);
 		
-				@media screen and (max-width:em(750)) 
+				@media screen and (max-width:em(800)) 
 				{
 				display:block;
 				float:right;
@@ -88,7 +89,7 @@
 				{
 				width:25px;
 				height:25px;
-				margin:16px 0px 0 20px;
+				margin:16px 0px 0 10px;
 				font-size:em(30);
 				}
 			
@@ -96,9 +97,45 @@
 		
 			}
 	
+
 	
 	
 	}
+	
+	
+		.search_icon
+			{
+			width:43px;
+			height:41px;
+			margin:10px 0px 0 10px;
+			font-family:$icon;
+			color:$red_too;
+			font-size:em(24);
+			float:right;
+			text-align:center;
+		
+				@media screen and (max-width:em(800)) 
+				{
+				}
+				
+				
+			@media screen and (max-width:em(499)) 
+				{
+				width:25px;
+				height:25px;
+				margin:8px 0px 0 10px;
+				font-size:em(22);
+				}
+			
+		
+		
+			}
+	
+
+	
+	
+
+	
 	
 	
 	.hero_logo
@@ -123,36 +160,7 @@
 	
 		}
 	
-	/*
-		.link_button
-		{
-		border:1px solid white;
-		padding:10px 10px 8px;
-		margin:13px 20px 0 0;
-		@include rounded;
-		background-color:$dark_red;
-			
-			&:hover
-			{
-			@include transition;
-			background-color:$red_too;
-			cursor:pointer;
-			}
-			
-			@media screen and (max-width:em(725)) 
-			{
-			display:block;
-			}
-			
-			@media screen and (max-width:em(400)) 
-			{
-			display:none;
-			}
-			
-		
-		}
-	
-	*/
+
 	
 
 	
@@ -163,7 +171,7 @@
 	@include font ($light, em(14), $red_too, 1em, none);
 	margin:0 0 0 20px;
 	
-		@media screen and (max-width:em(750)) 
+		@media screen and (max-width:em(800)) 
 			{
 			float:right;
 			}
@@ -189,7 +197,7 @@
 			}
 	
 	
-			@media screen and (max-width:em(750)) 
+			@media screen and (max-width:em(800)) 
 			{
 			display:none;
 			}
@@ -199,7 +207,6 @@
 
 	
 	}
-	
 	
 	
 	
