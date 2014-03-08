@@ -76,11 +76,40 @@ $(document).ready( function () {
 
 		<div class="top_info_container">
 
-				<h1>Here's where you submit FOIA requests blah blah info about that goes here herer </h1>
+			<!--	<h1>Here's where you submit FOIA requests blah blah info about that goes here herer </h1> -->
 			
+			<div class="choose_method">
+					
+			
+					<div class="method_inside">
+					
+					
+						<p class="big_number">&#xf067;</p>
+						
+						<h2>Create a new request</h2>
+						<p>Chatter about what creating a new request and what it means blah blah blah. This would be a bout yay long to explains what it's all about. </p>
+						<div class="button create window_shade_trigger" id="create_new"><a href="#create_new_shade">Create</a></div>
+						
+						
+					
+					</div>
+					
+					<div class="method_inside">
+						<p class="big_number">&#xf126;</p>
+						<h2>Fork an existing request</h2>
+						<p>Chatter about what forking a request and what it means blah blah blah.  This would be a bout yay long to explains what it's all about right here. </p>
+						<div class="button fork window_shade_trigger" id="fork"><a href="#fork_shade">Fork</a></div>
+						
+						
+						
+					</div>
+			
+			
+			<p class="clear"></p>
+			</div>
 			
 		
-			<p class="double_rule"></p>
+			<p class="double_rule window_shade"></p>
 		</div>
 
 
@@ -89,11 +118,11 @@ $(document).ready( function () {
 		<div class="main_news_container">
 
 			
-			<div class="request_container">
-					<h3>Create a new request</h3>
+			<div class="request_container" id="create_new_shade">
+					<h2>Create a new request</h2>
 					<p>This would be an intro paragraph that would set up the process of submitting a request for an FOIA document</p>
 
-					<p class="explainer_text">Pick a name for your request </p>
+					<h3>Pick a name for your request </h3>
 
 					<input type="text" class="request_title">
 
@@ -101,30 +130,33 @@ $(document).ready( function () {
 
 
 					<ul class="request_government_picker">
-					<li>
+					<li class="button window_shade_trigger" id="government_agency">
 					Local
 					</li>
 					
-					<li>
+					<li class="button">
 					State
 					</li>
 					
-					<li>
+					<li class="button">
 					Federal 
 					</li>
 					
-					<li>
+					<li class="button">
 					Multiple
 					</li>					
 					
 					<p class="clear"></p>
 					</ul>
 			
+			
+				<div class="window_shade" id="government_agency_shade">	
 				<p class="explainer_text">Pick the government agency</p>
-				<select class="selector agency_picker" disabled>
+				<select class="selector agency_picker">
 					<option value="adult-living-type">Adult Living</option>
 					<option value="adult-living-type">Option two</option>
 				</select>
+				</div>
 			
 				<p class="explainer_text">Describe your your request in detail.</p>
 					<textarea class="request_detail" label="Give your request a name">
@@ -142,9 +174,8 @@ $(document).ready( function () {
 			<p class="clear"></p>
 			</div>
 		
-			<p class="double_rule"></p>
 
-			<div class="request_container" id="request_container">
+			<div class="request_container window_shade" id="fork_shade">
 					<h3><span class="icon">&#xf126; </span>Fork an existing request</h3>
 					<p>Copy a successful document request blah blah reasons</p>
 					
@@ -160,7 +191,7 @@ $(document).ready( function () {
 	
 		
 
-
+<!--
 
 	<div class="main_right_rail">
 	
@@ -177,7 +208,7 @@ $(document).ready( function () {
 	
 	
 	</div>	
-		
+	-->	
 		
 	</div>
 
