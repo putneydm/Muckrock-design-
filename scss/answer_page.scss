@@ -59,7 +59,7 @@
 		.questioner
 		{
 		@include font ($bold, em(13), $dark_gray, 1.5em, none);
-		margin:0px 0 10px 0;
+		margin:0px 0 20px 0;
 		padding:12px 0 0 0;
 		
 			@media screen and (max-width:em(500)) 
@@ -102,7 +102,6 @@
 			.answer_body
 			{
 			width:100%;
-			font-size:em(18);
 			margin:0 0px 30px 0;
 			
 			/*
@@ -212,8 +211,8 @@
 	
 				.append_reply_field
 					{
-					height:24px;
-					padding:2px 10px 0;
+					height:29px;
+					padding:5px 10px 0 12px;
 					@include spanner (9, 657.797, 0, 7);
 					margin:0 10px 10px 0;
 					
@@ -229,6 +228,7 @@
 					.small_button
 					{
 					float:left;
+					margin:0px 0 0 0;
 					}			
 				}
 
