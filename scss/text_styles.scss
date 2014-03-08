@@ -32,7 +32,7 @@ body
 	
  p
 	{
-	@include font ($regular, em(15), $body, 1.7em, none);
+	@include font ($regular, em(15), $body, 1.8em, none);
 	margin:0 0 .80em 0;
 	font-family:$open;
 
@@ -102,21 +102,20 @@ h1
 	
 h2
 	{
-	@include font ($medium, em(24), $light_gray, 1.2em, none);
-	margin:0 0 10px 0;
+	@include font ($medium, em(20), $dark_gray, 1.2em, none);
+	margin:0 0 15px 0;
 	
 	@media screen and (max-width:500px) 
 	{
-	font-size:em(24);
+
 	}
 	
 	}
 	
 h3
 	{
-	@include font ($bold, em(24), $dark_gray, 1.5em, none);
-	line-height:1.3em;
-	margin:0 0 40px 0;
+	@include font ($light, em(20), $dark_gray, 1.2em, none);
+	margin:0 0 20px 0;
 	}	
 
 h4 
