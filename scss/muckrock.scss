@@ -675,20 +675,20 @@
 	@include font ($light, em(14), $dark_gray, 125%, none);
 	background:transparent;
     background-color: $white;
-    border:none;
+    border:1px solid $silver;
     outline:none;
-    display: inline-block;
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
     cursor:pointer;
     padding:5px 15px;
 	box-sizing:border-box;
-	background-image:url('../temp_art/arrow.png');
+	background-image:url('../temp_art/arrow.svg');
 	background-repeat:no-repeat;
 	background-position:95% -12px;
 	background-size:24px;
 	@include text_transition;
+	@include rounded;
 	margin:0 0 25px 0;
 	overflow:hidden;
 	
@@ -752,17 +752,19 @@
 	/* background-color:$red; */
 	box-sizing:border-box;
 	@include transition;
-	/*background-image: url('../temp_art/circle.svg'), url('../temp_art/button_bg.png') */;
-	background-size:30px, 1px;
-	background-position: 97px 5px;
 	background-repeat: no-repeat, repeat-x;
-	/* @include shadow; */
 	background-color:$aqua_blue;
 	
 		&:hover
 		{
 		color:$white;
-		background-color:$aqua_blue;
+		background-color:$hover;
+		}
+	
+	
+		a
+		{
+		color:$white;
 		}
 	
 	}
@@ -772,13 +774,15 @@
 
 .small_button
 	{
-	@include button (70px, 26px, 9px, 2px);
+	@include button (70px, 28px, 9px, 2px);
 	@include font ($light, em(10), $white, 100%, none);
 	font-family:$sans;
 	box-sizing:border-box;
 	@include transition;
 	text-align:center;
 	background-color:$aqua_blue;
+	border:1px solid $aqua_blue;
+
 	
 	
 		&:hover
@@ -897,6 +901,24 @@
 		font-size:em(24);
 		}
 	}
+	
+	
+	.create
+	{
+		&:after
+		{
+		content:' \f067';
+		font-family:$icon;
+		display:inline-block;
+		margin:0 10px 0 0;
+		width:20px;
+		height:20px;
+		float:right;
+		margin-right:24px;
+		font-size:em(24);
+		}
+	}
+	
 	
 	
 		.follow
@@ -1075,7 +1097,8 @@ border:1px solid red;
 	@include transition;
 	width:100%;
 	margin:0 0 25px 0;
-	height:55px;
+	height:49px;
+	@include transition;
 	
 	
 	&:focus
@@ -1404,6 +1427,9 @@ border:1px solid red;
 		margin:5px 0 10px 0;
 		}	
 	
-	
+	.window_shade
+	{
+	clear:both;
+	}
 	
 	
