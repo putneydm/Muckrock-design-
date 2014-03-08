@@ -2,13 +2,13 @@ $(document) .ready (function()
 	{	
 
 		
-		
 	// function that hides or shows 
 	// passses name of item clicked on it. looks for name, which is the id of the item to be shown, hidden
-	// initial visibility doesn't matter. It does the opposite of whatever it's state is.
+	// initial visibility doesn't matter. It does the opposite of whatever its state is.
 	
 	function hide_show (clicked)
 		{	
+		
 		var target = '#' + $(clicked) .attr ('name');
 		var visible = $(target) .is(":visible");
 
@@ -24,6 +24,58 @@ $(document) .ready (function()
 
 		}
 		
+	// second version of a function that hides or shows 
+	// passes an argument that includes the name of the item that you want to show or hide.
+	// initial visibility doesn't matter. It does the opposite of whatever its state is.		
+		
+		function hide_show_too (target, time)
+		{	
+		
+			if(typeof time === 'undefined'){
+				time = 0
+			 }
+		
+			else
+				{
+				time=time
+				}
+		
+		var visible = $(target) .is(":visible");
+
+			if (visible == true)
+			{
+			$(target) .fadeOut (time);	
+			}
+		
+			if (visible == false)
+			{
+			$(target) .fadeIn (100);		
+			}
+
+		}	
+		
+		
+		function toggle_header_height (div)
+			{
+			var width = $(div) .width ();
+			console.log(width);	
+
+				$(div).animate({
+					height: "toggle"
+				  }, 150, function() {
+					// Animation complete.
+				  });					
+			}
+		
+		
+		
+	// this hides items for show/hide actions so that if js is off, they can still be used.
+	$(document) .ready (function()
+		{
+		 hide_show_too('#inside_page_search');
+		 hide_show_too('.window_shade');		 
+		});
+
 
 	
 	function mobile_menu (document_width)
@@ -167,16 +219,82 @@ $(document) .ready (function()
 		});
 	*/
 	
+	//this triggers window shade action on teh credit card ccv number. 
 	
 	$('#CCV_explainer, #CCV_image_close, #CCV_image') .click (function()
-		{
-		
-		hide_show(this);
-		
+		{	
+		hide_show(this);	
 		});
 	
 	
+	// this triggers the windowshade action on the search box at the top of the inside page header
+	
+	$('#search_icon, #close_icon') .click (function()
+		{
+		toggle_header_height('#inside_page_search');
+		hide_show_too('#search_icon');
+		hide_show_too('#close_icon');
 		});	
+		
+		
+	// this triggers the window shade action of the site nav on mobile.
+	
+	$('#link_nav') .click (function()
+		{
+		toggle_header_height('#inside_nav');
+		hide_show_too('#close_menu_icon');
+		hide_show_too('#menu_icon');
+		});	
+		
+		
+		//this is for the submit page 
+		// it hides the chooser box with the two buttons 
+		// based on the button clicked, it shows the correct action forms.
+		
+		$('#create_new, #fork') .click (function()
+		{
+		hide_show_too('.top_info_container', 150, function()
+		{
+			var target_div = '#' + $(this) .attr ('id') + '_shade';
+			console.log(counter);
+
+		
+		if (counter == 0)
+		{
+		toggle_header_height(target_div);
+		counter ++;
+		}
+		});
+		return false; 
+		});		
+		
+		
+		
+	// this triggers generic window shade action sitewide
+		var counter = 0;	
+	$('.window_shade_trigger') .click (function()
+		{
+		var target_div = '#' + $(this) .attr ('id') + '_shade';
+				console.log(counter);
+
+		
+		if (counter == 0)
+		{
+		toggle_header_height(target_div);
+		counter ++;
+		}
+
+
+		});	
+			
+		
+		
+		
+});
+		
+		
+		
+	
 	
 	
 	//resizes input text box on review page to show all the text 
@@ -193,16 +311,16 @@ $(document) .ready (function()
 	
 	     //       console.log(text);
 		
-	});	
+
+	
+	
 	
 */
 function menu(scroll_position, menu_height)
 		{		
 		if (scroll_position	> 100 && menu_status==0)
 		{
-		//	 $('#menu').fadeIn(100)
-		//	menu_status = 1;
-		//	console.log(menu_status);
+
 		
 		
 		$( "#menu" ).animate({
@@ -228,18 +346,7 @@ function menu(scroll_position, menu_height)
 
 		}	
 	
-/*	
-$(window).scroll(function() {
-    clearTimeout($.data(this, 'scrollTimer'));
-    $.data(this, 'scrollTimer', setTimeout(function() {    
-    	var scroll_position = $(document) .scrollTop ();
-    	var menu_height = $('#menu') .height();
-		console.log(scroll_position);
-        menu(scroll_position, menu_height);        
- }, 100));
-});	
-	
-*/	
+
 
 $(window) .resize (function()	
 	{
