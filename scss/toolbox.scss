@@ -90,18 +90,22 @@
 	
 	.toolbox_alerts
 	{
-	background-image:url('../temp_art/starburst.svg');
+	background-image:url('../temp_art/toolbox_sprite.svg');
 	background-repeat:no-repeat;
-	background-size:32px;
-	background-position:center center;
-	
+	background-position:8px 8px;
+	width:50px;
+	height:45px;
+	float:left;
+	margin:8px 8px 0 0;
+	border-right:1px solid $medium_gray;
 	
 		@media screen and (max-width:em(500)) 
 		{
-		width:50px;
-		height:33px;
+		width:40px;
+		height:35px;
 		margin:5px 8px 0 0;
-		float:left;
+		background-position:3px 2px;
+		
 		}
 
 	.alert_count
