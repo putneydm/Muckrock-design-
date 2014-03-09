@@ -7,15 +7,16 @@
 	@include center (0,0);	
 	position:fixed;
 	bottom:0px;
-	background-color:rgba(20,20,20,0.8);
+	background-color:rgba(169,169,169,0.90);
 	padding:0px 10px;
 	height:60px;
 	color:#ebebeb;
 	font-family:$open;
+	border-bottom:1px solid $dark_gray;
 	
 		@media screen and (max-width:em(500)) 
 		{
-		height:45px;
+		height:48px;
 		}
 	
 	
