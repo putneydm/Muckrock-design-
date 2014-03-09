@@ -33,14 +33,14 @@
 		
 	.toolbox_login
 	{
-	width:200px;
+	width:150px;
 	float:left;	
-	margin:5px 10px 0 0;
-	
+	margin:8px 10px 0 0;	
 		
-			@media screen and (max-width:em(500)) 
+			@media screen and (max-width:em(800)) 
 			{
 			width:35px;
+			margin:5px 10px 0 0;			
 			}
 	
 	
