@@ -66,13 +66,18 @@
 	
 		.logged_in_name
 		{
-		color:#ebebeb;
+		color:$white;
 		float:left;
-		font-size:em(12);
+		font-size:em(13);
 		line-height:1.2em;
-		margin:5px 0 0 0;
+		margin:5px 0 0 8px;
+		max-width:95px;
+		width:100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		
-			@media screen and (max-width:500px) 
+			@media screen and (max-width:800px) 
 			{
 			display:none;
 			}		
