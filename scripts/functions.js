@@ -72,100 +72,19 @@ $(document) .ready (function()
 					// Animation complete.
 				  });					
 			}
-		
-		
-		
-	// this hides items for show/hide actions so that if js is off, they can still be used.
-	$(document) .ready (function()
-		{
-		 hide_show_too('#inside_page_search');
-		 hide_show_too('.window_shade');		 
-		});
 
+	// OPEN AND CLOSE TOOLBOX
 
-	
-	function mobile_menu (document_width)
-		{
-	//	$('#menu') .width (document_width);
-	//	$('#menu') .height (800);
-		
-	if (embiggened 	=== 0)
-	{	
-		$( "#menu" ).animate({
-		width: document_width,
-		height: "800"
-		}, 1000, function() {
-		embiggened = 1;
-		});			
-  	}
-  	
-  	
-  	if (embiggened 	=== 1)
-	{	
-		$( "#menu" ).animate({
-		width: '45',
-		height: '45'
-		}, 1000, function() {
-		embiggened = 0;
-		});			
-  	}
-
-
-		}
-
-			menu_status = 0;		
-
-
-	
-	/*
-   var scroll_position = $(document) .scrollTop ();    
-	    if (scroll_position == 0)
-	    {
-			$('#menu').hide (function ()
-			{
-			});
-		}	
-
-	*/
-		
-	embiggened = 0;	
-	$('#menu_trigger') .click (function()
-		{
-		var document_width = .94 * $(window) .width ();
-		console.log (document_width);
-		mobile_menu(document_width);
-		});	
-		
-		
-	function show_hide_toolbox()
-		{
-
-		var hidden = $('#toolbox').height();
-		
-		console.log(hidden);
-		
-		if (hidden !== 0)
-			{
-			console.log('shows');					
-			$('#toolbox_tab') .addClass ('toolbox_minimized_tab');
-			$('#toolbox') .addClass ('toolbox_minimized');
-			}
 			
-		else
+		$('#toolbox_tab, #toolbox_reveal') .click (function()
 			{
-			console.log('hidden');
-			$('#toolbox_tab') .removeClass ('toolbox_minimized_tab');
-			$('#toolbox') .removeClass ('toolbox_minimized');
-			}
-
-		}
-			
-		$('#toolbox_tab') .click (function()
-			{
-			show_hide_toolbox()
-			console.log('works');
+			hide_show_too ('#toolbox', 75);
+			hide_show_too ('#toolbox_reveal_container', 25);
+				console.log('works');
 			});
 		
+		
+	// SWITCHES BETWEEN VIEWS IN THE DOCUMENT TABLE	
 		
 		$('.switcher') .click (function()
 		{	
