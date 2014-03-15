@@ -311,6 +311,66 @@
 
 			}
 
+	.toolbox_reveal_container
+	{
+	position:fixed;
+	bottom:0px;
+	border:1px solid transparent;
+	width:100%;
+	height:0px;
+	margin:0 auto;
+	display:none;	
+
+		.toolbox_reveal_inside
+		{
+		max-width:1000px;
+		margin:0 auto;
+		height:0px;
+		border:1px solid transparent;
+		position:relative;
+		
+		.toolbox_reveal
+		{
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		width:43px;
+		height:50px;
+		background-color:rgba(169,169,169,0.90);
+		font-family:$icon;
+		text-align:center;
+		padding:8px 0 0 0;
+		font-size:em(22);
+		color:$pale-gray;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		margin:0px;
+		cursor:pointer;
+		
+			&:hover
+			{
+			color:$white;
+			}
+	
+			@media screen and (max-width:em(1000)) 
+			{
+			margin-right:10px;
+			}
+			
+			
+			@media screen and (max-width:em(600)) 
+				{
+				width:28px;
+				height:35px;
+				font-size:em(20);
+				}
+			
+		}
+		
+		}
+	
+	}
+
 
 /*
 		.toolbox_hide
