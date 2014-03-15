@@ -123,28 +123,8 @@ $(document) .ready (function()
 			
 			});
 		
-
-
-/*
-		
-		
-		//console.log('grid');
-		$('#document_list') .fadeOut (0);
-		$('#document_list') .removeClass ('list_view') .addClass ('grid_view');	
-		$('#document_list') .fadeIn (100);	
-		});
-		
 	
-		$('#list') .click (function()
-		{
-			//	console.log('list');
-		$('#document_list') .fadeOut (0);
-		$('#document_list') .removeClass ('grid_view') .addClass ('list_view');;	
-		$('#document_list') .fadeIn (100);	
-		});
-	*/
-	
-	//this triggers window shade action on teh credit card ccv number. 
+	//this triggers window shade action on THE credit card ccv number. 
 	
 	$('#CCV_explainer, #CCV_image_close, #CCV_image') .click (function()
 		{	
