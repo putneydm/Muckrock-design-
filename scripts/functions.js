@@ -1,6 +1,12 @@
 $(document) .ready (function()
 	{	
 
+	// this hides items for show/hide actions so that if js is off, they can still be used.
+
+		 hide_show_too('#inside_page_search');
+		 hide_show_too('.window_shade');		 
+
+
 		
 	// function that hides or shows 
 	// passses name of item clicked on it. looks for name, which is the id of the item to be shown, hidden
