@@ -9,14 +9,13 @@
 	bottom:0px;
 	background-color:rgba(169,169,169,0.90);
 	padding:0px 10px;
-	height:60px;
+	height:auto;
 	color:#ebebeb;
 	font-family:$open;
 	border-bottom:1px solid $dark_gray;
 	
 		@media screen and (max-width:em(500)) 
 		{
-		height:48px;
 		}
 	
 	
@@ -132,7 +131,6 @@
 	.toolbox_alerts_inactive
 	{
 	background-position:-45px 7px;
-	border:1px solid red;
 	}
 
 	
@@ -149,7 +147,7 @@
 	width:345px;
 	list-style-type: none;
 	
-		@media screen and (max-width:em(680)) 
+		@media screen and (max-width:em(690)) 
 		{
 		width:50px;
 		}
@@ -164,7 +162,7 @@
 		line-height:1.4em;
 		width:80px;
 		
-			@media screen and (max-width:em(680)) 
+			@media screen and (max-width:em(690)) 
 			{
 			display:none;
 			width:50px;
@@ -185,7 +183,7 @@
 		margin-bottom:0px;
 		
 		
-			@media screen and (max-width:em(680)) 
+			@media screen and (max-width:em(690)) 
 			{
 			font-size:em(18);
 			}
@@ -216,7 +214,7 @@
 				}
 				
 		
-			@media screen and (max-width:em(680)) 
+			@media screen and (max-width:em(690)) 
 				{
 				display:block;
 				font-size:em(16);
