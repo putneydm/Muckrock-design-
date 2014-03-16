@@ -176,6 +176,8 @@ $(document) .ready (function()
 		
 		
 	// this triggers generic window shade action sitewide
+	// 
+	
 		var counter = 0;	
 	$('.window_shade_trigger') .click (function()
 		{
@@ -187,6 +189,13 @@ $(document) .ready (function()
 		{
 		toggle_header_height(target_div);
 		counter ++;
+		}
+		
+		
+		else
+		{
+		toggle_header_height(target_div);
+		counter = 0;
 		}
 
 
