@@ -128,14 +128,14 @@
 	width:50px;
 	height:45px;
 	float:left;
-	margin:8px 8px 0 0;
+	margin:0px 8px 0 0;
 	border-right:1px solid $medium_gray;
 	
 		@media screen and (max-width:em(500)) 
 		{
 		width:40px;
 		height:35px;
-		margin:5px 8px 0 0;
+		margin:0px 8px 0 0;
 		background-position:3px 2px;
 		
 		}
@@ -175,7 +175,7 @@
 	font-family:$sans;
 	font-weight:400;
 	float:left;
-	margin:8px 0 0 0;
+	margin:0px 0 0 0;
 	text-align:center;
 	width:345px;
 	list-style-type: none;
@@ -257,7 +257,7 @@
 			
 			@media screen and (max-width:em(500)) 
 			{
-			margin-top:4px;
+			margin-top:0px;
 			
 				&:after
 				{			
@@ -346,7 +346,7 @@
 	{
 
 	float:right;
-	margin:9px 10px 0 0;
+	margin:0px 10px 0 0;
 	width:150px;
 	height:50px;
 	
@@ -373,6 +373,7 @@
 			font-weight:400;
 			padding-top:8px;
 			height:26px;
+			margin-top:3px;
 			}
 		}
 	
@@ -384,7 +385,7 @@
 			{
 			width:43px;
 			height:50px;
-			margin:10px 0px 0 10px;
+			margin:0px 0px 0 10px;
 			font-family:$icon;
 			color:$pale_gray;
 			font-size:em(20);
@@ -405,7 +406,7 @@
 				{
 				width:28px;
 				height:35px;
-				margin:5px 0px 0 0px;
+				margin:0px 0px 0 0px;
 				font-size:em(20);
 				}
 
