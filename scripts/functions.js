@@ -271,14 +271,27 @@ function menu(scroll_position, menu_height)
 	
 
 
-$(window) .resize (function()	
-	{
-	width = $('#measure_width') .width ();
-	$('#measure_width') .text (width);
+function menu_resizer(resize, tools, menu)
+{
+		//	if the menu us open when someone resizes the window, it goes way.
+			if (resize >=690 & menu == true)
+			{
+			 $('#toolbox_menu_hidden_reveal_shade').hide();
+			}	
+}
+
 	
-	console.log(width);
+$( window ).resize(function() {
+  	
+  	var resize = $(window) .width();
+  	
+  	// checks if the toolbox menu is open or not which is passes to to menu resizer
+    var toolbox_menu_visible =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
 	
-	
-	});	
+	menu_resizer(resize, toolbox_menu_visible);	
+  
+});
+
+
 	
 	
