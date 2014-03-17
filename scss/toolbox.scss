@@ -28,38 +28,71 @@
 	@include center (0,0);
 	max-width:1000px;
 	position:relative;
+	margin-top:8px;
 	}
 		
 	.toolbox_login
 	{
 	width:150px;
 	float:left;	
-	margin:8px 10px 0 0;	
+	margin:0px 10px 0 0;	
 		
 			@media screen and (max-width:em(800)) 
 			{
 			width:35px;
-			margin:5px 10px 0 0;			
+			margin:0px 10px 0 0;			
 			}
 	
 	
 		.login_avatar
 		{
 		width:45px;
-		height:auto;
+		height:45px;
 		float:left;
+		position:relative;
+		overflow:hidden;
+		@include transition;
 		
 			@media screen and (max-width:em(500)) 
 			{
 			width:33px;
 			height:33px;
 			}
+			
+		.logout_button
+		{
+		width:12px;
+		height:12px;
+		background-color:$pale_gray;
+		position:absolute;
+		bottom:0px;
+		right:0px;	
+		font-family:$icon;
+		color:$medium_gray;
+		text-align:center;
+		line-height:1em;
+		font-size:em(13);
+		@include transition;
+		}
 
 			
 		img
 		{
 		width:100%;		
 		}
+	
+			&:hover
+			{
+			border:1px solid $red;
+			
+			.logout_button
+			{
+			background-color: $red;
+			color:$white;
+			}
+
+			}
+	
 	
 	}	
 	
