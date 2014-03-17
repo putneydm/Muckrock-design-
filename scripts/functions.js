@@ -80,7 +80,14 @@ $(document) .ready (function()
 			{
 			hide_show_too ('#toolbox', 75);
 			hide_show_too ('#toolbox_reveal_container', 25);
-				console.log('works');
+			
+			var toolbox_menu_visible =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
+			
+			if ( toolbox_menu_visible == true)
+			{
+			 $('#toolbox_menu_hidden_reveal_shade').hide();
+			}	
+			
 			});
 		
 		
