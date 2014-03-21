@@ -81,9 +81,9 @@ $(document) .ready (function()
 			hide_show_too ('#toolbox', 75);
 			hide_show_too ('#toolbox_reveal_container', 25);
 			
-			var toolbox_menu_visible =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
+			var toolbox_menu_vis =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
 			
-			if ( toolbox_menu_visible == true)
+			if ( toolbox_menu_vis == true)
 			{
 			 $('#toolbox_menu_hidden_reveal_shade').hide();
 			}	
@@ -271,14 +271,17 @@ function menu(scroll_position, menu_height)
 	
 
 
-function menu_resizer(resize, tools, menu)
-{
+function menu_resizer(resize, menu)
+	{
 		//	if the menu us open when someone resizes the window, it goes way.
+			
 			if (resize >=690 & menu == true)
 			{
 			 $('#toolbox_menu_hidden_reveal_shade').hide();
 			}	
-}
+			
+				console.log('works');
+	}
 
 	
 $( window ).resize(function() {
@@ -286,7 +289,8 @@ $( window ).resize(function() {
   	var resize = $(window) .width();
   	
   	// checks if the toolbox menu is open or not which is passes to to menu resizer
-    var toolbox_menu_visible =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
+   
+   var toolbox_menu_visible =  $('#toolbox_menu_hidden_reveal_shade').is(':visible');	
 	
 	menu_resizer(resize, toolbox_menu_visible);	
   
