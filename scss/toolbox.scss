@@ -7,7 +7,7 @@
 	@include center (0,0);	
 	position:fixed;
 	bottom:0px;
-	background-color:rgba(169,169,169,0.90);
+	background-color:rgba($silver,0.90);
 	padding:0px 10px;
 	height:auto;
 	color:#ebebeb;
@@ -359,7 +359,7 @@
 	
 		.small_button
 		{
-		background-color:$pale_gray;
+		background-color:$background;
 		border:0px;
 		width:100%;
 		height:42px;
@@ -387,7 +387,7 @@
 			height:50px;
 			margin:0px 0px 0 10px;
 			font-family:$icon;
-			color:$pale_gray;
+			color:$white;
 			font-size:em(20);
 			float:right;
 			text-align:center;
@@ -397,7 +397,7 @@
 			
 				&:hover
 				{
-				color:$white;		
+				color:$pale_gray;		
 				}
 				
 
@@ -438,20 +438,21 @@
 		right:0px;
 		width:43px;
 		height:40px;
-		background-color:rgba(169,169,169,0.90);
+		background-color:rgba($silver,0.90);
 		font-family:$icon;
 		text-align:center;
 		padding:8px 0 0 0;
 		font-size:em(22);
-		color:$pale-gray;
+		color:$white;
 		border-top-left-radius:2px;
 		border-top-right-radius:2px;
 		margin:0px;
 		cursor:pointer;
+		@include transition;
 		
 			&:hover
 			{
-			color:$white;
+			color:$pale_gray;
 			}
 	
 			@media screen and (max-width:em(1000)) 
