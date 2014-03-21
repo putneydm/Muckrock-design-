@@ -148,10 +148,11 @@
 		margin:0 0 40px 0;
 		display:block !important;
 		
-			h3
+			.field_label
 			{
-			color:$red;
-			margin:0 0 20px 0;
+			font-family:$sans;
+			@include font ($bold, em(15), $dark_gray, 1, none);
+			margin:15px 0 10px 0;
 			
 				span
 				{
