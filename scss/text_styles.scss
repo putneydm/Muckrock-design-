@@ -19,7 +19,21 @@ a
 	{
 	text-decoration:none;
 	color:inherit;
+	@include transition;
+	
+		&:hover
+		{
+		color:$light_gray;
+		}
+	
 	}
+	
+a:hover img
+	{
+	opacity:0.4;
+	filter:alpha(opacity=40);	
+	}
+
 
  p
 	{
@@ -77,64 +91,16 @@ h3
 	{
 	@include font ($bold, em(14), $medium_gray, 1.4em, none);
 	margin:0 0 20px 0;
+	@include transition;	
 	}	
 
-/*
-
-h4 
+h4
 	{
-	@include font ($bold, em(14), $red, 1.4em, none);
-	margin:0px 0 10px 0;
-	
-	}
-
-	
-	
-h5
-	{
-	@include font ($bold, em(16), $red, .8em, uppercase);
+	@include font ($bold, em(15), $medium_gray, 1.4em, none);
 	margin:0 0 5px 0;
-	letter-spacing:.1em;
-	}	
-	
-h6
-	{
-	@include font ($bold, em(12), $red, .8em, uppercase);
-	margin:0 0 10px 0;
-	letter-spacing:.1em;
-	
-		span
-		{
-		border-bottom:1px solid $red;	
-		padding: 0 0 4px 0;
-		}
-	
 	}
-	
-h7
-	{
-	@include font ($bold, em(12), $light_gray, 1em, uppercase);
-	margin:0 0 2px 0;
-	display:block;
-	
-	
-		span
-		{
-		border-bottom:1px solid $light_gray;	
-		padding: 0 0 2px 0;
-		}
-	
-	}	
-	
-h8
-	{
-	@include font ($light, em(11), $light_gray, 1em, uppercase);
-	margin:0 0 2px 0;
-	display:block;
-	
-	}		
 
-*/
+
 
 i
 	{
@@ -171,6 +137,7 @@ blockquote
 	margin:15px 0px 18px;
 	padding:0 20px;
 	color:$dark_gray;
+	font-family:$open;
 	border-left:1px solid $silver;
 	}
 	
