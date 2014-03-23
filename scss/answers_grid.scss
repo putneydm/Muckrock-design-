@@ -3,13 +3,7 @@
 	{
 	width:100%;
 	margin:0px 0 0px 0px;
-	
-.answers_submit
-	{
-	width:100%;
-	margin:0 0 40px 0;	
-	}
-	
+
 	
 		.answers_list
 		{
@@ -142,10 +136,13 @@
 	
 	.question_title
 	{
-	margin:0 0 20px 0;
+	margin:0 0 0px 0;
 	}
 	
-	.button
+	.question_body
 	{
-	margin:0px 0 20px;
-	}
+	height:em(90);
+	margin-top:em(20);
+
+	}	
+	
