@@ -107,8 +107,6 @@
 	
 	
 	
-	.main_news_container
-	{
 
 	.story_container
 	{
@@ -116,195 +114,146 @@
 	width:100%;
 	margin:00px auto;
 	clear:both;
+	}
 	
-			.lead_art
-			{
-			@include spanner (6, 670, 0, 5);	
-			margin:0px 0 20px 0;
-			width:100%;
-			}
-	
-			.mug
-			{
-			width:45px;
-			float:right;
-			margin:0px 15px 5px 0;
-							
-				@media screen and (max-width:700px) 
-				{
-				float:left;
-				width:30px;
-				margin:0px 10px 10px 0;
-				}
-			
-			}
-	
-			.story_body
-			{
-			@include marginizer_left (6, 670, 0, 1);
-			clear:left;
-			float:left;
-			
-				@media screen and (max-width:700px) 
-					{
-					margin-left:0px;
-					}	
-			
-				p
-				{
-				@include font ($light, em(16), $body, 1.7em, none);
-				font-family:$open;
-
-					&:first-child
-					{
-					font-size:em(19);
-					line-height:1.8em;
-					
-						@media screen and (max-width:500px) 
-						{
-						font-size:em(16);
-						line-height:1.7em;
-						}
-					
-					
-					}
-					
-				}
-				
-				
-				
-			}
-
-			.name
-			{
-			@include font ($light, 11, $light_gray, 1.2em, none);
-			text-align:right;
-			margin:0 15px 0 0;
-			clear:right;
-						
-				@media screen and (max-width:700px) 
-				{
-				clear:none;
-				text-align:left;
-				margin:12px 0 5px 0;
-				}	
-			}
-				
-			.double_rule
-			{
-			@include spanner (6, 670, 0, 5);
-			float:right;
-			
-				@media screen and (max-width:700px) 
-				{
-				width:100%;
-				}		
-			}
-			
+	.lead_art
+	{
+	@include spanner (6, 670, 0, 5);	
+	margin:0px 0 20px 0;
+	width:100%;
+	}
 	
 	
-			
-			
-			h4
-			{
-			font-size:em(15);
-			float:left;
-			@include spanner (6, 670, 0, 3.75);
-			margin-bottom:10px;
-			padding-right:5px;
-			
-				@media screen and (max-width:700px) 
-				{
-				@include spanner (6, 670, 0, 5);
-
-				}				
-			
-			
-			}
-
+	
 		
-			h6, h3, .description
+	.byline_avatar
 			{
-			@include marginizer_left (6, 670, 0, 1);	
-			
-				@media screen and (max-width:700px) 
-				{
-				margin-left:0px;
-				}
-			
-			}
-			
-
-			.one
-			{
+			padding-right:0px;
+			padding:10px 0 0 0;
 			@include spanner (6, 670, 0, 1);
-				
-				@media screen and (max-width:700px) 
-				{
-				@include spanner (6, 670, 0, 6);
-				}	
-			}
-	
-			.two
-			{
-			@include spanner (6, 670, 0, 1.25);
-				
-				@media screen and (max-width:700px) 
-				{
-				@include spanner (6, 670, 0, 2);
-				}
-	
-			
-			}
-			
-			
 
-	
-			.three
-			{
-			@include spanner (6, 670, 0, 3);
-			border:1px solid blue;
 			
-				@media screen and (max-width:700px) 
+				@media screen and (max-width:750px) 
 				{
-				@include spanner (5, 650, 0, 3);
+				@include spanner (6, 670, 0, .75);
 				}
+
+			
+				@media screen and (max-width:650px) 
+				{
+				position:static;
+				width:100%;
+				}
+				
+			i
+			{
+			color:$silver;
+			text-align:right;
+			display:block;
+			margin:em(15) em(15) 0 0;
+			font-size:em(22);	
+			
+				@media screen and (max-width:650px) 
+				{
+				display:inline;
+				float:left;
+				font-size:em(18);
+				margin:em(3) em(15) 0 0;
+				}
+			
+			}				
+				.mail
+				{
+				font-size:em(18);
+				margin:em(15) em(20) 0 0;
+				
+				@media screen and (max-width:650px) 
+				{
+				font-size:em(14);
+				float:left;
+				margin:em(2) em(15) 0 0;
+				}
+				
+				}
+							
+			}
+		
+		.avatar
+		{
+		width:50px;
+		float:right;
+		margin:0px 15px 5px 0;
+	
+	
+			@media screen and (max-width:650px) 
+			{
+			float:left;
+			width:30px;
+			}
+	
+			@media screen and (max-width:500px) 
+			{
+			margin:0px 10px 10px 0;
+			}
+		}	
+	
+	
+	.name
+	{
+	@include font ($light, em(12), $light_gray, 1em, none);
+	text-align:right;
+	margin:0 15px 0 0;
+	clear:right;
+				
+		@media screen and (max-width:650px) 
+		{
+		clear:none;
+		text-align:left;
+		margin:8px em(20) 5px 0;
+		float:left;
+		font-size:em(14);
+		}	
+	}
+	
+	
+	.story_body
+	{
+	@include spanner (6, 670, 0, 5);
+
+			@media screen and (max-width:em(750)) 
+			{
+			@include spanner (6, 670, 0, 5.25);
+			}	
+	
+	
+		@media screen and (max-width:650px) 
+			{
+			margin-left:0px;
+			@include spanner (6, 670, 0, 6);
+			clear:left;	
+			}	
+	
+		p
+		{
+		@include font ($light, em(16), $body, 1.7em, none);
+		font-family:$open;
+
+			&:first-child
+			{
+			font-size:em(17.5);
+			line-height:1.9em;
 			
 				@media screen and (max-width:500px) 
 				{
-				@include spanner (5, 500, 0, 5);	
+				font-size:em(16);
+				line-height:1.7em;
 				}
-			
-			}	
-	
-	
-			.four
-			{
-			@include spanner (6, 670, 0, 4);	
-			}		
-	
-	
-			.five
-			{
-			@include spanner (6, 670, 0, 6);
-			margin: 0 0 25px 0;
-			position:relative;
-			
-				
-				@media screen and (max-width:700px) 
-				{
-				@include spanner (6, 670, 0, 6);
-				margin: 0 0 25px 0;
-				}		
-			}	
-	
+					
+				}			
+			}									
 		}
+
+
+				
 	
-	}
-
-
-
-	
-	
-
 	
