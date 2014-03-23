@@ -1,24 +1,21 @@
 
-
 @import "bourbon";
-@import "fonts";
-@import "colors";
 @import "shortcuts";
 @import "mixins";
+@import "fonts";
+@import "colors";
 @import "variables";
 @import "text_styles";
-@import "menu_test.scss";
-@import "muckrock";
+@import "common_styles";
 @import "inside_page";
-@import "table";
 @import "toolbox";
+@import "table";
+	
+
 
 	.top_info_container
 	{
-	@include spanner (10, 1000, 0, 10);	
-	margin:0px 0px 10px 0;
-	
-	
+
 	
 		.choose_method
 		{
@@ -148,12 +145,6 @@
 		margin:0 0 40px 0;
 		display:block !important;
 		
-			.field_label
-			{
-			font-family:$sans;
-			@include font ($bold, em(15), $dark_gray, 1, none);
-			margin:15px 0 10px 0;
-			
 				span
 				{
 				border:0px;
@@ -333,9 +324,6 @@
 		}		
 		}
 
-	
-		}
-		
 
 	
 		
