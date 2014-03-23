@@ -140,14 +140,84 @@ h8
 	display:block;
 	
 	}		
-	
-	
-.icon
+
+*/
+
+i
 	{
-	font-family: $icon;
+	font-family:$icon;
+	font-style:normal;
 	}
 	
+strong
+	{
+	@include font ($bold, inherit, inherit, inherit, inherit);
+	}
 
+.clear
+	{
+	clear:both;
+	height:0px;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	font-size:0em;
+	}
+	
+.red
+	{
+	color:$red;
+	}
+
+
+	
+blockquote
+	{
+	font-size:em(14);
+	line-height:1.5em;
+	margin:15px 0px 18px;
+	padding:0 20px;
+	color:$dark_gray;
+	border-left:1px solid $silver;
+	}
+	
+.label
+	{
+	@include font ($bold, em(10), $light_gray, 1em, uppercase);
+	margin:0 0 4px 0;
+	display:block;
+	letter-spacing: .09em;
+	}
+	
+	.right_link
+	{
+	float:right;
+	margin:0px 0 20px 0;
+	font-size:em(14);
+	color:$dark_gray;
+		&:after
+		{
+		content:' \f0a9';
+		font-family:$icon;
+		color:inherit;
+		display:inline-block;
+		margin-left:5px;
+		font-size:em(18);
+		padding:0px 0 0 0;
+		}
+	
+	
+	}
+
+	.field_label
+	{
+	font-family:$sans;
+	@include font ($bold, em(15), $dark_gray, 1.4, none);
+	margin:0px 0 10px 0;
+	}
+
+	
+/*
 .chatter_text
 	{
 	@include font (500, .9em, $dark_gray, 1.5em, none);
