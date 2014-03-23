@@ -1,109 +1,69 @@
 
-	* { 
+* { 
 	margin: 0; 
 	padding: 0; 
+	@include box-sizing(border-box);
 }
 
 body
 	{
-	@include font ($regular, em(15), $body, 1.5em, none);
+	@include font ($regular, em(16), $body, 1.5em, none);
 	background-color:$background;
 	font-family: $sans;
 	font-weight:$light;
-	margin:0 0px;
+	margin:0;
+	padding:0;
 	}
 
-.clear
+a
 	{
-	clear:both;
-	height:0px;
-	width:100%;
-	margin:0px;
-	padding:0px;
-	font-size:0em;
-	}
-	
-.red
-	{
-	color:$red;
+	text-decoration:none;	
 	}
 
-
-	
  p
 	{
 	@include font ($regular, em(15), $body, 1.8em, none);
-	margin:0 0 .80em 0;
+	margin:0 0 em(12) 0;
 	font-family:$open;
-
-	
 	
 		strong
 		{
 		font-weight:$bold;		
 		}
-		
-		
-		.red
-		{
-		color:$red;
-		}		
 
-	}
-	
-blockquote
-	{
-	font-size:em(14);
-	line-height:1.5em;
-	margin:15px 0px 18px;
-	padding:0 20px;
-	color:$dark_gray;
-	border-left:1px solid $silver;
-	}
-	
-i
-	{
-	font-family:$icon;
-	font-style:normal;
-	}
-	
-strong
-	{
-	@include font ($bold, inherit, inherit, inherit, inherit);
-	}
-	
-.byline
-	{
-	@include font ($regular, em(13), $medium_gray, 1.2em, uppercase);
-	margin:20px 0 5px 0;
-	}	
-	
-	
-a
-	{
-	text-decoration:none;
-	color:$aqua_blue;
-	@include transition;
-	border-bottom:1px dotted $aqua_blue;
+			a
+			{
+			text-decoration:none;
+			color:$aqua_blue;
+			@include transition;
+			border-bottom:1px dotted $aqua_blue;
 
-	
-	&:hover
-	{
-	color:$light_gray;
+				&:hover
+				{
+				color:$light_gray;
+				border-bottom:1px dotted $light_gray;
+				}		
+			}	
 	}
-		
-	}	
-	
+
+
 h1
 	{
-	@include font ($light, em(42), $dark_gray, 1.3em, none);
-	margin:0 0 20px 0;	
+	@include font ($bold, em(42), $dark_gray, 1.3em, none);
+	margin:0 0 0px 0;	
+	
+			@media screen and (max-width:em(600)) 
+			{
+			font-size:em(32);
+			}
+	
 	}
 	
 h2
 	{
 	@include font ($medium, em(20), $dark_gray, 1.2em, none);
 	margin:0 0 15px 0;
+	clear:both;
 	
 	@media screen and (max-width:500px) 
 	{
