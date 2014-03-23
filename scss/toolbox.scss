@@ -282,7 +282,8 @@
 	.toolbox_menu_hidden_container
 	{
 	clear:both;
-	margin:0 auto;
+	margin:5px auto 0;
+	padding:2px;
 	max-width:450px;
 	width:100%;
 	display:none;
@@ -292,7 +293,7 @@
 				@include spanner (4, 450, 0, 4);	
 				}
 	
-	
+	}
 	
 		.toolbox_menu_hidden
 		{
@@ -301,11 +302,12 @@
 		font-family:$sans;
 		font-weight:400;
 		float:left;
-		margin:0px auto 0px;
+		margin:10px auto 0px;
 		padding:0 0 8px 0;
 		text-align:center;
 		@include spanner (4, 450, 0, 4);	
 		list-style-type: none;
+		clear:both;
 
 	
 
