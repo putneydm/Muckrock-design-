@@ -3,6 +3,7 @@
 	{
 	width:100%;
 	margin:0px 0 0px 0px;
+	}
 
 	
 		.answers_list
@@ -41,12 +42,10 @@
 				@include font ($light, em(11), $light_gray, 1em, uppercase);
 				text-align:center;
 				margin:5px 0px 0 0;
-				}
-			
-			
+				}			
+			}			
 			}
 			
-	
 			.question_response
 			{
 			@include spanner (6, 674.797,0, 3.5);	
@@ -122,7 +121,6 @@
 		.small_button
 		{
 		float:right;
-		margin:15px 0 0 0;
 		width:70px;
 		
 			@media screen and (max-width:em(500)) 
@@ -135,10 +133,9 @@
 		}
 		
 				
-		}
 		
-	}
-	
+		/* */
+
 	
 	.question_title
 	{
