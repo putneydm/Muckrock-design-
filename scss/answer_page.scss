@@ -13,296 +13,276 @@
 @import "right_rail_monitor";
 @import "answers_grid";
 	
-	.top_info_container
+.top_info_container
+{
+
+	h1
 	{
-	
-		h1
+
+		span
 		{
 	
-			span
+		color:$red;
+		font-size:em(14);
+		display:inline-block;
+		border-right:1px solid $silver;
+		padding-right:em(15);
+		margin-right:em(5);
+		font-weight:light;
+		width:em(20);
+	
+			@media screen and (max-width:em(600)) 
 			{
-		
-			color:$red;
-			font-size:em(14);
-			display:inline-block;
-			border-right:1px solid $silver;
-			padding-right:15px;
-			margin-right:5px;
-			font-weight:light;
-			width:40px;
-		
-				@media screen and (max-width:em(600)) 
-				{
-				width:25px;
-				font-size:em(12);
-				}
-		
+			width:em(20);
+			font-size:em(12);
 			}		
-		
-			}
+		}				
+		}				
+	}	
 
-				
+
+.answers_submit
+{
+
+	.question_avatar_container
+	{
+	@include spanner (7, 1000, 0, 7);
+	margin:0 0 em(15) 0;
+
+		.user_avatar
+		{
+		float:left;
+		margin:0 em(10) 0 0;
+		}
+		
+		.user_name
+		{
+		@include font ($bold, em(14), $dark_gray, 1em, none);
+		margin:em(10) 0 em(5);
+		}
+		
+		.user_logout
+		{
+		@include font ($light, em(11), $light_gray, 1em, none);
 		}	
+	}
 
+}
 
-		.answers_submit
+.questioner
+{
+@include font ($bold, em(13), $dark_gray, 1.5em, none);
+margin:0 0 em(20) 0;
+padding:em(12) 0 0 0;
+
+	@media screen and (max-width:em(500)) 
 		{
-		
-			.question_avatar_container
-			{
-			@include spanner (7, 1000, 0, 7);
-			margin:0 0 em(15) 0;
-		
-				.user_avatar
-				{
-				float:left;
-				margin:0 em(10) 0 0;
-				}
-				
-				.user_name
-				{
-				@include font ($bold, em(14), $dark_gray, 1em, none);
-				margin:em(10) 0 em(5);
-				}
-				
-				.user_logout
-				{
-				@include font ($light, em(11), $light_gray, 1em, none);
-				}
-				
-			
-			}
-	
-	
-		
-	
+		padding:0;
 		}
 
-		.questioner
-		{
-		@include font ($bold, em(13), $dark_gray, 1.5em, none);
-		margin:0px 0 20px 0;
-		padding:12px 0 0 0;
-		
-			@media screen and (max-width:em(500)) 
-				{
-				padding:0px 0 0 0;
-				}
-		
-			
-			span
-			{
-			color:$light_gray;
-			}
-		
-		}	
-		
-		.question_avatar
-			{
-			width:40px;	
-			float:left;
-			vertical-align: bottom;
-			margin:0 10px 0 0;
-			
-			
-				@media screen and (max-width:em(500)) 
-					{
-					width:25px;
-					}		
-			}
 	
+	span
+	{
+	color:$light_gray;
+	}
 
-		.answer_container
-		{
-		max-width:$max_width;
-		width:100%;
-		margin:00px auto;
-		clear:both;
-		}
-		
-		.answer_body
-		{
-		width:100%;
-		margin:0 0px 30px 0;
-		}
-		
-		.view_request
-		{
-		margin: 20px 0;
-			
-			i
-			{
-			color:$silver;
-			font-size:em(34);
-			line-height:1em;
-			float:left;
-			margin:-3px 10px 0 0;
-			text-shadow:(1px 1px 1px $white);
-			}
-			
-			p
-			{
-			margin:0 0 0 0;
-			font-size:em(13);
-			
-			}
-		
-		
-		}
-			
-
-		.about_request
-		{
-		color:$light_gray;
-		font-size:em(13);
-		margin:20px 0;
-		}
-
-
-			.answer_tools
-			{
-			@include spanner (9, 657.797, 0, 1);
-			height:100px;
-			
-			.mini_button_special
-				{
-				margin:0 auto;
-				width:100%;
-					@media screen and (max-width:em(500)) 
-					{
-					font-size:em(18);
-					}
-				
-				}
-			
-			}
-
-
-			.vote_counter
-			{
-			@include font ($bold, em(28), $light_gray, 1em, none);
-			text-align:center;
-			margin:10px 0 0 0;
-			
-				@media screen and (max-width:em(500)) 
-				{
-				font-size:em(22);
-				}
-			
-			}
-
-			.reply_body
-			{
-				@include box-sizing(border-box);
-				padding:0 0 0 0px;
-				@include spanner (9, 657.797, 0, 8);
-				margin:0 0px 20px 0;
-
-				p
-					{
-					margin-left:0px;
-					clear:left;
-									
-					}				
-			}	
-			
-			.append_reply
-				{
-				@include spanner (9, 657.797, 0, 9);
-				margin:5px 0 0 0;
-				
-				@media screen and (max-width:em(500)) 
-						{
-						margin:0 0px 10px 0;			
-						}
-					
-				
+}	
 	
-				.append_reply_field
-					{
-					height:29px;
-					padding:5px 10px 0 12px;
-					@include spanner (9, 657.797, 0, 7);
-					margin:0 10px 10px 0;
-					
-					@media screen and (max-width:em(500)) 
-						{
-						width:100%;
-						margin:0 0px 10px 0;			
-						}
-					
-					
-					}
+.question_avatar
+	{
+	width:em(40);	
+	float:left;
+	vertical-align: bottom;
+	margin:0 em(10) 0 0;
 	
-					.small_button
-					{
-					float:left;
-					margin:0px 0 0 0;
-					}			
-				}
+	
+		@media screen and (max-width:em(500)) 
+			{
+			width:em(25);
+			}		
+}
+
+
+.answer_container
+{
+max-width:$max_width;
+width:100%;
+margin:0 auto;
+clear:both;
+}
+	
+.answer_body
+{
+width:100%;
+margin:0 0 em(30) 0;
+}
+	
+.view_request
+{
+margin: em(20) 0;
+	
+	i
+	{
+	color:$silver;
+	font-size:em(34);
+	line-height:1em;
+	float:left;
+	margin:em(-3) em(10) 0 0;
+	text-shadow:(em(1) em(1) em(1) $white);
+	}
+	
+	p
+	{
+	margin:0;
+	font-size:em(13);
+	
+	}		
+}
+			
+.about_request
+{
+color:$light_gray;
+font-size:em(13);
+margin:em(20) 0;
+}
+
+
+.answer_tools
+{
+@include spanner (9, 657.797, 0, 1);
+height:em(100);
+
+.mini_button_special
+	{
+	margin:0 auto;
+	width:100%;
+		@media screen and (max-width:em(500)) 
+		{
+		font-size:em(18);
+		}				
+	}			
+}
+
+
+.vote_counter
+{
+@include font ($bold, em(28), $light_gray, 1em, none);
+text-align:center;
+margin:em(10) 0 0 0;
+
+	@media screen and (max-width:em(500)) 
+	{
+	font-size:em(22);
+	}			
+}
+
+.reply_body
+{
+	@include box-sizing(border-box);
+	padding:0 0 0 0px;
+	@include spanner (9, 657.797, 0, 8);
+	margin:0 0px em(20) 0;
+
+	p
+		{
+		margin-left:0px;
+		clear:left;
+						
+		}				
+}	
+			
+.append_reply
+{
+@include spanner (9, 657.797, 0, 9);
+margin:em(5) 0 0 0;
+	
+	@media screen and (max-width:em(500)) 
+			{
+			margin:0 0 em(10) 0;			
+			}
+
+	.append_reply_field
+	{
+	height:em(32);
+	padding:em(3) em(10) 0 em(12);
+	@include spanner (9, 657.797, 0, 7);
+	margin:0 em(10) em(10) 0;
+	
+		@media screen and (max-width:em(500)) 
+			{
+			width:100%;
+			margin:0 0px em(10) 0;			
+			}
+	}
+
+	.small_button
+	{
+	float:left;
+	margin:0 0 0 0;
+	}			
+}
 
 
 
-				.append_body
-				{
-				padding:0 0 0 0px;
+.append_body
+{
+padding:0 0 0 0px;
+
+	p
+	{
+	margin-left:em(28);
+	@include font ($light, em(14), $dark_gray, 1.6em, none);
+
+		@media screen and (max-width:em(500)) 
+		{
+		margin-left:em(20);
+		}		
+	}
 				
-				p
-				{
-				margin-left:28px;
-				@include font ($light, em(14), $dark_gray, 1.6em, none);
-				
-					@media screen and (max-width:em(500)) 
-					{
-					margin-left:20px;
-					}		
-				}
+	.question_avatar
+	{
+	width:25px;	
+	float:left;
+	vertical-align: bottom;
+	margin:0 em(10) 0 0;		
+	}
+
+
+	.questioner
+	{
+	@include font ($bold, em(13), $dark_gray, 1.5em, none);
+	padding-top:em(20);
+	clear:none;
+
+		@media screen and (max-width:em(500)) 
+		{
+		padding-top:em(8);
+		}
 								
-				.question_avatar
-				{
-				width:25px;	
-				float:left;
-				vertical-align: bottom;
-				margin:0 10px 0 0;		
-				}
-			
-
-				.questioner
-						{
-						@include font ($bold, em(15), $dark_gray, 1.5em, none);
-						padding-top:20px;
-						clear:none;
-						
-							@media screen and (max-width:em(500)) 
-							{
-							padding-top:8px;
-							}
-												
-						}
-						
-					.question_avatar
-						{		
-						padding-top:12px;
-						margin-bottom:10px;
-						}
-						
-					.question_link
-					{
-					width:20px;
-					height:20px;
-					border-left:1px solid $light_gray;
-					border-bottom:1px solid $light_gray;
-					float:left;
-					margin:0 10px 0 0;
-					
-					
-						@media screen and (max-width:em(500)) 
-						{
-						width:12px;
-						height:24px;
-						}					
-					}		
-			}
+	}
+		
+	.question_avatar
+	{		
+	padding-top:em(12);
+	margin-bottom:em(10);
+	}
+		
+	.question_link
+	{
+	width:em(20);
+	height:em(20);
+	border-left:1px solid $light_gray;
+	border-bottom:1px solid $light_gray;
+	float:left;
+	margin:0 em(10) 0 0;
+	
+		@media screen and (max-width:em(500)) 
+		{
+		width:em(12);
+		height:em(24);
+		}					
+	}		
+}
 
 
 		
