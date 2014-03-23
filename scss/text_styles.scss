@@ -74,9 +74,11 @@ h2
 	
 h3
 	{
-	@include font ($light, em(20), $dark_gray, 1.2em, none);
+	@include font ($bold, em(15), $medium_gray, 1.3em, none);
 	margin:0 0 20px 0;
 	}	
+
+/*
 
 h4 
 	{
