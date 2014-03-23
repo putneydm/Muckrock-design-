@@ -60,23 +60,30 @@
 				margin:10px 0 10px 70px;		
 				}
 			
-			.question_link
-			{
-			width:15px;
-			height:15px;
-			border-left:1px solid $silver;
-			border-bottom:1px solid $silver;
-			float:left;
-			margin:0 5px 0 0;
-			}
-				
-				li
+				.question_link
 				{
-				@include font ($light, em(13), $dark_gray, 1.8em, none);
+				width:15px;
+				height:15px;
+				border-left:1px solid $silver;
+				border-bottom:1px solid $silver;
+				float:left;
+				margin:0 5px 0 0;
+				}
+				
+				.question_below_line
+				{
+				@include font ($light, em(13), $light_gray, 1.8em, none);
 				margin:0 0 5px 0;
 				min-height:25px;
 				margin-left:30px;
 				padding-top:3px;
+				
+					a
+					{
+					color:$dark_gray;
+					border-bottom:0px;
+					}
+				
 				
 					@media screen and (max-width:em(500)) 
 					{
