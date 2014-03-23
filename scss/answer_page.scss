@@ -1,62 +1,83 @@
 
 
 @import "bourbon";
-@import "fonts";
-@import "colors";
 @import "shortcuts";
 @import "mixins";
+@import "fonts";
+@import "colors";
 @import "variables";
 @import "text_styles";
-@import "menu_test.scss";
-@import "muckrock";
+@import "common_styles";
 @import "inside_page";
-@import "answers_grid";
 @import "toolbox";
-
-
-
+@import "right_rail_monitor";
+@import "answers_grid";
 	
 	.top_info_container
 	{
-	@include spanner (10, 1000, 0, 10);	
-	margin:0px 0px 10px 0;
-	
 	
 		h1
 		{
-		font-weight:$bold;
 	
-		
-		span
-		{
-		
-		color:$red;
-		font-size:em(14);
-		display:inline-block;
-		border-right:1px solid $silver;
-		padding-right:15px;
-		margin-right:5px;
-		font-weight:light;
-		width:40px;
-		
-			@media screen and (max-width:em(600)) 
+			span
 			{
-			width:25px;
-			font-size:em(12);
-			}
 		
-		}
+			color:$red;
+			font-size:em(14);
+			display:inline-block;
+			border-right:1px solid $silver;
+			padding-right:15px;
+			margin-right:5px;
+			font-weight:light;
+			width:40px;
 		
-			@media screen and (max-width:em(600)) 
-			{
-			font-size:em(32);
+				@media screen and (max-width:em(600)) 
+				{
+				width:25px;
+				font-size:em(12);
+				}
+		
 			}		
-		}
+		
+			}
 
 				
 		}	
+
+
+		.answers_submit
+		{
+		
+			.question_avatar_container
+			{
+			@include spanner (7, 1000, 0, 7);
+			margin:0 0 em(15) 0;
+		
+				.user_avatar
+				{
+				float:left;
+				margin:0 em(10) 0 0;
+				}
+				
+				.user_name
+				{
+				@include font ($bold, em(14), $dark_gray, 1em, none);
+				margin:em(10) 0 em(5);
+				}
+				
+				.user_logout
+				{
+				@include font ($light, em(11), $light_gray, 1em, none);
+				}
+				
+			
+			}
 	
 	
+		
+	
+		}
+
 		.questioner
 		{
 		@include font ($bold, em(13), $dark_gray, 1.5em, none);
@@ -87,9 +108,7 @@
 				@media screen and (max-width:em(500)) 
 					{
 					width:25px;
-					}
-			
-			
+					}		
 			}
 	
 
@@ -99,35 +118,24 @@
 		width:100%;
 		margin:00px auto;
 		clear:both;
+		}
 		
-			.answer_body
-			{
-			width:100%;
-			margin:0 0px 30px 0;
-			
-			/*
-				p
-				{
-				&:nth-child(3)
-				{
-				margin-top:15px;
-				}
-			
-			}
-			
-						*/
-			
-			
-			}
-			
+		.answer_body
+		{
+		width:100%;
+		margin:0 0px 30px 0;
+		}
+		
 		.view_request
 		{
 		margin: 20px 0;
+			
 			i
 			{
-			@include font ($light, em(34), $silver, 1em, none);
+			color:$silver;
+			font-size:em(34);
+			line-height:1em;
 			float:left;
-			font-family:$icon;
 			margin:-3px 10px 0 0;
 			text-shadow:(1px 1px 1px $white);
 			}
@@ -149,7 +157,6 @@
 		font-size:em(13);
 		margin:20px 0;
 		}
-
 
 
 			.answer_tools
@@ -196,8 +203,9 @@
 					margin-left:0px;
 					clear:left;
 									
-					}
-
+					}				
+			}	
+			
 			.append_reply
 				{
 				@include spanner (9, 657.797, 0, 9);
@@ -247,12 +255,9 @@
 					@media screen and (max-width:em(500)) 
 					{
 					margin-left:20px;
-					}
-				
-				
+					}		
 				}
-				
-				
+								
 				.question_avatar
 				{
 				width:25px;	
@@ -260,25 +265,7 @@
 				vertical-align: bottom;
 				margin:0 10px 0 0;		
 				}
-				
-				
-				.questioner
-					{
-					@include font ($bold, em(13), $dark_gray, 1.5em, none);
-					padding-top:15px;
-					clear:none;
-					
-						@media screen and (max-width:em(500)) 
-						{
-						padding-top:8px;
-						}
-						
-					}	
 			
-				
-				
-				}
-
 
 				.questioner
 						{
@@ -290,8 +277,7 @@
 							{
 							padding-top:8px;
 							}
-						
-						
+												
 						}
 						
 					.question_avatar
@@ -314,19 +300,12 @@
 						{
 						width:12px;
 						height:24px;
-						}
-					
-					}
-				
-			
+						}					
+					}		
 			}
+
+
 		
-		.button
-		{
-		margin:30px 0 0 30px;
-		}
-		
-		}
 		
 
 
