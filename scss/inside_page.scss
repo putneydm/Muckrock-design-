@@ -15,11 +15,8 @@
 		@media screen and (max-width:499px) 
 			{
 			height:auto;
-			}
-	
+			}	
 	}
-	
-
 
 	
 	.hero_inside_page_content
@@ -333,11 +330,13 @@
 	
 	}
 	
-	
-	
-	.content_container
-	{
-	margin-top:100px;	
-	}
+.top_info_container
+{
+width:100%;
+margin:em(90) 0 em(40) 0;
+border-bottom:3px solid $silver;
+padding:0 0 em(30) 0;
+}
+
 	
 	
