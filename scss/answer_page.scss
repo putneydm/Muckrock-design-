@@ -232,6 +232,7 @@ padding:0 0 0 0px;
 	{
 	margin-left:em(28);
 	@include font ($light, em(14), $dark_gray, 1.6em, none);
+	font-family:$open;
 
 		@media screen and (max-width:em(500)) 
 		{
