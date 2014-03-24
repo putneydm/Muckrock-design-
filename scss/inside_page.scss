@@ -39,12 +39,12 @@
 		{
 		float:right;
 		background-color:$dark_red;
-		margin:10px 0 0 0;
+		margin:9px 0 8px 0;
 		
 			@media screen and (max-width:em(499)) 
 			{
 			@include button (80px, 30px, 10px, 2px);
-			margin:11px 0 0 0;
+			margin:11px 0 10px 0;
 			}		
 
 		}
@@ -271,7 +271,7 @@
 	{
 	float:right;
 	list-style-type: none;
-	@include font ($light, em(14), $red_too, 1em, none);
+	@include font ($light, em(14), $white, 1em, none);
 	margin:0 0 15px 20px;
 	
 		@media screen and (max-width:em(800)) 
@@ -284,16 +284,11 @@
 
 		li
 		{
-		margin:27px 20px 0 0;
+		margin:25px 18px 0 0;
 		padding:0px;
 		float:left;
-		text-align:right;
-		
-			&:first-child
-			{
-			color:white;
-		
-			}
+		text-align:right;		
+		@include transition;
 			
 			i
 			{
@@ -302,6 +297,14 @@
 			margin-top:-1px;
 			}
 	
+			a
+			{
+				&:hover
+				{
+				color:$red_too;
+				}
+			}	
+			
 	
 			@media screen and (max-width:em(800)) 
 			{
