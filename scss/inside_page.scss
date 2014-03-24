@@ -230,22 +230,36 @@
 	.hero_logo
 		{
 		width:204px;
-		height:55px;
+		height:29px;
 		/*background-image:url('../temp_art/muckrock1.png'); */
-  		background-image: url('../temp_art/muckrock_white.png'), none;
-  		background-image: url('../temp_art/muckrock_white.svg'), none;
+  		background-image: url('../temp_art/muckrock_white.png');
+  		background-image: none, url('../temp_art/muckrock_white.svg');
 		background-size:204px;
-		background-position:left 9px;
+		background-position:left top;
 		background-repeat:no-repeat;
 		float:left;
-		margin:7px 0 0 0;
+		margin:16px 0 0 0;
+		overflow:hidden;
+		display:block;
+		-webkit-transition: background-image 0.2s ease-in-out;
+		-moz-transition: background-image 0.2s ease-in-out;
+		-ms-transition: background-image 0.2s ease-in-out;
+		-o-transition: background-image 0.2s ease-in-out;
+		transition: background-image 0.2s ease-in-out;
 		
 			@media screen and (max-width:em(499)) 
 			{
 			width:140px;
-			height:40px;
+			height:20px;
 			background-size:140px;
+			background-position:left 1px;
 			}
+		
+		&:hover
+		{
+		background-position: left 107%;
+		}
+	
 	
 		}
 	
