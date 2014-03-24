@@ -24,15 +24,12 @@
 
 	
 	.top_info_container
-	{
-	@include spanner (10, 1000, 0, 10);	
-	margin:0px 0px 10px 0;
-	
+	{	
 	
 		h1
 		{
 		font-weight:$bold;
-		margin-bottom:10px;
+		margin-bottom:em(10);
 		
 			@media screen and (max-width:600px) 
 			{
@@ -41,26 +38,24 @@
 		
 		}
 		
-	
-		h3
-		{
-		color:$light_gray;
-		font-weight:$light;
-		margin-top:0px;
-		
-			@media screen and (max-width:600px) 
-			{
-			font-size:em(20);
-			}
-	
-		}
-		
-		
 	.user_container
 	{
 	float:left;	
-	margin:0 20px 0 0;
-	padding:0 20px 0 0;
+	margin:0 em(20) 0 0;
+	padding:0 em(20) 0 0;
+	height:em(120);
+	
+	h1
+	{
+	font-size:em(30);
+	margin:0;
+	}
+	
+	h2
+	{
+	font-size:em(15);
+	color:$light_gray;
+	}
 	
 		@media screen and (max-width:em(590)) 
 			{
@@ -78,8 +73,8 @@
 	.main_avatar
 	{
 	float:left;
-	width:150px;
-	margin:5px 20px 20px 0;
+	width:em(115);
+	margin:em(5) em(20) 0 0;
 	}
 		
 	
@@ -104,7 +99,7 @@
 		
 	.badges
 	{
-	margin:10px 0 0 0;
+	margin:em(10) 0 0 0;
 	padding:0;
 	list-style-type: none;
 	width:107%;
@@ -115,18 +110,18 @@
 			@include circle (48px);
 			background-color:$silver;
 			float:left;
-			margin:0px 10px 15px 0;
+			margin:0px em(10) 0 0;
 			font-family:$icon;
 			font-size:em(24);
 			color:$red;
 			text-align:center;
-			padding-top:14px;
-			text-shadow: 1px 1px 0 $silver;
+			padding-top:em(11);
+			text-shadow: em(1) em(1) 0 $silver;
 			
 				@media screen and (max-width:em(400)) 
 				{
 				@include circle (40px);
-				padding-top:10px;
+				padding-top:em(10);
 				}
 			
 		
@@ -145,9 +140,9 @@
 		.badge_name
 		{
 		@include font ($light, 10(em), $light_gray, 1em, none);
-		font-size:10px !important;
+		font-size:em(10) !important;
 		text-shadow: none;
-		padding-top:18px;
+		padding-top:em(10);
 		}	
 	
 	}
@@ -157,19 +152,19 @@
 	.contributions_stream
 	{
 	@include spanner (1, 639.797px, 0px, 1);
-	margin:30px 0 40px 0px;	
+	margin:em(30) 0 em(40) 0px;	
 	
 		.contributions_inside
 		{
 		@include spanner (1, 639.797px, 0px, 1);
 		padding:0 0 0 0;
-		margin: 0 0 20px 0;	
+		margin: 0 0 em(20) 0;	
 		
 			@media screen and (max-width:em(550)) 
 			{
 			width:100%;
 			clear:left;
-			margin:0 0 30px 0;
+			margin:0 0 em(30) 0;
 			}
 				
 			&:nth-child(2)
@@ -182,44 +177,34 @@
 
 		.user_page_options_list
 		{
-		@include font ($light, em(14), $body, 1.2em, none);
 		@include spanner (1, 639.797px, 0px, 1);
 		margin:10px 0 00px 0px;
 		list-style-type:none;
 		float:left;
-		padding-right:20px;
+		padding-right:em(20);
 		
 	
 		.list_avatar
 		{
 		float:left;
-		width:30px;
-		margin:0px 7px 0px 0px;
+		width:em(30);
+		margin:0 em(7) 0 0;
 		clear:left;
 		}
 		
 		
 			li
 			{
-			margin:0 0px 7px 37px;
+			margin:0 0 em(7) em(37);
 			line-height:1.5em;
-			min-height:28px;
+			min-height:em(28);
+			@include font ($light, em(14), $body, 1.2em, none);
+
 			
 				@media screen and (max-width:em(600)) 
 				{
-				margin-bottom:15px;
+				margin-bottom:em(15);
 				}
-
-			
-			/*
-			&:before {
-					content: "\2022";
-					display:inline-block;
-					margin:0 10px 0 0;
-					color: $red; 
-					font-size:em(16);
-				}
-			*/
 			
 			}
 		
@@ -228,17 +213,17 @@
 		.user_page_options_list_small
 		{
 		@include font ($light, em(12), $light_gray, 1.4em, none);
-		margin:7px 0 0 5px;
-		width:120px;
-		padding:0px;
+		margin:em(7) 0 0 em(5);
+		width:em(120);
+		padding:0;
 		
 			li
 			{
-			margin:0 0px 2px 5px;
-			text-indent:-5px;
+			margin:0 0 em(2) em(5);
+			text-indent:em(-5);
 			
 			&:before {
-					margin:0 5px 0 0;
+					margin:0 em(5) 0 0;
 				}
 			
 
@@ -253,19 +238,19 @@
 	{
 	width:100%;
 	height:auto;
-	margin-top:20px;
+	margin-top:em(20);
 	
 		.chart_week
 		{
 		@include spanner (26, 639.797px, 0px, 1);
 		list-style-type:none;
-		padding:0px;
+		padding:0;
 		
 				@media screen and (max-width:em(450)) 
 				{
 				width:70%;
 				float:left;
-				margin-left:0%;
+				margin-left:0;
 				}
 		
 				&:nth-child(27)
@@ -280,13 +265,13 @@
 			background-color:$silver;
 			margin:0px 0 0 0;
 			border:1px solid $background;
-			min-height:17px;
+			min-height:em(17);
 			
 				@media screen and (max-width:em(450)) 
 				{
 				@include spanner (7, 639.797px, 0px, 1);
-				height:15px;
-				padding:0px;
+				height:em(15);
+				padding:0;
 				}		
 			}
 	
@@ -327,15 +312,15 @@
 			{
 			padding-bottom:55%;
 			background-color:$background;
-			margin:0px 0 0 0;
+			margin:0 0 0 0;
 			border:1px solid $background;
 			position:relative;
-			min-height:17px;
+			min-height:em(17);
 	
 				@media screen and (max-width:em(450)) 
 				{
 				@include spanner (7, 639.797px, 0px, 1);
-				height:15px;
+				height:em(15);
 				padding:0px;
 				}
 	
@@ -345,7 +330,7 @@
 			{
 			@include font ($bold, em(11), $light_gray, 1em, uppercase);
 			position:absolute;
-			top:4px;
+			top:em(4);
 			text-align:center;
 			width:100%;
 		
@@ -363,14 +348,14 @@
 		list-style-type: none;
 		@include font ($bold, em(11), $light_gray, 1em, uppercase);
 		@include marginizer_left (26, 639.797, 0, 1);
-		margin-bottom: 4px;
+		margin-bottom: em(4);
 
 		
 			@media screen and (max-width:em(450)) 
 				{
 				width:15%;
 				float:left;
-				margin:17px 0 0 0;
+				margin:em(17) 0 0 0;
 				}
 		
 			li
@@ -382,8 +367,8 @@
 				@media screen and (max-width:em(450)) 
 				{
 				width:100%;
-				height:70px;
-				padding-top:30px;
+				height:em(70);
+				padding-top:em(30);
 				@include box-sizing(border-box);
 				}
 			
@@ -400,9 +385,9 @@
 		.chart_stats
 		{
 		@include spanner (4, 639.797px, 0px, 4);
-		margin:0px 0 30px 0;
+		margin:0 0 em(30) 0;
 		border-bottom:1px solid $silver;
-		padding:0 0 0px 0;
+		padding:0;
 		
 		.chart_stats_inside
 			{
@@ -411,13 +396,13 @@
 			
 				&:nth-child(4)
 				{
-				border-right:0px;
+				border-right:0;
 				}
 			
 				@media screen and (max-width:em(475)) 
 				{
 				@include spanner (4, 639.797px, 0px, 2);
-				margin-bottom:20px;
+				margin-bottom:em(20);
 				
 				}
 
@@ -425,8 +410,8 @@
 			
 			&:nth-child(4)
 				{
-				border:0px;
-				margin-right:0px;
+				border:0;
+				margin-right:0;
 				}
 			
 			}
@@ -443,7 +428,7 @@
 			{
 			@include font ($light, em(60), $medium_gray, 1em, none);	
 			text-align:center;
-			margin:0px 0 10px 0;
+			margin:0px 0 em(10) 0;
 			}
 		
 			.big_icon
@@ -457,9 +442,9 @@
 			margin:0px;
 			text-shadow:(1px 1px 1px $white);
 			border:0px;
-			width:60px;
+			width:em(60);
 			margin:0 auto 10px;
-			padding:0 0 5px 0;
+			padding:0 0 em(5) 0;
 			border-bottom:1px solid $silver;	
 			display:none;
 			}
