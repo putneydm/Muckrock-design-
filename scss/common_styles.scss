@@ -15,7 +15,6 @@
 		@include center (0,0);	
 		@include box-sizing(border-box);
 		margin-top:em(70);	
-
 	
 		@media screen and (max-width:1040px) 
 		{
@@ -87,8 +86,8 @@
 	{
 	width:100%;
 	height:auto;
-	@include box-sizing(border-box);
 	margin-bottom:30px;
+	border-bottom:3px solid $silver;
 		
 		h4
 		{
