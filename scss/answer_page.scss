@@ -48,6 +48,18 @@
 	{
 	@include spanner (7, 1000, 0, 7);
 	margin:0 0 em(15) 0;
+	
+			a
+			{
+			color:inherit;
+			border-bottom:0px;	
+			
+				&:hover
+				{
+				color:$aqua_blue;
+				}
+			
+			}
 
 		.user_avatar
 		{
