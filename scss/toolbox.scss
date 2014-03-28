@@ -71,19 +71,19 @@
 		color:$medium_gray;
 		text-align:center;
 		line-height:1em;
-		font-size:em(13);
+		font-size:em(12);
 		@include transition;
 		}
 
 			
 		img
 		{
-		width:100%;		
+		width:100%;	
+		cursor:pointer;
 		}
 	
 			&:hover
 			{
-			border:1px solid $red;
 			
 			.logout_button
 			{
