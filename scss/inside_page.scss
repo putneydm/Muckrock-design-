@@ -41,6 +41,11 @@
 		background-color:$dark_red;
 		margin:9px 0 8px 0;
 		
+			&:hover
+			{
+			background-color:$red_too;
+			}
+		
 			@media screen and (max-width:em(499)) 
 			{
 			@include button (80px, 30px, 10px, 2px);
