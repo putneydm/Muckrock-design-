@@ -171,10 +171,21 @@ margin:em(20) 0;
 @include spanner (9, 657.797, 0, 1);
 height:em(100);
 
-.mini_button_special
+.answer_vote
 	{
 	margin:0 auto;
 	width:100%;
+	font-family:$icon;
+	text-align:center;
+	font-size:em(20);
+	color:$light_gray;
+	cursor:pointer;
+	
+			&:hover
+			{
+			color:$red;
+			}
+	
 		@media screen and (max-width:em(500)) 
 		{
 		font-size:em(18);
