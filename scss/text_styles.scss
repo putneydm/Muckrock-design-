@@ -23,16 +23,21 @@ a
 	
 		&:hover
 		{
-		color:$light_gray;
+		color:$dark_aqua;
 		}
-	
+		
+		&:hover
+		{
+			img
+			{
+			opacity:0.4;
+			filter:alpha(opacity=40);	
+			}
+		}				
 	}
 	
-a:hover img
-	{
-	opacity:0.4;
-	filter:alpha(opacity=40);	
-	}
+	
+	
 
 
  p
