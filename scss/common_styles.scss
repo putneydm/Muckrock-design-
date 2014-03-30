@@ -33,6 +33,15 @@
 	}	
 	
 	
+.top_info_container
+	{
+	width:100%;
+	margin:em(90) 0 em(30) 0;
+	border-bottom:3px solid $silver;
+	padding:0 0 em(30) 0;
+	}
+
+	
 .main_news_container
 	{
 	@include spanner (10, 1000, 4, 7);	
