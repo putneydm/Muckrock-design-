@@ -7,6 +7,8 @@
 	@include center (0,0);	
 	position:fixed;
 	bottom:0px;
+	/*ie 8 hack */
+	background-color:$silver;
 	background-color:rgba($silver,0.90);
 	padding:0px 10px;
 	height:auto;
@@ -471,6 +473,7 @@
 		right:0px;
 		width:43px;
 		height:40px;
+		background-color:$silver;
 		background-color:rgba($silver,0.90);
 		font-family:$icon;
 		text-align:center;
