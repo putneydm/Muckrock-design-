@@ -69,7 +69,6 @@
 	{
 	@include spanner (10, 1000, 0, 3);	
 	height:auto;
-	@include box-sizing(border-box);
 	padding:0px 0 0 20px;
 	float:left;
 	

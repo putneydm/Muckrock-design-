@@ -70,7 +70,7 @@ a
 h1
 	{
 	@include font ($bold, em(42), $dark_gray, 1.3em, none);
-	margin:0 0 0px 0;	
+	margin:0;	
 	
 			@media screen and (max-width:em(600)) 
 			{
