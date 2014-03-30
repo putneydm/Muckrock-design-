@@ -282,12 +282,25 @@ input, textarea
 	box-sizing:border-box;
 	@include transition;
 	background-color:$aqua_blue;
+	border:0px;
 	
 		&:hover
 		{
 		color:$white;
 		background-color:$dark_aqua;
 		}
+		
+		&:focus
+		{
+		color:$white;
+		background-color:$dark_aqua;
+		}	
+		
+		&:active
+		{
+		color:$white;
+		background-color:$dark_aqua;
+		}			
 	
 		a
 		{
