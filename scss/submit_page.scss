@@ -129,12 +129,22 @@
 	.main_news_container
 	{
 		@include spanner (10, 1000, 4, 7);
-		@include box-sizing(border-box);
 		float:none;
 		@include center (0px,0px);	
 		clear:both;
 		padding:0px;
-		background-image: none;
+		border:0px;
+		
+			@media screen and (max-width:em(850)) 
+			{
+			width:90%;
+			}
+		
+			@media screen and (max-width:em(695)) 
+			{
+			width:100%;
+			}
+		
 	
 		.story_container
 		{
