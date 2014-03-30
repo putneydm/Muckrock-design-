@@ -44,12 +44,19 @@
 		
 
 		
-			&:nth-child(1)
+			&:first-child
 			{
 			border-right:1px solid $silver;
 			padding:0 20px 0 0;		
 			}
 			
+	
+			&:first-child + div
+			{
+			padding:0 0px 0 20px;
+			margin-right:0px;
+			}
+	
 			&:nth-child(2)
 			{
 			padding:0 0px 0 20px;
