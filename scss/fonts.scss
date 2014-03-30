@@ -1,3 +1,11 @@
+/* ie 8 hack */
+@font-face {
+    font-family: "icon";
+    src: url('../fonts/fontawesome-webfont.eot');
+    font-weight: normal;
+    font-style: normal;        
+}
+
 
 @font-face {
     font-family: 'icon';
@@ -10,6 +18,15 @@
     font-style: normal;
 
 }
+
+/* ie 8 hack */
+@font-face {
+    font-family: "montserrat";
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    font-weight: 700;
+    font-style: normal;        
+}
+
 
 
 @font-face {
@@ -25,6 +42,15 @@
 }
 
 
+/* ie 8 hack */
+@font-face {
+    font-family: "montserrat";
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    font-weight: 400;
+    font-style: normal;        
+}
+
+
 @font-face {
     font-family: 'montserrat';
     src: url('../fonts/montserrat-regular-webfont.eot');
@@ -35,6 +61,15 @@
     font-weight: 400;
     font-style: normal;
 
+}
+
+
+/* ie 8 hack */
+@font-face {
+    font-family: "open_sans";
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    font-weight: 400;
+    font-style: normal;        
 }
 
 
