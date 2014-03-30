@@ -14,7 +14,8 @@
 		max-width:1000px;
 		@include center (0,0);	
 		@include box-sizing(border-box);
-		margin-top:em(70);	
+		margin-top:em(90);	
+
 	
 		@media screen and (max-width:1040px) 
 		{
