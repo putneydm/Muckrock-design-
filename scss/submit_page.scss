@@ -293,18 +293,95 @@
 			}
 		
 		
+		
+		
 			li
 			{
 			@include spanner (4, 652.797, 20, 1);	
 
 
+			.button
+			{
+			width:100%;
+			
+				@media screen and (max-width:em(600)) 
+				{
+				width:70%;
+				margin:0 15%;
+				}
+				
+				@media screen and (max-width:em(400)) 
+				{
+				width:95%;
+				margin:0 2.5%;
+				}
+				
+			
+			}
+
+			.civic_building
+			{
+			width:100%;	
+			padding-top:60%;
+			margin:0 0 10px 0;
+			background-repeat:no-repeat;
+			background-size:90% auto;
+			background-position:center bottom;
+
+			
+				@media screen and (max-width:em(600)) 
+				{
+				background-size:60% auto;
+				padding-top:40%;
+				}
+				
+				@media screen and (max-width:em(400)) 
+				{
+				background-size:80% auto;
+				padding-top:70%;
+				}	
+				
+			
+			
+			}
+		
+			.local
+					{
+			_background-image:url('../temp_art/courthouse.png');
+			background-image:none, url('../temp_art/courthouse.svg');
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../temp_art/courthouse.png', sizingMethod='scale');
+					}
+				
+			.state
+			{
+			_background-image:url('../temp_art/state.png');			
+			background-image:none, url('../temp_art/state.svg');
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../temp_art/state.png', sizingMethod='scale');
+			}	
+
+			.federal
+			{
+			_background-image:url('../temp_art/federal.png');
+			background-image:none, url('../temp_art/federal.svg');
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../temp_art/federal.png', sizingMethod='scale');			
+			}	
+
+			.multiple
+			{
+			_background-image:url('../temp_art/multiple.png');
+			background-image:none, url('../temp_art/multiple.svg');
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../temp_art/multiple.png', sizingMethod='scale');			
+			}	
+
+					&:first-child + li + li + li
+					{
+					margin-right:0px;
+					}
+
 					&:nth-child(4)
 					{
 					margin-right:0px;
 					}
-				
-
-
 			
 				@media screen and (max-width:600px) 
 				{
