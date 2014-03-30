@@ -1,12 +1,11 @@
 
-
 .table_container
 	{
 	max-width:674px;
 	width:100%;
 	padding:10px;
 	position:relative;
-
+	}
 
 .switcher
 		{
@@ -39,6 +38,7 @@
 		{
 		color:$red;
 		}
+
 
 	.dataTables_filter
 	{
@@ -80,6 +80,8 @@
 	table { 
 		width: 100%; 
 		border-collapse: collapse; 
+	}
+	
 
 	thead
 	{
@@ -94,6 +96,7 @@
 		padding:0 0 10px 0;
 		float:left !important;
 		height:30px;
+		
 				@media screen and (max-width:575px) 
 				{
 				width:100% !important;
@@ -141,8 +144,6 @@
 			}
 		}
 	}
-	
-		}
 	
 	
 	/*
@@ -336,12 +337,16 @@
 			}
 		
 			
-			&:nth-child(5)
+			&:first-child + td + td + td + td
 			{
 			display:none;
 			}
 
 		
+			&:nth-child(5)
+			{
+			display:none;
+			}
 		
 		
 		}
@@ -352,11 +357,35 @@
 		display:block;
 		float:left;
 		position:relative;
-		margin:0 0 20px 0;
-		
+		margin:0 0 0px 0;
+				
+				/* hideous hack to make table work in ie8 */
+				
+				&:first-child + tr + tr +tr + tr
+				{
+				clear:left;
+				}
 	
-			@media screen and (min-width:576px) 
+				&:first-child + tr + tr +tr + tr + tr + tr +tr + tr
+				{
+				clear:left;
+				}
+	
+				/* 
+				&:nth-child(5)
+				{
+				clear:left;
+				}	
+		
+				*/
+	
+	
+			@media screen and (max-width:576px) 
 			{
+			width:33.333%;
+			clear:none;
+			
+			/*
 			&:nth-child(5n + 4)
 				{
 				clear:left;
@@ -373,13 +402,47 @@
 				{
 				clear:left;
 				}
+				
+				*/
+				
+				/* more hideous ie8 hacks these clear out previous clears */
+				&:first-child + tr + tr +tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+						
+				&:first-child + tr + tr +tr + tr
+				{
+				clear:none;
+				}
+				
+				/* more hideous ie8 hacks this sets new */
+				
+				&:first-child + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				
 			}	
 	
 				
-			@media screen and (max-width:575px) and (min-width:451px) 
+				
+			@media screen and (max-width:451px) 
 			{
 			width:33.3333%;
 			
+				/*
 				&:nth-child(4n + 3)
 				{
 				clear:left;
@@ -395,6 +458,26 @@
 				clear:left;
 				}
 			
+				*/
+			
+			/* more hideous ie8 hacks these clear out previous clears */
+	
+			&:first-child + tr + tr + tr
+				{
+				clear:none;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+			
+			
 			
 			}
 
@@ -403,10 +486,30 @@
 			{
 			width:50%;
 			
-			&:nth-child(odd)
+			&:first-child + tr + tr
+				{
+				clear:left;				}
+				
+				&:first-child + tr + tr + tr + tr
 				{
 				clear:left;
 				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}	
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+			
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}	
+				
 			
 			}
 
@@ -427,12 +530,28 @@
 			word-wrap: break-word;
 			width:100%;
 			display:block;
+			float:left;
+			position:relative;
+			margin:0 0 0px 0;
+			
+				img
+				{
+				width:100%;
+				
+				}
+				
 				
 				.small_button
 				{
 				width:90%;
 				max-width:70px;
 				margin:0 auto;		
+				float:none;
+				}
+
+				.list_fork
+				{
+				display:none;		
 				}
 		
 		/*
@@ -461,7 +580,10 @@
 			*/
 			}
 
-		}
+	
+	
+	
+	
 		
 		}	
 		
