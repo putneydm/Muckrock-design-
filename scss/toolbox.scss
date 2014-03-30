@@ -118,7 +118,8 @@
 	
 	.toolbox_alerts
 	{
-	background-image:url('../temp_art/toolbox_sprite.svg');
+	background-image:url('../temp_art/toolbox_sprite.png');
+	background-image:none, url('../temp_art/toolbox_sprite.svg');
 	background-repeat:no-repeat;
 	background-position:8px 7px;
 	width:50px;
