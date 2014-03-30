@@ -85,21 +85,12 @@
 			}				
 		}
 		
-		
-
-		
-		
-	.regi_container
+	.content_container
 		{
-		position:relative;
-		max-width:475px;
-		@include center (em(100),0);	
-		width:100%;		
+	width:60%;
+	max-width:600px;
+	margin:90px auto 0;
 		
-		.double_rule
-		{
-		margin:em(40) 0 em(40);
-		}
 		
 		.regi_spacer
 		{
