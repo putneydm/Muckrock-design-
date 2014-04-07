@@ -4,8 +4,11 @@ $(document) .ready (function()
 	// this hides items for show/hide actions so that if js is off, they can still be used.
 
 		 hide_show_too('#inside_page_search');
-		 hide_show_too('.window_shade');		 
-
+		 hide_show_too('.window_shade');
+		 hide_show_too('.window_shade_too');	
+		 hide_show_too('#toolbox_login_mode');		
+		 hide_show_too('#toolbox_login_reveal_container');
+		 
 
 		
 	// function that hides or shows 
@@ -34,9 +37,10 @@ $(document) .ready (function()
 	// passes an argument that includes the name of the item that you want to show or hide.
 	// initial visibility doesn't matter. It does the opposite of whatever its state is.		
 		
-		function hide_show_too (target, time)
+	
+		function hide_show_too (target, time, repeat)
 		{	
-		
+	
 			if(typeof time === 'undefined'){
 				time = 0
 			 }
@@ -89,6 +93,17 @@ $(document) .ready (function()
 			}	
 			
 			});
+			
+			
+		//OPEN AND CLOSE LOG IN BAR 
+		$('#toolbox_login_tab, #login_cancel') .click (function()
+			{
+			console.log('click');
+			hide_show_too ('#toolbox_login_mode', 75);
+			hide_show_too ('#toolbox_login_reveal_container', 25);
+			clearforms()
+			
+			});	
 		
 		
 	// SWITCHES BETWEEN VIEWS IN THE DOCUMENT TABLE	
