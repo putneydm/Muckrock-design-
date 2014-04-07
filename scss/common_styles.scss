@@ -130,7 +130,7 @@
 
 /* selector */
 
-.selector
+select
 	{
 	width:100%;
 	height:40px;
@@ -248,7 +248,8 @@ input[type=text]
 	
 	
 	}
-	
+
+
 		
 	input[type=checkbox] 
 		{
@@ -399,6 +400,7 @@ input[type=text]
 	background-color:$light_aqua;
 	border:1px solid $light_aqua;
 	}
+		
 	
 .mini_button
 	{
@@ -443,6 +445,9 @@ input[type=text]
 		background-color: $dark_aqua;
 		}	
 	}
+	
+	
+	
 	
 /*	
 .mini_button_special
