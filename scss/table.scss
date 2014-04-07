@@ -68,7 +68,8 @@
 	
 		label
 		{
-		@include font ($bold, em(14), $dark_gray, 1.9em, uppercase);	
+		@include font ($bold, em(14), $dark_gray, 1.9em, uppercase);
+		color:red;
 		}
 		
 	}
@@ -88,6 +89,9 @@
 	border-bottom:1px solid silver;
 	height:28px;
 	width:100%;
+
+		
+
 
 		tr
 		{
