@@ -197,49 +197,63 @@
 
 
 <p>Hope that helps.</p>
-
 					<div class="append_reply">
-						<textarea class="append_reply_field" placeholder="Append this reply ..."></textarea>
-						<div class="small_button mini_button_light">Submit</div>				
+						<input type="text" class="append_reply_field" placeholder="Append this reply ..."></text>
+						<input type="button" class="small_button mini_button_light" value="Submit" />				
 					</div>				
-
 			
+			</div>					
 			</div>
+
+	<!-- THIS IS WHERE A USER SUBMITS AN ANSWER TO THE OVERALL QUESTION ON THE PAGE NOT JUST APPENDING A REPLY AS ABOVE. -->	
+	
+	<div class="answers_submit" id="answers_submit">	
+		<h2 span class="red">Reply to this</h2>		
+		<div class="question_avatar_container">	
+
+			<!-- LOGGED IN STATE -->
 			
-					
-			</div>
-	
-	
-	
-	
-	
-	<div class="answers_submit" id="answers_submit">
-	
-	<h2 span class="red">Reply to this</h2>		
-	<div class="question_avatar_container">
-	
-	<img src="temp_art/mug1.jpg" class="user_avatar" />
-	<p class="user_name"><a href="user_page.html" rel="next">Heywood Jablomey</a></p>
-	<p class="user_logout"><a href="" rel="nofollow">Not you? Log out</a></p>
+			<!-- AVATAR -->	
+			<a href="" rel="next">
+			<img src="temp_art/mug1.jpg" class="user_avatar" />
+			</a>
+								
+			<!-- GENERIC AVATAR STATE. -->
+			<!--
+			<div class="user_avatar_generic"><a href="" rel="next"></a></div>
+			-->
+			
+		<!-- NAME OF LOGGED-IN USER -->	
+		<p class="user_name"><a href="user_page.html" rel="next">Heywood Jablomey</a></p>
+		
+		<!-- GIVES OPTION TO LOG OUT USER -->
+		<p class="user_logout"><a href="" rel="nofollow">Not you? Log out</a></p>
+		</div>
+
+
+		<!-- LOGGED OUT STATE-->
+		<!--
+		<div class="question_avatar_container">	
+			<p class="user_name"><a href="user_page.html" rel="next">Log in to comment</a></p>
+			<p class="user_logout"><a href="" rel="nofollow">Not a member? Sign up. It's free!</a></p>
+		</div>
+		-->
+		
 	</div>
 
-	<textarea class="question_body" label="Give your request a name" value placeholder="What is your reply... "></textarea>
-	
-	<div class="button">Submit</div>
-	
-	</div>
-	
-	
-	</div>
-		
-
-							
-		
-	
-	
-		
 
 
+		<!-- FIELD TO ENTER REPLY -->
+		<textarea class="question_body" label="Give your request a name" placeholder="What is your reply... "></textarea>
+	
+		<!-- SUBMIT BUTTON -->
+		<input type="button" class="button" value="Submit">	
+		
+		<!-- CANCEL BUTTON -->
+		<input type="button" class="button light_button clear_forms" value="Cancel">	
+
+	</div>	
+</div>
 
 	<div class="main_right_rail">
 	
