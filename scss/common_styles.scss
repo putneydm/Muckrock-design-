@@ -317,7 +317,6 @@ input[type=text]
 	width:100%;
 	@include font ($light, em(12), $white, 100%, none);
 	@include transition;
-	background-color:$red;
 	text-align: center;
 	padding:10px 0 0;
 	margin:0 0 30px;
