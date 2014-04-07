@@ -23,7 +23,6 @@
 	
 	}
 	
-	
 	.toolbox_inside
 	{
 	@include spanner (10, 1000, 0, 10);
@@ -232,6 +231,9 @@
 					}
 		
 				}
+			a
+			{
+			
 			&:hover
 			{
 			color:$light_gray;
@@ -242,7 +244,7 @@
 				}
 			
 			}
-			
+			}
 
 		}
 	
@@ -457,7 +459,7 @@
 	width:100%;
 	height:0px;
 	margin:0 auto;
-	display:none;	
+	display:none;
 
 		.toolbox_reveal_inside
 		{
@@ -507,225 +509,122 @@
 			
 		}
 		
-		}
-	
 	}
 
-
-/*
-		.toolbox_hide
-		{
-		@include spanner (10, 1000, 0, .5);	
-		@include box-sizing(border-box);
-		float:right;
-		text-align:center;
-		padding-top:10px;
-		font-size:em(20);
-		color:$light_gray;
-		text-shadow:.09em .09em .2em  $background;
-		cursor:pointer;
-		
-			@media screen and (max-width:600px) 
-				{
-				@include spanner (10, 1000, 0, 1);
-				float:right;
-				padding:5px 0 0 0;
-				}	
-		
-			.toolbox_icon
-			{
-			display:none;
-			font-size:em(18);
-			}
-		
-			.toolbox_close_icon
-			{
-			display:block;	
-			}
-		
-		
-		}
-
-		.toolbox_intro
-		{
-		@include spanner (10, 1000, 0, 2.5);
-		padding:0px 0 0px 0;
-		
-				@media screen and (max-width:600px) 
-				{
-				@include spanner (10, 1000, 0, 9);	
-				}		
-		
-		
-			.counter
-			{
-			width:24px;
-			height:24px;
-			float:left;
-			background-image:url('../temp_art/sunburst_bg.png');
-			background-repeat: no-repeat;
-			background-size: 24px;
-			background-position: left top;
-			text-align:center;
-			@include box-sizing(border-box);
-			@include font ($light, em(12), $white, 1.3em, none);
-			display:inline-block;
-			padding:6px 0 0 0px;
-			margin:-4px 3px 0 0;
-			}
-		
-		
-			h4
-			{
-			@include font ($bold, em(14), $dark_gray, 1.2em, none);
-			margin:3px 5px 0 0;
-			padding:16px 0 0;
-				&:after
-				{
-				content:'\f0a9';
-				font-family:$icon;
-				margin:0 0 0 3px;
-				color:$light_gray;
-				}
-			
-			
-				@media screen and (max-width:600px) 
-				{
-				padding:5px 0 0;
-				}
-			
-			
-			}
-		
-		
-		}
-		
-		
-
-		
-		.toolbox_menu
-		{
-		list-style-type:none;
-		padding:0px;
-		margin:0px;
-		border-left:1px solid $white;
-		border-right:1px solid #d2d2d2;
-		@include spanner (10, 1000, 0, 7);	
-		
-				@media screen and (max-width:600px) 
-				{
-				@include spanner (10, 1000, 0, 10);
-				border:0px;
-				}	
-			
-			li
-			{
-			@include spanner (5, 598, 0, 1);	
-			text-align:center;
-			padding:5px 10px 6px;
-			@include font ($light, em(12), $red, 1em, none);
-			border-left:1px solid #d2d2d2;
-			border-right:1px solid $white;
-			@include box-sizing(border-box);
-			@include transition;
-			
-					&:first-child
-					{
-						@media screen and (max-width:500px) 
-						{	
-						border-left:0px;
-						}
-
-					}
-					
-					&:nth-child(5)
-					{
-						@media screen and (max-width:500px) 
-						{	
-						border-right:0px;
-						}
-					}
-					
-				@media screen and (max-width:500px) 
-					{
-					font-size:em(9);
-					margin:5px 0;
-					padding:3px 3px 3px;
-					min-height:38px;
-			
-					}
-				
-				&:hover
-				{
-				color:$red;
-				background-color:rgba(255,255,255,0.3);
-				border-left:1px solid transparent;
-				
-					.icon
-					{
-					color:$red;
-					text-shadow:none;
-					}
-				}
-				
-				.icon
-				{
-				font-size:em(26);
-				color:$light_gray;
-				line-height:1em;
-				margin:2px 0px 2px 0;
-				text-shadow:.09em .09em .2em  $background;
-				@include transition;			
-				}
-				
-					
-			}
-		
-		}
-	
-	
 	}
-	
-
-.toolbox_minimized
+		
+	.toolbox_login_mode
 	{
-	height:0px;
+	@extend .toolbox;
 
-		.toolbox_minimized_tab
+		}
+	
+		#login_name
 		{
-		height:45px;
-		width:45px;
-		position:absolute;
-		bottom:0px;
-		right:0px;
-		@include marginizer_left (10, 1000, 0, 7.5);
-		background-color:$silver;
-		border-top:1px solid $white;
-		border-left:1px solid $white;
-		border-right:1px solid $silver;
-		border-bottom:0px;
-		border-top-left-radius:4px;
-		border-top-right-radius:4px;
-		text-shadow:.09em .09em .2em  $white;
-		display:block !important;
-
+		height:36px;
+		@include spanner (6, 1000, 15, 2);	
+		float:left;
+		margin-bottom:0px;
 		
-			.toolbox_icon
+			@media screen and (max-width:em(600)) 
 			{
-			display:block;
-			font-size:em(16);
-			color:$red;
+			width:49%;
+			margin-right:2%;
+			}
+			
+			
+			@media screen and (max-width:em(400)) 
+			{
+			width:100%;
+			margin-bottom:8px;
+			float:none;
 			}
 		
-			.toolbox_close_icon
+		}
+		
+		#login_password
+		{
+		@include font ($light, em(13), $medium_gray, 1.5em, none);
+		border:1px solid $dark_background;
+		@include rounded;
+		padding:10px 18px;
+		@include transition;
+		margin:0;
+		@include transition;
+		@extend #login_name;
+	
+		&:focus
+		{
+		color:$dark_gray;
+		outline:none;
+		border:1px solid $aqua_blue;
+		}
+	
+		&:active
+		{
+		color:$dark_gray;
+		outline:none;
+		border:1px solid $aqua_blue;
+		}		
+		
+		}
+		
+		
+		.login_button_container
+		{
+		@extend #login_name;
+		margin: 0px 0 8px 1.5%;
+		padding:5px 0 0;
+		
+			@media screen and (max-width:em(600)) 
 			{
-			display:none;	
+			@include spanner (6, 1000, 0, 6);	
+			margin:8px 0;
+			padding:0px;
 			}
 		
+			.button
+			{
+			float:left;
+			}
 		
 		}	
 	
-	}
 	
-	*/
+		.toolbox_login_tab
+		{
+		position:absolute;
+		bottom:0px;
+		left:10px;
+		width:auto;
+		height:auto;
+		background-color:$silver;
+		background-color:rgba($silver,0.90);
+		padding:8px 8px 3px;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		margin:0px;
+		cursor:pointer;
+		@include transition;
+
+			@media screen and (max-width:em(1040)) 
+			{
+			left:20px;
+			}
+			
+			@media screen and (max-width:em(600)) 
+			{
+			left:10px;
+			}
+
+		
+		.button
+		{
+		margin:0px;
+		}
+		
+		}
+
 	
+
+
