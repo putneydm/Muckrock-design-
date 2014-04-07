@@ -247,9 +247,25 @@ $(document) .ready (function()
 		counter = 0;
 		}
 
-
 		});	
 		
+
+	// this is the same as the generic window shade above but it trigger the window shade once. It doesn't close it again.
+
+		countertoo = 0;
+	$('.window_shade_trigger_too') .click (function()
+		{
+		var target_div = '#' + $(this) .attr ('id') + '_shade';
+
+		
+		if (countertoo == 0)
+		{
+		toggle_header_height(target_div);
+		countertoo ++;
+		}
+
+
+		});	
 		
 			
 		
