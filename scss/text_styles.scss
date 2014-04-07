@@ -56,12 +56,14 @@ a
 			text-decoration:none;
 			color:$aqua_blue;
 			@include transition;
-			border-bottom:1px dotted $aqua_blue;
+			/*border-bottom:1px dotted $aqua_blue; */
+			background-image:none, url('../temp_art/underline.svg');
+			background-repeat:repeat-x;
+			background-position: left 90%;
 
 				&:hover
 				{
 				color:$dark_aqua;
-				border-bottom:1px dotted $dark_aqua;
 				}		
 			}	
 	}
