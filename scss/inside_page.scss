@@ -170,7 +170,7 @@
 			
 		@media screen and (max-width:em(550)) 
 			{
-			height:26px
+			height:28px
 			}	
 	
 		.small_button
@@ -185,21 +185,22 @@
 					width:25%;
 					border-top-left-radius:0px;
 					border-bottom-left-radius:0px;	
+					position: absolute;
 					}		
 		}
 	}
 
 
-	.search_box
+	#search_box
 		{
 		margin:0px;
 		height:41px;
-		padding-top:12px;
 		float:left;
 		width:87%;
-		border:1px solid $white;
-		
-		
+		border:0px solid $white;
+		padding-top:12px;
+		padding-left:12px;
+				
 			@media screen and (max-width:em(800)) 
 			{
 			margin:0px 0% 0px;
@@ -209,8 +210,10 @@
 			@media screen and (max-width:em(550)) 
 			{
 			width:75%;
-			height:26px;
-			padding-left:5px;
+			height:28px;
+			padding-left:7px;
+			padding-top:4px;
+			padding-bottom:0px;
 			}
 		
 		}
