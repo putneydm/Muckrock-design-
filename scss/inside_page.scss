@@ -16,7 +16,6 @@
 			{
 			height:auto;
 			}	
-			
 	}
 
 	
@@ -160,7 +159,7 @@
 	@include rounded;
 	background-color:$white;
 	max-width:1000px;
-	
+	position:relative;
 	
 		@media screen and (max-width:em(1040)) 
 			{
