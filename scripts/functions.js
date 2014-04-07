@@ -146,6 +146,33 @@ $(document) .ready (function()
 			});
 		
 	
+	// clears forms when you hit the cancel button
+	
+	function clearforms()
+		{
+		$('input[type=text], textarea, input[type=password]').val("");
+		}
+	
+	function clearformscollapse(target)
+		{
+		$("input[type=text], textarea").val("");
+		hide_show_too (target, 150)
+		countertoo = 0;
+		}
+
+	$('.clear_forms_collapse') .click (function()
+		{
+		target= '#' + $(this) .attr ('id') + '_shade';
+		clearformscollapse(target)
+		});
+	
+	
+	$('.clear_forms') .click (function()
+		{
+		clearforms()
+		});
+	
+	
 	//this triggers window shade action on THE credit card ccv number. 
 	
 	$('#CCV_explainer, #CCV_image_close, #CCV_image') .click (function()
