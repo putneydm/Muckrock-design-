@@ -49,9 +49,11 @@ $(document) .ready (function()
 				{
 				time=time
 				}
-		
+			
 		var visible = $(target) .is(":visible");
 
+				console.log ('v' + visible);
+				
 			if (visible == true)
 			{
 			$(target) .fadeOut (time);	
@@ -231,7 +233,6 @@ $(document) .ready (function()
 	$('.window_shade_trigger') .click (function()
 		{
 		var target_div = '#' + $(this) .attr ('id') + '_shade';
-				console.log(counter);
 
 		
 		if (counter == 0)
