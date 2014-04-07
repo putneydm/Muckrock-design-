@@ -100,6 +100,7 @@
 		padding:0 0 10px 0;
 		float:left !important;
 		height:30px;
+		border:1px solid red;
 		
 				@media screen and (max-width:575px) 
 				{
@@ -256,6 +257,7 @@
 			border: none;
 			position: relative;
 			
+			/*
 			&:nth-child(2)
 			{
 			width:100%;
@@ -285,6 +287,41 @@
 			padding-right:0px;
 			}			
 
+			*/
+
+			/* hideous ie hacks */
+			
+			&:first-child + td
+			{
+			width:100%;
+			display:block;
+			padding:5px 0 0px 0; 
+			}
+
+			&:first-child + td + td
+			{
+			width:33%;
+			display:block;
+			float:left;
+			}
+
+
+			&:first-child + td + td + td
+			{
+			width:33%;
+			display:block;
+			float:left;
+			}
+			
+			&:first-child + td + td + td + td
+			{
+			width:33%;
+			display:block;
+			float:left;
+			padding-right:0px;
+			}
+			
+
 			}
 	
 		}
@@ -310,7 +347,7 @@
 		td
 		{
 		
-			&:nth-child(1)
+			&:fist-child
 			{
 			width:100%;
 			display:block;
@@ -335,7 +372,7 @@
 			}
 			
 		
-			&:nth-child(2)
+			&:nth-child + td
 			{
 			color:$dark_gray;
 			}
@@ -345,8 +382,7 @@
 			{
 			display:none;
 			}
-
-		
+	
 			&:nth-child(5)
 			{
 			display:none;
@@ -374,41 +410,14 @@
 				{
 				clear:left;
 				}
-	
-				/* 
-				&:nth-child(5)
-				{
-				clear:left;
-				}	
-		
-				*/
+
 	
 	
 			@media screen and (max-width:576px) 
 			{
 			width:33.333%;
 			clear:none;
-			
-			/*
-			&:nth-child(5n + 4)
-				{
-				clear:left;
-				}	
-				
-				
-				&:nth-child(4)
-				{
-				clear:none !important;
-				}
-				
-				
-				&:nth-child(5)
-				{
-				clear:left;
-				}
-				
-				*/
-				
+
 				/* more hideous ie8 hacks these clear out previous clears */
 				&:first-child + tr + tr +tr + tr + tr + tr + tr + tr
 				{
@@ -437,6 +446,7 @@
 				clear:left;
 				}
 				
+				/* end ie hacks */	
 				
 			}	
 	
@@ -523,6 +533,7 @@
 		th { 
 			color: white; 
 			font-weight: bold; 
+
 			}
 			
 			td 
