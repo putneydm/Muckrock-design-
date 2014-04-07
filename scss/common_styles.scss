@@ -377,6 +377,11 @@ input[type=text]
 	background-color:$aqua_blue;
 	border:1px solid $aqua_blue;
 	
+		@media screen and (max-width:em(400)) 
+		{
+		width:70px !important;
+		}
+	
 		a
 		{
 		color:$white;
