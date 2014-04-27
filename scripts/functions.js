@@ -268,7 +268,16 @@ $(document) .ready (function()
 
 		});	
 		
-			
+	
+	function vine_fix ()
+		{
+		$('.vine_embed iframe') .attr('width','100%');
+		$('.vine_embed iframe') .attr ('height','100%');
+		}
+		
+	vine_fix ();
+	
+	
 		
 	
 		
