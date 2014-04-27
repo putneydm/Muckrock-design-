@@ -87,7 +87,17 @@ a
 				background-image: -webkit-linear-gradient(top, $background 75%, $dark_aqua 75%);
 				background-image: -o-linear-gradient(top, $background 75%, $dark_aqua 75%);
 				background-image: linear-gradient(to bottom, $background 75%, $dark_aqua 75%);
-				}		
+				}
+				
+				
+				&:followed
+				{
+				color:$dark_aqua;
+				background-image: -moz-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: -webkit-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: -o-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: linear-gradient(to bottom, $background 75%, $dark_aqua 75%);
+				}	
 			}	
 	}
 
