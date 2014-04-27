@@ -384,6 +384,14 @@ input[type=text]
 		margin-bottom:10px;
 		}
 		
+			&:disabled
+			{
+			border:0px $pale_gray;
+			background-color:$pale_gray;
+			color:white;
+			}
+		
+		
 		}
 		
 	input[type=submit]
