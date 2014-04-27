@@ -74,10 +74,11 @@
 	padding:0px 0 0 20px;
 	float:left;
 	
-		@media screen and (max-width:em(700)) 
+		@media screen and (max-width:em(750)) 
 		{
 		width:100%;
-		padding:0 10px;
+		margin:0;
+		padding:0 0px;
 		}
 	}
 	
@@ -87,7 +88,93 @@
 	width:100%;
 	height:auto;
 	margin-bottom:30px;
-	border-bottom:3px solid $silver;
+	
+			@media screen and (max-width:em(750)) 
+			{
+			@include spanner (4, 1000, 30, 2);
+			margin:0 0 0 3%;
+			}
+			
+			@media screen and (max-width:em(550)) 
+			{
+			@include spanner (4,100,0,4);
+			margin:0 0 30px 0;
+			}
+	
+	.main_about_us_section
+	{
+	width:100%;
+	height:auto;
+	margin:0 0 30px 0;
+	border-bottom:1px solid $silver;
+	padding:0 0 20px 0;
+	
+		&:nth-child(3)
+		{
+		border-bottom:0px;
+		}
+	}
+
+	.button
+	{
+	float:left;
+	
+		@media screen and (max-width:em(500)) 
+		{
+		width:100%;
+		float:none;
+		clear:both;
+		margin-bottom:15px;
+		height:42px;
+		}
+
+	}
+	
+	
+	.button_icon
+	{
+
+	
+		@media screen and (max-width:em(500)) 
+		{
+		padding-top:12px;
+		}
+
+	}
+	
+
+	.button_options
+		{
+		width:auto;
+		float:left;
+		margin:-45px 0 0 85px;
+		padding:0px;
+		color:$light_gray;
+		
+			@media screen and (max-width:em(500)) 
+			{
+			margin:0;
+			}
+		
+		
+		}
+		
+		.button_options_too
+		{
+		margin:-50px 0 0 85px;
+		
+			@media screen and (max-width:em(500)) 
+			{
+			margin:0;
+			}
+		
+		}
+		
+	
+	input[type='text']
+		{
+		margin:0 0 20px 0;
+		}
 		
 		h4
 		{
@@ -98,7 +185,9 @@
 		
 		p
 		{
-		color:$light_gray;
+		color:$medium_gray;
+		line-height:1.4em;
+		margin-bottom:20px;
 		
 			a
 			{
