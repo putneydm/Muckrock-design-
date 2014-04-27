@@ -242,12 +242,180 @@
 				font-size:em(16);
 				line-height:1.7em;
 				}
-					
+				
+				&:first-letter
+				{
+				font-size:em(62);
+				float:left;
+				margin:10px 5px 0 0;
+				color:$light_gray;
+				line-height:48px;
+				padding:0px;
+				
+				@media screen and (max-width:500px) 
+				{
+				font-size:em(56);
+				margin:8px 6px 0 0;
 				}			
-			}									
+				}	
+			}			
+		}
+					
+		img
+		{
+		width:100%;
+		margin:0 auto 15px;
+		}
+		
+		
+		iframe
+		{
+		margin:0 0 15px 0;
+		}
+		
+		h2
+		{
+		font-size:em(16);
+		margin:3px 0 3px 0;
+		
+		
+		}
+		
 		}
 
 
-				
+.social
+	{
+	@include spanner (6, 670, 0, 5);
+	@include marginizer_left (6, 670, 0, 1);
+	margin-bottom:30px;
+	margin-top:10px;
+	padding-left:13px;
+
+		@media screen and (max-width:em(750)) 
+			{
+			@include spanner (6, 670, 0, 5.25);
+			@include marginizer_left (6, 670, 0, .75);
+			margin-bottom:30px;
+			}	
 	
+	
+		@media screen and (max-width:650px) 
+			{
+			margin-left:0px;
+			@include spanner (6, 670, 0, 6);
+			margin-bottom:30px;
+			clear:left;	
+			padding-left:0px;
+			}
+		
+	
+	
+	}
+
+
+.story_river
+	{
+	@include spanner (6, 670, 0, 5);
+	@include marginizer_left (6, 670, 0, 1);
+	margin-top:20px;
+	padding:20px 0 0 15px;
+
+		@media screen and (max-width:em(750)) 
+			{
+			@include spanner (6, 670, 0, 5.25);
+			@include marginizer_left (6, 670, 0, .75);
+			}	
+	
+	
+		@media screen and (max-width:650px) 
+			{
+			margin-left:0px;
+			@include spanner (6, 670, 0, 6);
+			clear:left;	
+			padding:20px 0 0 0px;
+			}
+		
+		.story_river_teaser
+		{
+		clear:both;
+		margin-bottom:30px;
+		padding-bottom:30px;
+		border-bottom:1px solid $silver;
+					
+			.avatar
+			{
+			float:left;
+			width:25px;
+			}
+	
+		}
+		
+		
+		h2
+		{
+		margin:0 0 5px 0;
+		font-size:em(18);
+		line-height:1.4em;
+		}
+		
+		h4
+		{
+		margin-bottom:20px;
+		}
+		
+		.teaser_text
+		{
+		line-height:1.6em;
+		margin:0 0 15px 0;
+		font-size:em(15);
+		clear:left;
+		color:$dark_gray;
+		}
+
+		.teaser_link
+		{
+		background:none;
+		font-weight:bold;
+		}
+
+		.teaser_byline
+		{
+		font-size:em(13);
+		font-style:italic;
+		font-weight:bold;
+		color:$light_gray;
+		margin:0 0 2px 0;
+		letter-spacing:.04em;
+		
+			a
+			{
+			background:none;
+			color:inherit;
+			@include transition;
+				
+				&:hover
+				{
+				color:$dark_aqua;
+				
+				}
+				
+			
+			}
+
+		}
+		
+	
+	}
+				
+		
+.rule
+	{
+	width:100%;
+	height:0px;
+	border-bottom:3px solid $silver;
+	clear:both;
+	}
+
+
 	
