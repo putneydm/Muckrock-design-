@@ -400,24 +400,6 @@ input[type=text]
 	
 				
 	/* buttons */
-
-.large_button
-	{
-	height:30px;
-	@include rounded;
-	width:100%;
-	@include font ($light, em(12), $white, 100%, none);
-	@include transition;
-	text-align: center;
-	padding:10px 0 0;
-	margin:0 0 30px;
-		&:hover
-		{
-		color:$white;
-		background-color:$aqua_blue;
-		}	
-	}
-
 	
 .button
 	{
@@ -428,6 +410,8 @@ input[type=text]
 	background-color:$aqua_blue;
 	border:0px;
 	margin-right:15px;
+	display:block;
+	overflow:hidden;
 
 
 		&:hover
@@ -456,7 +440,10 @@ input[type=text]
 	
 	}
 	
-	
+.large_button
+	{
+	width:100%;
+	}	
 
 
 .small_button
@@ -471,7 +458,7 @@ input[type=text]
 	
 		@media screen and (max-width:em(400)) 
 		{
-		width:70px !important;
+		width:70px;
 		}
 	
 		a
@@ -542,53 +529,159 @@ input[type=text]
 		}	
 	}
 	
-	
-	
-	
-/*	
-.mini_button_special
+.button_icon
 	{
-	color:$light_gray;
-	background-color:$background;
-	border:0px;	
-	box-shadow: none;
+	width:67px;
+	float:left;
 	font-family:$icon;
-	font-size:em(24);
+	font-size:em(16);
+	padding-top:6px;
+	}
 	
-	&:hover
-		{
-		background-color:$background;
-		color:$red;
-		}	
-	}	
+.button_icon_tall
+	{
+	width:67px;
+	float:left;
+	font-family:$icon;
+	font-size:em(18);
+	padding-top:13px;
+	}
 
-*/
 
 .button_options
 		{
-		@include font ($light, em(12), $light_gray, 1.4em, none);
-		margin:7px 0 0 5px;
+		@include font ($light, em(12), $light_gray, 1.5em, none);
+		font-family:$open;
+		margin:7px 0 0 0px;
 		list-style-type:none;
 		float:left;
-		padding-right:20px;
-		
+		padding-right:5px;
+	
 			li
 			{
-			margin:0 0px 2px 5px;
-			text-indent:-5px;
+			margin:0 0px 2px 0px;
 			line-height:1.3em;
-					
-			&:before {
-					content: "\2022";
-					display:inline-block;
-					margin:0 5px 0 0;					
-					color: $red; 
-					font-size:em(16);
-				}			
+			
 			}		
 		}
-	
+
 					
+/*RESPONSIVE EMBED CONTAINER FOR VIDEOS */
+
+.video_embed 
+	{ 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	padding-top: 30px; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+	height: auto; 
+	margin:0 0 15px 0;
+
+		iframe, .embed-container object, .embed-container embed 
+		{ 
+		position: absolute; 
+		top: 0; left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+	}
+	
+/* RESPONSIVE EMBED CODE FOR INSTAGRAM */
+
+.instagram_embed
+	{
+	position: relative; 
+	padding-top: 30px; 
+	height: 0; overflow: hidden;
+	width:390px;
+	height:492px;
+	margin:0 auto 15px;
+	
+		@media screen and (max-width:em(420)) 
+		{
+		padding-bottom: 120%; 
+		padding-top: 30px;
+		height: 0;
+		width:100%;
+		overflow: hidden;
+		}
 	
 
 	
+	iframe, object, embed 
+		{ 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		}
+	
+	}
+	
+/* RESPONSIVE VINE EMBED */
+
+.vine_embed 
+	{
+	padding-top:0px;
+	width:390px;
+	height:390px;
+	overflow: hidden;
+	border:1px solid red;
+	position:relative;
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	margin:0px auto 15px;
+		
+		@media screen and (max-width:em(420)) 
+		{
+		padding-bottom:100%; 
+		padding-top:0px;
+		width:100%;
+		height:0px;
+		overflow: hidden;
+		border:1px solid blue;
+		}	
+		
+		
+		iframe, object, embed 
+		{ 
+		position:absolute; 
+		top:0; 
+		left:0; 
+		width: 100%; 
+		height: 100%;
+		}
+	}	
+
+/* RESPONSIVE GETTY EMBED */
+
+.getty_embed
+	{ 
+	position: relative; 
+	padding-bottom: 79.96632996632997%; 
+	padding-top: 30px; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; height: auto; 
+	margin:0 auto 15px;
+	 
+		 iframe, object, embed 
+		 { 
+		 position: absolute; 
+		 top: 0; 
+		 left: 0; 
+		 width: 100%; 
+		 height: 100%; 
+		 }
+	}
+
+/* RESPONSIVE TWITTER EMBED */
+
+.twitter-tweet-rendered
+	{
+	margin:0 auto 15px;
+	border:1px;
+	}
