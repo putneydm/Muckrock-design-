@@ -490,6 +490,12 @@ input[type=text]
 	color:white;
 	background-color:$light_aqua;
 	border:1px solid $light_aqua;
+	
+		&:hover
+		{
+		border:1px solid $dark_aqua;
+		}
+	
 	}
 		
 	
