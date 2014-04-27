@@ -66,14 +66,27 @@ a
 			text-decoration:none;
 			color:$aqua_blue;
 			@include transition;
-			/*border-bottom:1px dotted $aqua_blue; */
+			/*border-bottom:1px dotted $aqua_blue; 
 			background-image:none, url('../temp_art/underline.svg');
 			background-repeat:repeat-x;
-			background-position: left 90%;
+			background-position: left 90%;*/
+			
+			background-image: -moz-linear-gradient(top, $background 75%, $aqua_blue 75%);
+			background-image: -webkit-linear-gradient(top, $background 75%, $aqua_blue 75%);
+			background-image: -o-linear-gradient(top, $background 75%, $aqua_blue 75%);
+			background-image: linear-gradient(to bottom, $background 75%, $aqua_blue 75%);
+			background-size: 2px 2px;
+			background-origin: padding-box;
+			background-position: 0px 87%;
+			background-repeat: repeat-x;
 
 				&:hover
 				{
 				color:$dark_aqua;
+				background-image: -moz-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: -webkit-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: -o-linear-gradient(top, $background 75%, $dark_aqua 75%);
+				background-image: linear-gradient(to bottom, $background 75%, $dark_aqua 75%);
 				}		
 			}	
 	}
@@ -83,11 +96,21 @@ h1
 	{
 	@include font ($bold, em(42), $dark_gray, 1.3em, none);
 	margin:0;	
-	
+
 			@media screen and (max-width:em(600)) 
 			{
 			font-size:em(32);
 			}
+	
+		em
+		{
+		font-style:normal;
+		}
+		
+		strong
+		{
+		font-weight:inherit;
+		}
 	
 	}
 	
@@ -96,6 +119,17 @@ h2
 	@include font ($medium, em(18), $dark_gray, 1.2em, none);
 	margin:0 0 15px 0;
 	clear:both;
+	
+		em
+		{
+		font-style:normal;
+		}
+		
+		strong
+		{
+		font-weight:$bold;
+		}
+	
 	
 	@media screen and (max-width:500px) 
 	{
@@ -130,11 +164,7 @@ i
 	font-family:$icon;
 	font-style:normal;
 	}
-	
-strong
-	{
-	@include font ($bold, inherit, inherit, inherit, inherit);
-	}
+
 
 .clear
 	{
@@ -170,6 +200,19 @@ blockquote
 	margin:0 0 4px 0;
 	display:block;
 	letter-spacing: .09em;
+	
+		a
+		{
+		color:inherit;
+		background:none;
+		
+		&:hover
+			{
+			background:none;
+			}
+		
+		}
+	
 	}
 	
 	.right_link
@@ -199,18 +242,4 @@ blockquote
 	margin:0px 0 10px 0;
 	}
 
-	
-/*
-.chatter_text
-	{
-	@include font (500, .9em, $dark_gray, 1.5em, none);
-	
-		strong
-		{
-		font-weight:$medium;
-		}
-	
-	}	
-	
-	*/
 	
