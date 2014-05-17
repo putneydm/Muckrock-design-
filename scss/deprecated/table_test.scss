@@ -1,0 +1,601 @@
+/*
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+@import "menu_test.scss";
+@import "muckrock";
+@import "inside_page";
+*/	
+
+.table_container
+	{
+	max-width:674px;
+	width:100%;
+	padding:10px;
+	position:relative;
+	}
+
+.switcher
+		{
+		@include font ($bold, em(14), $dark_gray, 1em, uppercase);	
+		float:right;
+		margin:0 0px 20px 20px;
+		cursor:pointer;
+		padding-top:7px;
+		
+		@media screen and (max-width:450px) 
+		{
+		margin-bottom:20px;
+		float:right;
+		}
+		
+			&:hover
+			{
+			color:$red;
+			}
+		
+			.icon
+			{
+			display:inline-block;
+			margin: 0 0 0 5px;
+			}
+		
+		}
+		
+		.clicked
+		{
+		color:$red;
+		}
+	
+
+	.dataTables_filter
+	{
+		position:absolute;
+		right:10px;
+		top:50px;
+		
+			@media screen and (max-width:575px) 
+			{
+			position:static;
+			float:left;
+			clear:left;
+			margin-bottom:20px;
+			clear:right;
+			}
+	
+	
+		input
+		{
+		width:197px;
+		margin-left:10px;
+		height:28px;
+		background-image:url('../temp_art/magnifier.svg');
+		background-repeat: no-repeat;
+		background-position: 168px 6px;
+		}
+	
+		label
+		{
+		@include font ($bold, em(14), $dark_gray, 1.9em, uppercase);	
+		}
+		
+	}
+
+
+	/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+	table { 
+		width: 100%; 
+		border-collapse: collapse; 
+	}
+	
+	
+	thead
+	{
+	border-bottom:1px solid silver;
+	height:28px;
+	width:100%;
+
+		tr
+		{
+		width:100% !important;
+		margin-bottom:10px !important;
+		padding:0 0 10px 0;
+		float:left !important;
+		height:30px;
+		
+				@media screen and (max-width:575px) 
+				{
+				width:100% !important;
+				max-height:30px !important;
+				min-height:30px;
+				}
+		
+			th 
+			{ 
+			color: white; 
+			font-weight: bold; 
+			width:82px !important;
+			float:left;
+			display:block;
+			margin-right:6px;
+			margin-right:10px;
+			
+			
+				@media screen and (max-width:450px) 
+				{
+				margin-left:0px;
+				margin-right:10px;
+				}
+						
+				.small_button
+				{
+				background-color:$light_gray;
+				box-shadow:none;
+				width:80px;
+				height:26px;
+				}
+			
+			
+				&:first-child
+				{
+				display:none;
+				}
+				
+				
+				&:nth-child(5)
+				{
+				display:none;
+				}
+			
+			}
+		}
+	}
+	
+	
+	/*
+	show table as a list
+	*/
+	
+	.list_view
+	{
+	
+		tbody
+		{
+		width:100%;
+		}
+	
+		tr 
+		{ 
+		width:100%;
+		}
+	
+			
+			td { 
+			padding:5px 5px 10px 0; 
+			text-align: left; 
+			border-bottom:1px solid $silver;
+			vertical-align:top;
+			@include font ($light_gray, em(13), $light_gray, 1.5em, none);
+			word-wrap: break-word;
+		
+				.small_button
+				{
+				float:right;
+				width:70px;
+				}
+		
+				&:nth-child(1)
+				{
+				display:none;				
+				}
+		
+		
+				&:nth-child(2)
+				{
+				width:41.66667%;
+				@include font ($bold, em(13), $dark_gray, 1.5em, none);
+				}
+				
+				&:nth-child(3)
+				{
+				width:20.83333%;
+				}
+		
+				&:nth-child(4)
+				{
+				width:20.83333%;
+				}
+		
+				&:nth-child(5)
+				{
+				padding-right:0px;
+				}			
+
+
+
+			}
+	
+		tr
+		{
+		width:100%;
+		}
+	
+
+	
+	/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+
+	
+	tbody
+	{
+	
+	
+	@media 
+	only screen and (max-width: 650px),
+	(min-device-width: 768px) and (max-device-width: 1024px)  
+	{
+	
+			/* Force table to not be like tables anymore */
+			table, thead, tbody, th, /*td,*/ tr 
+			{ 
+			display: block; 
+			}
+		
+		
+				tr 
+				{ 
+				border-bottom: 1px solid $silver;
+				clear:left;
+				min-height:75px;
+				}
+		
+			td 
+			{ 
+			/* Behave  like a "row" */
+			border: none;
+			position: relative;
+			
+			&:nth-child(2)
+			{
+			width:100%;
+			display:block;
+			padding:5px 0 0px 0; 
+			}
+				
+			&:nth-child(3)
+			{
+			width:33%;
+			display:block;
+			float:left;
+			}
+		
+			&:nth-child(4)
+			{
+			width:33%;
+			display:block;
+			float:left;
+			}
+		
+			&:nth-child(5)
+			{
+			width:33%;
+			display:block;
+			float:left;
+			padding-right:0px;
+			}			
+
+			}
+	
+		}
+		
+		}
+		
+		}
+		
+		
+		/*
+		show table as a grid 
+		*/
+		
+	.grid_view
+	{
+	
+		tbody
+		{
+		width:100%;
+		}
+	
+	
+		td
+		{
+		
+			&:nth-child(1)
+			{
+			width:100%;
+			display:block;
+			position:relative;
+			padding-bottom:0px;
+				
+				img
+				{
+				width:97%;
+				max-width:180px;
+				margin:0 3% 0 0;
+				}
+			
+				.small_button_container
+				{
+				width:97%;
+				margin:0 3% 0 0;
+				position:absolute;
+				bottom:20px;
+				}
+			
+			}
+			
+		
+			&:nth-child(2)
+			{
+			color:$dark_gray;
+			}
+		
+			
+			&:first-child + td + td + td + td
+			{
+			display:none;
+			}
+
+		
+			&:nth-child(5)
+			{
+			display:none;
+			}
+		
+		
+		}
+	
+		tr 
+		{ 
+		width:25%;
+		display:block;
+		float:left;
+		position:relative;
+		margin:0 0 0px 0;
+				
+				/* hideous hack to make table work in ie8 */
+		
+				&:first-child + tr + tr +tr + tr
+				{
+				clear:left;
+				}
+	
+				&:first-child + tr + tr +tr + tr + tr + tr +tr + tr
+			{
+				clear:left;
+				}
+	
+				/* 
+				&:nth-child(5)
+				{
+				clear:left;
+				}	
+				
+				*/
+		
+	
+			@media screen and (max-width:576px) 
+			{
+			width:33.333%;
+			clear:none;
+			
+			/*
+			&:nth-child(5n + 4)
+				{
+				clear:left;
+				}	
+				
+				
+				&:nth-child(4)
+				{
+				clear:none !important;
+				}
+				
+				
+				&:nth-child(5)
+				{
+				clear:left;
+				}
+				
+				*/
+				
+				/* more hideous ie8 hacks these clear out previous clears */
+				&:first-child + tr + tr +tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+						
+				&:first-child + tr + tr +tr + tr
+				{
+				clear:none;
+				}
+				
+				/* more hideous ie8 hacks this sets new */
+				
+				&:first-child + tr + tr + tr
+				{
+				clear:left;
+			}	
+	
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				
+			}	
+	
+
+				
+			@media screen and (max-width:451px) 
+			{
+			width:33.3333%;
+			
+				/*
+				&:nth-child(4n + 3)
+				{
+				clear:left;
+				}
+
+				&:nth-child(3)
+				{
+				clear:none !important;
+				}
+				
+				&:nth-child(4)
+				{
+				clear:left;
+				}
+			
+				*/
+			
+			/* more hideous ie8 hacks these clear out previous clears */
+	
+			&:first-child + tr + tr + tr
+				{
+				clear:none;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:none;
+				}
+			
+			
+			
+			}
+
+		
+			@media screen and (max-width:450px) 
+			{
+			width:50%;
+			
+			&:first-child + tr + tr
+				{
+				clear:left;				}
+				
+				&:first-child + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+				
+				&:first-child + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}
+			
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}	
+				
+				&:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr
+				{
+				clear:left;
+				}	
+				
+			
+			}
+
+		}
+	
+
+		th { 
+			color: white; 
+			font-weight: bold; 
+			}
+			
+			td 
+			{ 
+			padding:5px 5px 10px 0; 
+			text-align: left; 
+			vertical-align:top;
+			@include font ($light_gray, em(13), $light_gray, 1.5em, none);
+			word-wrap: break-word;
+			width:100%;
+			display:block;
+			float:left;
+			position:relative;
+			margin:0 0 0px 0;
+			
+				img
+				{
+				border:1px solid red;
+				width:100%;
+				
+				}
+				
+				
+				.small_button
+				{
+				width:90%;
+				max-width:70px;
+				margin:0 auto;		
+				}
+		
+				.list_fork
+				{
+				display:none;		
+				}
+		
+		/*
+				&:nth-child(1)
+				{
+				width:41.66667%;
+				@include font ($bold, em(13), $dark_gray, 1.5em, none);
+				}
+				
+				&:nth-child(2)
+				{
+				width:20.83333%;
+				}
+		
+				&:nth-child(3)
+				{
+				width:20.83333%;
+				}
+		
+				&:nth-child(4)
+				{
+				padding-right:0px;
+				}			
+
+
+			*/
+			}
+
+	
+	
+	
+	
+		
+		}
+		

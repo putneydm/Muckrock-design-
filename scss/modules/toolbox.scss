@@ -1,0 +1,630 @@
+/* toolbox */
+
+.toolbox
+	{
+	width:100%;
+	@include spanner (10, 1000, 0, 10);	
+	@include center (0,0);	
+	position:fixed;
+	bottom:0px;
+	/*ie 8 hack */
+	background-color:$silver;
+	background-color:rgba($silver,0.90);
+	padding:0px 10px;
+	height:auto;
+	color:#ebebeb;
+	font-family:$open;
+	border-bottom:1px solid $dark_gray;
+	
+		@media screen and (max-width:em(500)) 
+		{
+		}
+	
+	
+	}
+	
+	.toolbox_inside
+	{
+	@include spanner (10, 1000, 0, 10);
+	@include center (0,0);
+	max-width:1000px;
+	position:relative;
+	margin-top:8px;
+	}
+		
+	.toolbox_login
+	{
+	width:150px;
+	float:left;	
+	margin:0px 10px 0 0;	
+		
+			@media screen and (max-width:em(800)) 
+			{
+			width:35px;
+			margin:0px 10px 0 0;			
+			}
+	
+	
+		.login_avatar
+		{
+		width:45px;
+		height:45px;
+		float:left;
+		position:relative;
+		overflow:hidden;
+		@include transition;
+		
+			@media screen and (max-width:em(500)) 
+			{
+			width:33px;
+			height:33px;
+			}
+			
+		.logout_button
+		{
+		width:12px;
+		height:12px;
+		background-color:$pale_gray;
+		position:absolute;
+		bottom:0px;
+		right:0px;	
+		font-family:$icon;
+		color:$medium_gray;
+		text-align:center;
+		line-height:1em;
+		font-size:em(12);
+		@include transition;
+		}
+
+			
+		img
+		{
+		width:100%;		
+		cursor:pointer;
+		}
+	
+			&:hover
+			{
+			
+			.logout_button
+			{
+			background-color: $red;
+			color:$white;
+			}
+			}
+	}	
+	
+		.logged_in_name
+		{
+		color:$white;
+		float:left;
+		font-size:em(13);
+		line-height:1.2em;
+		margin:5px 0 0 8px;
+		max-width:95px;
+		width:100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		
+			@media screen and (max-width:800px) 
+			{
+			display:none;
+			}		
+		}	
+	}
+	
+	
+	.toolbox_alerts
+	{
+	background-image:url('../temp_art/toolbox_sprite.png');
+	background-image:none, url('../temp_art/toolbox_sprite.svg');
+	background-repeat:no-repeat;
+	background-position:8px 7px;
+	width:50px;
+	height:45px;
+	float:left;
+	margin:0px 8px 0 0;
+	border-right:1px solid $medium_gray;
+	cursor:pointer;
+	
+		&:hover
+		{
+		background-position: -34px 7px;
+		
+		}
+	
+	
+		@media screen and (max-width:em(500)) 
+		{
+		width:40px;
+		height:35px;
+		margin:0px 8px 0 0;
+		background-position:3px 2px;
+		
+		}
+
+	.alert_count
+	{
+	font-size:em(13);
+	color:$white;
+	text-align:center;
+	font-family:$sans;
+	font-weight:700;
+	margin-top:13px;
+
+	
+		@media screen and (max-width:em(500)) 
+		{
+		margin-top:7px;
+		}
+	
+	
+	}
+	
+	}
+	
+	
+	.toolbox_alerts_inactive
+	{
+	background-position:-45px 7px;
+	}
+
+	
+	
+	.toolbox_menu
+	{
+	font-size:em(13);
+	color:$white;
+	font-family:$sans;
+	font-weight:400;
+	float:left;
+	margin:8px 0 0 0;
+	text-align:center;
+	width:345px;
+	list-style-type: none;
+	
+		@media screen and (max-width:em(690)) 
+		{
+		width:50px;
+		}
+	
+	
+		li
+		{
+		float:left;
+		margin:0px 5px 0 0;
+		padding:0px;
+		font-size:em(14);
+		line-height:1.4em;
+		width:80px;
+		@include transition;
+		cursor:pointer;
+
+		
+			@media screen and (max-width:em(690)) 
+			{
+			display:none;
+			width:50px;
+			font-size:em(18);
+			line-height:1em;
+			}
+
+				i
+				{
+				width:100%;
+				height:18px;
+				display:block;
+				font-size:em(24);
+				color:#737373;
+				margin:0px 0 0px 0;
+				@include transition;
+		
+					@media screen and (max-width:em(690)) 
+					{
+					font-size:em(18);
+					}	
+		
+					@media screen and (max-width:em(500)) 
+					{
+					display:none;
+					}
+		
+				}
+			a
+			{
+			
+			&:hover
+			{
+			color:$light_gray;
+			
+				i
+				{
+				color:$light_gray;
+				}
+			
+			}
+			}
+
+		}
+	
+		
+		
+	
+		@media screen and (max-width:em(500)) 
+		{
+		margin:13px 0 0 5px;
+		font-size:em(12);
+		}
+	
+		.toolbox_show_menu
+		{
+		display:none;
+		
+				&:after
+				{
+				font-family:$icon;
+				color:$pale_gray;
+				}
+				
+		
+			@media screen and (max-width:em(690)) 
+				{
+				display:block;
+				font-size:em(16);
+				}
+			
+			
+			
+			@media screen and (max-width:em(500)) 
+			{
+			margin-top:0px;
+			
+				&:after
+				{			
+				content:'  \f055';
+				}
+			
+			}
+
+		
+		}
+	
+	}
+	
+	.toolbox_menu_hidden_container
+	{
+	clear:both;
+	margin:5px auto 0;
+	padding:2px;
+	max-width:450px;
+	width:100%;
+	display:none;
+	
+				@media screen and (max-width:em(365)) 
+				{
+				@include spanner (4, 450, 0, 4);	
+				}
+	
+	}
+	
+		.toolbox_menu_hidden
+		{
+		font-size:em(13);
+		color:$white;
+		font-family:$sans;
+		font-weight:400;
+		float:left;
+		margin:10px auto 0px;
+		padding:0 0 8px 0;
+		text-align:center;
+		@include spanner (4, 450, 0, 4);	
+		list-style-type: none;
+		clear:both;
+
+	
+
+			li
+			{
+			float:left;
+			margin:0px 5px 0 0;
+			padding:0px;
+			font-size:em(14);
+			line-height:1.2em;
+			@include spanner (4, 450, 0, 1);
+			padding:0 4px;
+			cursor:pointer;
+			@include transition;
+			
+			.break
+				{
+			
+				@media screen and (max-width:em(365)) 
+				{
+				display:block;
+				}
+			}	
+						
+					i
+					{
+					width:100%;
+					height:15px;
+					display:block;
+					font-size:em(24);
+					color:#737373;
+					margin:0px 0 3px 0;
+					margin-bottom:0px;
+					@include transition;
+					}
+					
+					&:hover
+					{
+					color:$light_gray;
+			
+						i
+						{
+						color:$light_gray;
+						}
+					}		
+					
+			}
+
+		}
+	
+	
+	
+	
+	.toolbox_CTA
+	{
+
+	float:right;
+	margin:0px 10px 0 0;
+	width:150px;
+	height:50px;
+	
+		@media screen and (max-width:em(500)) 
+		{
+		width:90px;
+		height:37px;
+		}
+	
+	
+		.button
+		{
+		background-color:$background;
+		border:0px;
+		width:100%;
+		height:42px;
+		padding-top:16px;
+		font-size:em(12);
+		color:$aqua_blue;
+		
+			&:hover
+			{
+			background-color: $dark_aqua;
+			color:white;
+			}
+		
+			@media screen and (max-width:em(500)) 
+			{	
+			font-size:em(12);
+			font-weight:400;
+			padding-top:8px;
+			height:26px;
+			margin-top:3px;
+			}
+		}
+	
+	
+	}
+	
+	
+		.toolbox_close
+			{
+			width:43px;
+			height:50px;
+			margin:0px 0px 0 10px;
+			font-family:$icon;
+			color:$white;
+			font-size:em(20);
+			float:right;
+			text-align:center;
+			padding:5px 0 0 0;
+			cursor:pointer;
+			@include transition;
+			
+				&:hover
+				{
+				color:$pale_gray;		
+				}
+				
+
+				
+			@media screen and (max-width:em(600)) 
+				{
+				width:28px;
+				height:35px;
+				margin:0px 0px 0 0px;
+				font-size:em(20);
+				}
+
+
+			}
+
+	.toolbox_reveal_container
+	{
+	position:fixed;
+	bottom:0px;
+	border:1px solid transparent;
+	width:100%;
+	height:0px;
+	margin:0 auto;
+	display:none;
+
+		.toolbox_reveal_inside
+		{
+		max-width:1000px;
+		margin:0 auto;
+		height:0px;
+		border:1px solid transparent;
+		position:relative;
+		
+		.toolbox_reveal
+		{
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		width:43px;
+		height:40px;
+		background-color:$silver;
+		background-color:rgba($silver,0.90);
+		font-family:$icon;
+		text-align:center;
+		padding:8px 0 0 0;
+		font-size:em(22);
+		color:$white;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		margin:0px;
+		cursor:pointer;
+		@include transition;
+		
+			&:hover
+			{
+			color:$pale_gray;
+			}
+	
+			@media screen and (max-width:em(1000)) 
+			{
+			margin-right:10px;
+			}
+			
+			
+			@media screen and (max-width:em(600)) 
+				{
+				width:28px;
+				height:35px;
+				font-size:em(20);
+				}
+			
+		}
+		
+	}
+
+	}
+		
+	.toolbox_login_mode
+	{
+	@extend .toolbox;
+
+		}
+	
+		#login_name
+		{
+		height:36px;
+		@include spanner (6, 1000, 15, 2);	
+		float:left;
+		margin-bottom:0px;
+		
+			@media screen and (max-width:em(600)) 
+			{
+			width:49%;
+			margin-right:2%;
+			}
+			
+			
+			@media screen and (max-width:em(400)) 
+			{
+			width:100%;
+			margin-bottom:8px;
+			float:none;
+			}
+		
+		}
+		
+		#login_password
+		{
+		@include font ($light, em(13), $medium_gray, 1.5em, none);
+		border:1px solid $dark_background;
+		@include rounded;
+		padding:10px 18px;
+		@include transition;
+		margin:0;
+		@include transition;
+		@extend #login_name;
+	
+		&:focus
+		{
+		color:$dark_gray;
+		outline:none;
+		border:1px solid $aqua_blue;
+		}
+	
+		&:active
+		{
+		color:$dark_gray;
+		outline:none;
+		border:1px solid $aqua_blue;
+		}		
+		
+		}
+		
+		
+		.login_button_container
+		{
+		@extend #login_name;
+		margin: 0px 0 8px 1.5%;
+		padding:5px 0 0;
+		
+			@media screen and (max-width:em(600)) 
+			{
+			@include spanner (6, 1000, 0, 6);	
+			margin:8px 0;
+			padding:0px;
+			}
+		
+			.button
+			{
+			float:left;
+			}
+		
+		}	
+	
+	
+		.toolbox_login_tab
+		{
+		position:absolute;
+		bottom:0px;
+		left:10px;
+		width:auto;
+		height:auto;
+		background-color:$silver;
+		background-color:rgba($silver,0.90);
+		padding:8px 8px 3px;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		margin:0px;
+		cursor:pointer;
+		@include transition;
+
+			@media screen and (max-width:em(1040)) 
+			{
+			left:20px;
+			}
+			
+			@media screen and (max-width:em(600)) 
+			{
+			left:10px;
+			}
+
+		
+		.button
+		{
+		margin:0px;
+		}
+		
+		}
+
+	
+
+

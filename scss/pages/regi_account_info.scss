@@ -1,0 +1,117 @@
+/*
+@import "bourbon";
+@import "shortcuts";
+@import "mixins";
+@import "fonts";
+@import "colors";
+@import "variables";
+@import "text_styles";
+@import "common_styles";
+@import "inside_page";
+@import "toolbox";
+*/
+
+/*
+------------------------
+REGI ACCOUNT INFO PAGE
+------------------------
+*/
+
+	.regi_content_container
+		{
+
+	
+		.regi_spacer
+		{
+		margin-top:em(30);	
+		}
+		
+			@media screen and (max-width:em(495)) 
+			{
+			width:100%;
+			padding:0 10px;
+			}
+		
+		.button
+			{
+			float:left;
+			margin-right:15px;
+			}
+		
+		}
+	
+	
+		.add_avatar
+		{
+		width:100px;
+		height:100px;
+		@include rounded;
+		box-shadow: inset 3px 3px 5px rgba(207, 207, 207, .4);
+		background-color:$white;
+		float:left;
+		margin:0 20px 0 0;	
+		border:1px solid $silver;
+		}
+	
+
+		.user_info_state
+		{
+		@include spanner (4, 475, 10, 2);	
+		margin-right:20px;
+		}
+		
+		
+		.user_info_city
+		{
+		@include spanner (4, 475, 0, 2.9);
+		float:left;
+		margin-bottom:0px;
+		margin-right:2%;
+		}
+		
+		.user_info_phone
+		{
+		@include spanner (4, 475, 0, 2.9);
+		float:none;
+		}
+		
+		.user_info_zip
+		{
+		@include spanner (4, 475, 0, 1);	
+		margin:0px 0 25px 0;
+		}
+		
+		
+		.selector
+		{
+		float:left;
+		@include spanner (4, 475, 10, 2);	
+		margin-right:15px;
+		clear:left;
+
+		}
+		
+		.checkbox_container
+		{
+		@include spanner (4, 475, 10, 2);	
+		height:40px;
+		margin:0 0 25px 0;
+		padding:10px 0 0 0;
+		
+		
+			p
+			{
+			float:left;
+			@include font ($light, em(12), $light_gray, 2em, none);
+			}
+		
+			.checkbox
+			{
+			float:left;
+			margin:0 5px 0 0;
+			}
+		
+		}
+		
+		
+	

@@ -1,0 +1,125 @@
+
+/*
+@import "bourbon";
+@import "fonts";
+@import "colors";
+@import "shortcuts";
+@import "mixins";
+@import "variables";
+@import "text_styles";
+*/
+
+.q_a_table_container
+	{
+	max-width:674px;
+	width:100%;
+	padding:10px;
+	position:relative;
+
+	
+	
+	.dataTables_filter
+	{
+		position:absolute;
+		right:10px;
+		top:50px;
+		
+			@media screen and (max-width:575px) 
+			{
+			position:static;
+			float:left;
+			clear:left;
+			margin-bottom:20px;
+			clear:right;
+			}
+	
+	
+		input
+		{
+		width:197px;
+		margin-left:10px;
+		height:28px;
+		background-image:url('../temp_art/magnifier.svg');
+		background-repeat: no-repeat;
+		background-position: 168px 6px;
+		}
+	
+		label
+		{
+		@include font ($bold, em(14), $dark_gray, 1.9em, uppercase);	
+		}
+		
+	}
+
+
+	table { 
+		width: 100%; 
+		border-collapse: collapse; 
+
+	thead
+	{
+	width:100%;
+
+		tr
+		{
+		border:1px solid green;
+
+
+			th
+			{
+			border:1px solid red;
+			}
+
+			
+			}
+		}
+		
+		tbody
+		{
+		wdith:100%;
+		
+			tr
+			{
+			width:100%;
+			border:1px solid yellow;
+			
+				td
+				{
+				border:1px solid red;
+				width:150px !important;
+				display:block;
+				float:left;
+				
+				&:nth-child(2)
+				{
+				border:1px solid blue;
+				width:2000px !important;
+				}
+				
+				&:nth-child(3)
+				{
+				border:1px solid green;
+				width:2000px !important;
+				clear:left;
+				}
+				
+				
+				}
+			
+			
+			}
+		
+		}
+		
+		
+		
+	}
+	
+		}
+	
+
+	
+	
+		
+	
+		
