@@ -5,7 +5,7 @@
 <head>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/submit_page.css" rel="stylesheet" type="text/css">
+<link href="css/muckrock_main_styles.css" rel="stylesheet" type="text/css">
 
 
 <!-- <script src="scripts/jquery-1.9.1.min-ck.js"></script> -->
@@ -63,7 +63,7 @@ $(document).ready( function () {
 					
 						<p class="big_number">&#xf067;</p>
 						
-						<h2>Create a new request</h2>
+						<h2>Create a new request x</h2>
 						<p>Chatter about what creating a new request and what it means blah blah blah. This would be a bout yay long to explains what it's all about. </p>
 						<div class="button create window_shade_trigger" id="create_new"><a href="#create_new_shade">Create</a></div>
 						
@@ -92,7 +92,7 @@ $(document).ready( function () {
 
 
 
-		<div class="main_news_container">
+		<div class="main_news_container_wide main_container_submit">
 
 			
 			<div class="request_container" id="create_new_shade">
@@ -135,10 +135,13 @@ $(document).ready( function () {
 			
 				<div class="window_shade" id="government_agency_shade">	
 				<p class="field_label">Pick the government agency</p>
-				<select class="selector agency_picker">
-					<option value="adult-living-type">Adult Living</option>
-					<option value="adult-living-type">Option two</option>
-				</select>
+				<input type="text" list="agency" autofocus>
+				<datalist class="selector agency_picker" id="agency"> 
+					<select>
+					<option value="Adult Living">Adult Living</option>
+					<option value="Option two">Option two</option>
+					</select>
+				</datalist> 
 				</div>
 			
 				<p class="field_label">Describe your your request in detail.</p>
@@ -150,8 +153,8 @@ $(document).ready( function () {
 				<div class="button arrow_right">Preview</div>
 				
 				<div class="buttons_right">
-					<div class="button gray_button cancel">Clear form</div>
-					<div class="button gray_button save">Save for later</div>
+					<div class="button light_button cancel">Clear form</div>
+					<div class="button light_button save">Save for later</div>
 				</div>	
 			
 			<p class="clear"></p>
